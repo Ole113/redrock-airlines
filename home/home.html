@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBLA Website</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a style="padding-left: 30px" class="navbar-brand" href="#">
+            <!--Increase padding-->
+            <img id="hamburgerImage" src="/assets/favicon/faviconPlaceholder.png" alt="company image" />
+            Company Name - <span style="font-size: 20px">company slogan</span>
+
+            <div id="hamburgerMainItems">
+                <span style = "padding-right: 14%">
+                <button type="button" class="btn btn-primary">BOOK</button></span>
+                <button type="button" class="btn btn-primary">SCHEDULES</button>
+            </div>
+
+        </a>
+        <!-- Make it so when you click on it the icon turns in an x to close https://material.io/resources/icons/?icon=close&style=baseline-->
+        <i style = "font-size: 40px" id="hamburgerButton" class="material-icons">menu</i>
+    </nav>
+
+    <div id="slideout"></div>
+</body>
+
+</html>

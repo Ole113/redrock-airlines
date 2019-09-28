@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#slideout {
+	height: 100%;
+	background-color: #212121;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#hamburgerButton {
+	position: relative;
+	right: 8%;
+	cursor: pointer;
+}
+#hamburgerImage {
+	width: 55px;
+	height: 40px;
+}
+#hamburgerMainItems {
+	display: inline-block;
+	position: absolute;
+	right: 16%;
+	margin-right: 50px;
+}

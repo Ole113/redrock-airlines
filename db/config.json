@@ -1,0 +1,8 @@
+{
+    "comment": "UPDATE HOST, PASSWORD, DATABASE ONCE SET UP",
+    "host": "roast-bot.cnmnzfebwfwp.us-east-2.rds.amazonaws.com",
+    "user": "root",
+    "password": "aelb8362580",
+    "database": "roast_bot_unit_test",
+    "port": "3306"
+}

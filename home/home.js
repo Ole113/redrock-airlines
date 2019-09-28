@@ -1,4 +1,7 @@
 /*
+
+  https://www.fbla-pbl.org/competitive-event/website-design-fbla/
+
   Topic: Create a website for a new discount airline. This airline serves the states surrounding the one in which you live. The airline has hired you to create a website. The website must include:
 
   Airline name and theme/slogan
@@ -9,6 +12,11 @@
   Social media links (NOTE: No live social media accounts should be created for this event.)
 
   libraries must be identified.
+
+  Libraries used so far:
+  https://getbootstrap.com/docs/4.3/components/navbar/
+  https://material.io/resources/icons/?style=baseline
+
   Any photographs, texts, trademarks, or names used must be supported by proper documentation and approvals indicated on the site or project.
 
   Rating Guide:
@@ -27,9 +35,9 @@ $(function () {
 
   let displayed = 0;
 
-  $("#button").click(function () {
+  $("#hamburgerButton").click(function () {
     if (!displayed) {
-      $("#slideout").animate({ width: "100px" }, 500);
+      $("#slideout").animate({ width: "30%" }, 500);
       displayed = 1;
     } else {
       $("#slideout").animate({ width: "0" }, 500);
@@ -38,7 +46,7 @@ $(function () {
   });
 });
 
-/* if mobile
+/* if mobile https://getbootstrap.com/docs/4.3/components/dropdowns/ or jquery below
 $(function() {
 	$("#item").click(function() {
 		$("#submenu").slideToggle(500);
