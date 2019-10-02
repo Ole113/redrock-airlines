@@ -29,6 +29,9 @@
 
   https://www.w3schools.com/howto/howto_css_parallax.asp
   Bootstrap nav bar, no materialize
+
+  Use this for social media links box shawdow:
+  https://alligator.io/css/box-shadow-examples/
 */
 
 $(function () {
