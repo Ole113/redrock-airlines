@@ -32,17 +32,33 @@
 
   Use this for social media links box shawdow:
   https://alligator.io/css/box-shadow-examples/
+
+  Images attribution:
+  https://www.pexels.com/photo/low-angle-photography-of-airplane-1157255/
+  https://pixabay.com/photos/airplane-window-wing-flight-travel-2619434/
+  https://pixabay.com/photos/architecture-skyscraper-2256489/
+  https://pixabay.com/photos/cooling-tower-concrete-perspective-4210918/
+  https://www.pexels.com/photo/low-angle-photo-of-airplane-1154619/
+  https://en.facebookbrand.com/assets/f-logo/
+  https://about.twitter.com/en_us/company/brand-resources.html
+  https://en.instagram-brand.com/assets/icons
+
 */
 
 $(function () {
 
+
+
   let displayed = 0;
+  $("#slideoutButtons").hide();
 
   $("#hamburgerButton").click(function () {
     if (!displayed) {
       $("#slideout").animate({ width: "30%" }, 500);
+      $("#slideoutButtons").show();
       displayed = 1;
     } else {
+      $("#slideoutButtons").hide();
       $("#slideout").animate({ width: "0" }, 500);
       displayed = 0;
     }

@@ -18,27 +18,38 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+
+    <nav id = "origNav">
+
+    </nav>
+    <nav id = "navbar" class="navbar navbar-custom">
         <a style="padding-left: 30px" class="navbar-brand" href="#">
             <!--Increase padding-->
             <img id="hamburgerImage" src="/assets/favicon/faviconPlaceholder.png" alt="company image" />
-            Company Name - <span style="font-size: 20px">company slogan</span>
+            Company Name
 
-            <div id="hamburgerMainItems">
-                <span style = "padding-right: 14%">
-                <button type="button" class="btn btn-primary">BOOK</button></span>
+            <div id="hamburgerMainItems" style = "margin-right: 3%;">
+                <button style = "margin-right: 20%;" type="button" class="btn btn-primary">BOOK</button>
                 <button type="button" class="btn btn-primary">SCHEDULES</button>
             </div>
 
         </a>
         <!-- Make it so when you click on it the icon turns in an x to close https://material.io/resources/icons/?icon=close&style=baseline-->
-        <i style = "font-size: 40px" id="hamburgerButton" class="material-icons">menu</i>
+        <i id="hamburgerButton" class="material-icons">menu</i>
     </nav>
 
-    <div id="slideout"></div>
+    <div id="slideout">
+        <div id = "slideoutButtons">
+            <button type="button" class="btn btn-primary">BOOK</button>
+            <button type="button" class="btn btn-primary">SCHEDULES</button>
+        </div>
 
+    </div>
 
-    <div id = "footer"></div>
-</body>
+    <div id = "mainImageHolder">
+        <img id = "mainImage" alt = "view from window" src = "/assets/cooling-tower-4210918.jpg"/>
+        <h1 class = "mainImageTexts" id = "mainImageText">Welcome to Company Name</br><span style = "font-size: 45px">Flying made easier</span></h1>
+    </div>
+
 
 </html>
