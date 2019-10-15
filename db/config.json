@@ -1,8 +1,7 @@
 {
-    "comment": "UPDATE HOST, PASSWORD, DATABASE ONCE SET UP",
-    "host": "roast-bot.cnmnzfebwfwp.us-east-2.rds.amazonaws.com",
-    "user": "root",
+    "host": "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com",
+    "user": "admin",
     "password": "aelb8362580",
-    "database": "roast_bot_unit_test",
+    "database": "booking",
     "port": "3306"
 }
