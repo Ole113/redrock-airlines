@@ -10,6 +10,8 @@
   How to apply for a job with the airline
   Social media links (NOTE: No live social media accounts should be created for this event.)
 
+  Make sure to minify the code before production
+
   libraries must be identified.
 
   Libraries used so far:
@@ -43,3 +45,10 @@
   https://en.instagram-brand.com/assets/icons
   https://www.pexels.com/photo/canyon-arizona-1672813/
   Animate the landing page main text using https://daneden.github.io/animate.css/ fadeInDown. Animation similar to career website theme.
+
+  TODO:
+   Fix flickering of slideout
+   Fix bug when scrolling and slideout enabled
+   Organize code in css by order in html
+   The word "to" on the main title in too light by the sunlight
+   Fix *faviconImg* Red Rock Airlines in footer, not even height with other titles(more obvios with smaller tab)

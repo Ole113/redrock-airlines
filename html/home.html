@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBLA Website</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon/red-rock-favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+
+    <nav id="navbar" class="navbar navbar-custom">
+        <a style="padding-left: 30px" class="navbar-brand">
+
+            <img style="z-index: 1;" id="hamburgerImage" src="/images/favicon/red-rock-favicon.png"
+                alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span style="color: white; z-index: 1;">Red Rock Airlines</span>
+
+            <div id="hamburgerMainItems" style="margin-right: 3%;">
+                <button onclick="window.location.href = 'book.html'" style="margin-right: 20%;" type="button"
+                    class="btn btn-primary">BOOK</button>
+                <button onclick="window.location.href = 'schedule.html'" type="button"
+                    class="btn btn-primary">SCHEDULES</button>
+            </div>
+
+        </a>
+        <i id="hamburgerButton" class="material-icons">menu</i>
+    </nav>
+
+    <div id="slideout">
+        <div style="animation-delay: 0.3s;" class="animated fadeIn" id="slideoutButtons">
+            <!--Make the close menu the same color as the landing page buttons blue-->
+            <i id="closeButton" class="material-icons">close</i>
+            <!--<a href="frequent.html" class="slideButtons">Frequent Flyer Program</a> -->
+        </div>
+    </div>
+
+    <div id="mainImageHolder">
+        <img id="mainImage" alt="arizona canyon view" src="/images/arches-picture.jpg" />
+        <div id="mainImageHolderText">
+            <h1 style="animation-delay: 0.2s;" class="animated fadeInDown" id="mainImageText">Welcome to Red Rock
+                Airlines</br><span style="font-size: 30px">Flying
+                    made easier</span></h1>
+        </div>
+    </div>
+
+    <!--Make the buttons fade/red rock colors fade-->
+    <div class="infos" id="bookingInfo">
+        <div id = "bookingImage">
+            <img width="30%" height="55%" alt="skyscrapers w/ plane" src="images/airplane-skyscrapers.jpg" />
+        </div>
+        <div id="bookingInfoText">
+            <p>
+                Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
+                nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
+                lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
+                nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
+                nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
+                fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
+                quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
+                odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
+                enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
+                consequat leo ut.
+            </p>
+            <button onclick="window.location.href = 'book.html'" type="button" class="btn btn-primary">Book Now</button>
+        </div>
+    </div>
+
+    <div class="infos" id="frequentInfo">
+
+    </div>
+
+    <div class="infos" id="jobInfo">
+
+    </div>
+
+    <footer>
+        <div class="footerPart" id="company">
+            <img style="z-index: 1;" id="hamburgerImage" src="/images/favicon/red-rock-favicon.png"
+                alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span style="font-weight: bolder; font-size: 25px;">Red Rock Airlines</span>
+        </div>
+        <div style="right: 10%;" class="footerPart" id="mediaHolder">
+            <h4 style="font-weight: bolder;">Visit Us</h4>
+            <br />
+            <a href="facebook.com/redrockairlines">Facebook</a> <br />
+            <a href="twitter.com/redrockairlines">Twitter</a> <br />
+            <a href="instagram.com/redrockairlines">Instagram</a>
+        </div>
+
+        <div class="footerPart" id="scheduleBookHolder">
+            <h4 style="font-weight: bolder;">Booking & Schedules</h4>
+            <br />
+            <a href="book.html">Book a flight</a> <br />
+            <a href="schedules.html">Flight Schedules</a>
+        </div>
+
+        <div class="footerPart" id="learnMoreHolder">
+            <h4 style="font-weight: bolder;">Learn More</h4>
+            <br />
+            <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
+            <a href="privacy.html">Privacy Policy</a> <br />
+            <a href="terms.html">Terms & Conditions</a> <br />
+            <a href="job.html">Jobs</a> <br />
+            <a href="about.html">About Red Rock Airlines</a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

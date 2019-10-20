@@ -4,25 +4,44 @@ body {
 }
 
 .navbar-custom {
-	z-index: 1;
+	z-index: 2;
 	background-color: rgb(212, 212, 212, 0) !important;
 	margin-top: 2%;
+	position: absolute;
+	top: 2%;
+	width: 100%;
 }
 
+/*
 .navbar-custom a {
 	color: white;
 }
+*/
 
 #slideout {
 	height: 100%;
-	background-color: #e6e6e6;
+	background-color: #212121;
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 1;
-	-webkit-box-shadow: 24px -4px 17px -19px rgba(204,204,204,1);
-	-moz-box-shadow: 24px -4px 17px -19px rgba(204,204,204,1);
-	box-shadow: 24px -4px 17px -19px rgba(204,204,204,1);
+}
+
+#closeButton {
+	color: white;
+	cursor: pointer;
+	font-size: 47px;
+	position: absolute;
+	top: 6%;
+
+}
+
+#slideoutButtons a {
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: 70px;
+	left: 5px;
 }
 
 #hamburgerButton {
@@ -47,28 +66,63 @@ body {
 #mainImage {
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	bottom: 0;
 }
 
 #hamburgerMainItems button {
-	padding: 13px;
+	padding: 10px;
 }
 
-#footer {
-	background-color: #F8F8F8;
+footer {
+	background-color: #d9d9d9;
 	width: 100%;
-	height: 100px;
+	height: 280px;
+	position: relative;
+	color: white;
 }
 
-#mainImageText {
+.footerPart a, .footerPart h4, .footerPart span {
+	color: #1c1c1c;
+	cursor: pointer;
+}
+
+#learnMoreHolder, #scheduleBookHolder, #mediaHolder, #company{
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-	transform: translate(-50%, -50%);
+	top: 15%;
+}
+
+#learnMoreHolder {
+	right: 15%;
+}
+
+#scheduleBookHolder {
+	right: 35%;
+}
+
+#company {
+	left: 3%;
+}
+
+#mediaHolder {
+	left: 25%;
+}
+#mainImageText {
 	color: white;
 	font-size: 80px;
 	font-weight: bold;
-	text-align: center;
+    position: absolute;
+    text-align: left;
+    top: 36%;
+	left: 25%;
+	width: 50%;
+}
+
+.infos {
+	padding-left: 20%;
+	padding-top: 100px;
+	position: relative;
+
+}
+
+#bookingInfo {
+	
 }
