@@ -13,30 +13,54 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles/home.css">
-    <script src="scripts/home.js"></script>
-    <link rel="icon" type="image/png" href="images/favicon/red-rock-favicon.png">
+    <link rel="stylesheet" href="/styles/home.css">
+    <script src="/scripts/home.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
+    <div class="parallax"></div>
 
-    <nav id="navbar" class="navbar navbar-custom">
+    <nav class="navbar navbar-custom">
         <a style="padding-left: 30px" class="navbar-brand">
-
-            <img style="z-index: 1;" id="hamburgerImage" src="/images/favicon/red-rock-favicon.png"
-                alt="company image" />
+            <img id="hamburgerImage" alt="company logo" src="/images/red-rock-logo.png" />
             &nbsp;&nbsp;&nbsp;<span style="color: white; z-index: 1;">Red Rock Airlines</span>
 
             <div id="hamburgerMainItems" style="margin-right: 3%;">
-                <button onclick="window.location.href = 'book.html'" style="margin-right: 20%;" type="button"
-                    class="btn btn-primary">BOOK</button>
-                <button onclick="window.location.href = 'schedule.html'" type="button"
-                    class="btn btn-primary">SCHEDULES</button>
+                <a style="margin-right: 30px;" href="/scripts/bookTest.php" class="btn btn-primary">BOOK</a>
+                <a href="schedules.html" class="btn btn-primary">SCHEDULES</a>
             </div>
-
         </a>
         <i id="hamburgerButton" class="material-icons">menu</i>
+    </nav>
+
+    <!--maybe add fadein up onto -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="padding-left: 30px" class="navbar-brand">
+            <a class="navbar-brand" href="home.html">
+                <img alt="Brand" src="/images/favicon/favicon.ico">
+            </a>
+        </a>
+        &nbsp;&nbsp;&nbsp;<span style="color: #1c1c1c; z-index: 1;">Red Rock Airlines</span>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+
+        <form>
+            <i class="material-icons">search</i>
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form>
+
     </nav>
 
     <div id="slideout">
@@ -47,46 +71,144 @@
         </div>
     </div>
 
-    <div id="mainImageHolder">
-        <img id="mainImage" alt="arizona canyon view" src="/images/arches-picture.jpg" />
-        <div id="mainImageHolderText">
-            <h1 style="animation-delay: 0.2s;" class="animated fadeInDown" id="mainImageText">Welcome to Red Rock
-                Airlines</br><span style="font-size: 30px">Flying
-                    made easier</span></h1>
+    <!--
+    <div id="mainImageElementWrapper">
+        <div id="secondaryImageElementWrapper">
+            <div class="mainImageElement">
+                <h1 style="animation-delay: 0.2s;" class="animated fadeInDown" id="mainImageText">Welcome to Red Rock
+                    Airlines</br><span style="font-size: 30px">Flying
+                        made easier</span></h1>
+            </div>
+
+            <div class="mainImageElement" style="background-color: white; padding-left: 1.5%;">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+-->
+    <!--Make the buttons fade/red rock colors fade maybe-->
+    <div id="bookingInfo">
+        <img id="bookingImage" alt="skyscrapers w/ plane" src="/images/airplane-skyscrapers.jpg" />
+        <h1>Book your dream vacation now</h1>
+        <br />
+        <p>
+            Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
+            nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
+            lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
+            nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
+            nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
+            fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
+            quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
+            odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
+            enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
+            consequat leo ut.
+        </p>
+        <br />
+        <a href="book.html" class="btn btn-primary">Book Now</a>
+    </div>
+
+    <div id="wrapper">
+        <div id="frequentInfo" class="card" style="margin-right: 7.5%;">
+            <img src="/images/airplane-landing.jpg" class="card-img-top" alt="skyscrapers">
+            <div class="card-body">
+                <h5 class="card-title">Join our Frequent Flyer Program today</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
+                    Sagittis in
+                    nullam imperdiet
+                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit
+                    vitae
+                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh
+                    lectus
+                    nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper
+                    mauris
+                    nunc laoreet tristique.</p>
+                <a href="frequent.html" class="btn btn-primary">Join Today</a>
+            </div>
+        </div>
+        <div id="jobInfo" class="card">
+            <img src="/images/airplane-window-sunset.jpg" class="card-img-top" alt="skyscrapers">
+            <div class="card-body">
+                <h5 class="card-title">Join our workforce today</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
+                    Sagittis in
+                    nullam imperdiet
+                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam,
+                    sit vitae
+                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh
+                    lectus
+                    nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa,
+                    ullamcorper mauris
+                    nunc laoreet tristique.</p>
+                <a href="job.html" class="btn btn-primary">Apply Today</a>
+            </div>
         </div>
     </div>
 
-    <!--Make the buttons fade/red rock colors fade-->
-    <div class="infos" id="bookingInfo">
-        <div id = "bookingImage">
-            <img width="30%" height="55%" alt="skyscrapers w/ plane" src="images/airplane-skyscrapers.jpg" />
+    <div id="explore">
+        <div>
+            <h4>Explore The Western United States</h4>
+            <br />
+            <p>Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.Sagittis in</p>
+            <a href="book.html" class="btn btn-primary">Learn More</a>
+            <br />
+            <br />
+            <br />
+            <h4>Another Link For Something</h4>
+            <p>Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.Sagittis in</p>
+            <a href="book.html" class="btn btn-primary">Learn More</a>
         </div>
-        <div id="bookingInfoText">
-            <p>
-                Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
-                nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
-                lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
-                nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
-                nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
-                fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
-                quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
-                odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
-                enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
-                consequat leo ut.
-            </p>
-            <button onclick="window.location.href = 'book.html'" type="button" class="btn btn-primary">Book Now</button>
-        </div>
-    </div>
-
-    <div class="infos" id="frequentInfo">
-
-    </div>
-
-    <div class="infos" id="jobInfo">
-
+        <img src="/images/airport-terminal.jpg" alt="airport terminal" />
     </div>
 
     <footer>
+        <div class="footerPart border-top" id="company" style="color: #b3b3b3;">
+            <img style="z-index: 1;" id="hamburgerImage" src="/images/red-rock-logo.png" alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span style="font-weight: bolder; font-size: 25px;">Red Rock Airlines</span>
+        </div>
+        <div class="footerPart" id="mediaHolder">
+            <h5 style="font-weight: bolder;">Visit Us</h5>
+            <br />
+            <a href="https://facebook.com/redrockairlines">Facebook</a> <br />
+            <a href="https://twitter.com/redrockairlines">Twitter</a> <br />
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+        </div>
+        <div class="footerPart" id="scheduleBookHolder">
+            <h4 style="font-weight: bolder;">Booking & Schedules</h4>
+            <br />
+            <a href="book.html">Book a flight</a> <br />
+            <a href="schedules.html">Flight Schedules</a>
+        </div>
+
+        <div class="footerPart" id="learnMoreHolder">
+            <h4 style="font-weight: bolder;">Learn More</h4>
+            <br />
+            <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
+            <a href="privacy.html">Privacy Policy</a> <br />
+            <a href="terms.html">Terms & Conditions</a> <br />
+            <a href="job.html">Jobs</a> <br />
+            <a href="about.html">About Red Rock Airlines</a>
+        </div>
+    </footer>
+    <!--
+    <footer>
+
         <div class="footerPart" id="company">
             <img style="z-index: 1;" id="hamburgerImage" src="/images/favicon/red-rock-favicon.png"
                 alt="company image" />
@@ -118,6 +240,7 @@
         </div>
 
     </footer>
+-->
 </body>
 
 </html>

@@ -1,6 +1,13 @@
-$(function () {
+$(function run() {
+	slideout();
+	scroll();
+});
+
+function slideout() {
 
 	let displayed = 0;
+
+	$(".navbar-expand-lg").hide();
 	$("#slideoutButtons").hide();
 
 	$("#hamburgerButton").click(function () {
@@ -21,8 +28,19 @@ $(function () {
 			$("#hamburgerButton").show();
 		}
 	});
-});
+}
 
+function scroll() {
+	$(document).scroll(function () {
+		if ($(document).scrollTop() >= 550) {
+			$(".navbar-expand-lg").fadeIn();
+		}
+
+		if($(document).scrollTop() <= 300) {
+			$(".navbar-expand-lg").fadeOut(200);
+		}
+	});
+}
 /* if mobile https://getbootstrap.com/docs/4.3/components/dropdowns/ or jquery below
 $(function() {
 	$("#item").click(function() {

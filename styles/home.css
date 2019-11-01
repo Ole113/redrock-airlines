@@ -1,8 +1,20 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
+p {
+	font-family: "Lato", "Arial", sans-serif;
+}
+
+h1, h5 {
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/**************
+	Navbar
+**************/
 .navbar-custom {
 	z-index: 2;
 	background-color: rgb(212, 212, 212, 0) !important;
@@ -12,12 +24,92 @@ body {
 	width: 100%;
 }
 
-/*
-.navbar-custom a {
-	color: white;
+/* navbar when scrolling */
+.navbar-expand-lg {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	
 }
-*/
 
+.navbar-expand-lg a img {
+	width: 55px;
+	height: 40px;
+}
+
+.navbar-expand-lg form {
+	width: 200px;
+}
+
+/***************
+	Navbar End
+***************/
+/******************
+	Hamburger
+******************/
+#hamburgerButton {
+	position: relative;
+	right: 8%;
+	cursor: pointer;
+	color: white;
+	font-size: 45px;
+}
+
+#hamburgerImage {
+	width: 55px;
+	height: 40px;
+}
+
+#hamburgerMainItems {
+	display: inline-block;
+	position: absolute;
+	right: 16%;
+}
+
+#hamburgerMainItems button {
+	padding: 10px;
+}
+
+/******************
+	Hamburger End
+******************/
+
+/*******************
+	Main Image Items
+********************/
+#superWrapper {
+	position: absolute;
+	top: 32.5%;
+	left: 20%;
+	width: 100%;
+}
+
+#mainImageElementWrapper {
+	position: relative
+}
+
+.mainImageElement h1 {
+    width: 600px;
+	float:left;
+	color: white;
+	font-weight: 800;
+}
+.mainImageElement form {
+	width: 30%;
+	float: left;
+	background-color: white;
+	padding: 4.5%;
+	color: #1c1c1c;
+}
+
+
+/************************
+	Main Image Items End
+************************/
+
+/******************
+	Slideout
+******************/
 #slideout {
 	height: 100%;
 	background-color: #212121;
@@ -43,86 +135,115 @@ body {
 	top: 70px;
 	left: 5px;
 }
+/******************
+	Slideout End
+******************/
 
-#hamburgerButton {
-	position: relative;
-	right: 8%;
-	cursor: pointer;
-	color: white;
-	font-size: 45px;
-}
-
-#hamburgerImage {
-	width: 55px;
-	height: 40px;
-}
-
-#hamburgerMainItems {
-	display: inline-block;
-	position: absolute;
-	right: 16%;
-}
-
-#mainImage {
-	width: 100%;
-	height: 100%;
-}
-
-#hamburgerMainItems button {
-	padding: 10px;
-}
-
-footer {
-	background-color: #d9d9d9;
-	width: 100%;
-	height: 280px;
-	position: relative;
-	color: white;
-}
-
-.footerPart a, .footerPart h4, .footerPart span {
-	color: #1c1c1c;
-	cursor: pointer;
-}
-
-#learnMoreHolder, #scheduleBookHolder, #mediaHolder, #company{
-	position: absolute;
-	top: 15%;
-}
-
-#learnMoreHolder {
-	right: 15%;
-}
-
-#scheduleBookHolder {
-	right: 35%;
-}
-
-#company {
-	left: 3%;
-}
-
-#mediaHolder {
-	left: 25%;
-}
-#mainImageText {
-	color: white;
-	font-size: 80px;
-	font-weight: bold;
-    position: absolute;
-    text-align: left;
-    top: 36%;
-	left: 25%;
-	width: 50%;
-}
-
-.infos {
-	padding-left: 20%;
-	padding-top: 100px;
-	position: relative;
-
-}
+/****************
+	Infos
+*****************/
 
 #bookingInfo {
-	
+	width: 100%;
+	float: left;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 10%;
 }
+
+#bookingImage {
+	padding-right: 60px;
+	width: 45%;
+	height: 65%;
+	float: left;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+    text-align: center;
+}
+
+.card {
+	display: inline-block;
+	width: 600px;
+	margin-top: 7%;
+	margin-bottom: 8%;
+}
+/*************
+	Infos End
+**************/
+
+/***************** 
+  Explore Start
+******************/ 
+
+#explore { 
+	background-color: #f5f7fa; 
+	width: 100%; 
+	height: 100%; 
+}
+
+#explore img { 
+	display: block; 
+	margin: auto; 
+	width: 60%; 
+	padding-bottom: 8%; 
+}
+
+#explore div {
+	position: absolute; 
+	margin-left: 25%; 
+	margin-top: 5%; 
+	background-color: white; 
+	width: 25%; 
+	height: 65%;
+	padding: 4%;
+}
+
+/***************** 
+Explore End 
+******************/
+
+/***************
+	Parallax
+****************/
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.parallax {
+	background-image: url("/images/arches-picture.jpg");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/****************
+	Parallax End
+*****************/
+
+/***********
+	Footer
+************/
+
+footer {
+	width: 100%;
+	height: 400px;
+	background-color: #f2f2f2;
+	position: relative;
+    text-align: center;
+}
+
+.footerPart h1, .footerPart a {
+	color: #1c1c1c;
+}
+
+/**************
+	Footer End
+***************/
+/*https://codepen.io/anon/pen/CGwgn*/
