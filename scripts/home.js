@@ -33,7 +33,7 @@ function slideout() {
 function scroll() {
 	$(document).scroll(function () {
 		if ($(document).scrollTop() >= 550) {
-			$(".navbar-expand-lg").fadeIn();
+			$(".navbar-expand-lg").fadeIn(300);
 		}
 
 		if($(document).scrollTop() <= 300) {

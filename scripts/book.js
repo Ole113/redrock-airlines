@@ -6,4 +6,3 @@ connection.query(`SELECT * FROM flights;`, function (err, result) {
         
     }
 }
-setFlightsFile.run();
