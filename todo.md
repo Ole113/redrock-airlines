@@ -1,8 +1,5 @@
   TODO:
-   Fix flickering of slideout and scroll navbar(fix with inline css) 
-   Fix bug when scrolling and slideout enabled
    Organize code in css by order in html
-   The word "to" on the main title in too light by the sunlight
    Fix *faviconImg* Red Rock Airlines in footer, not even height with other titles(more obv with smaller tab)
    make sure the fonts at specific spots is correct
    when you scroll down the navbar changes to gray and stays fixed top. when at top of main page it becomes clear.(position: fixed;)
@@ -34,6 +31,12 @@
    Make sure the book tab is correctly centered(discord help)
    Link the company logo back to home.html on all pages.
    Make the FAQ part on the logo part of the about page but scrolled down a little(use # i think).
+   Change text in footer to be smaller/ different font
+   Change fonts(maybe current ones aren't working).
+   Thing on explore part is not correctly centered
+   Fix the book your dream vacation now(text cant be highlighted(button cant be clicked))
+   Make the explore western us in the middle of the book dream... and cards.
+
 
 
    Max Size For Web version:

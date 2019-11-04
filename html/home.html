@@ -25,7 +25,7 @@
     <nav class="navbar navbar-custom">
         <a style="padding-left: 30px" class="navbar-brand">
             <img id="hamburgerImage" alt="company logo" src="/images/red-rock-logo.png" />
-            &nbsp;&nbsp;&nbsp;<span style="color: white; z-index: 1;">Red Rock Airlines</span>
+            &nbsp;<span style="color: white; z-index: 1;">Red Rock Airlines</span>
 
             <div id="hamburgerMainItems" style="margin-right: 3%;">
                 <a style="margin-right: 30px;" href="/scripts/bookTest.php" class="btn btn-primary">BOOK</a>
@@ -35,7 +35,6 @@
         <i id="hamburgerButton" class="material-icons">menu</i>
     </nav>
 
-    <!--maybe add fadein up onto -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a style="padding-left: 30px" class="navbar-brand">
             <a class="navbar-brand" href="home.html">
@@ -65,42 +64,53 @@
 
     <div id="slideout">
         <div style="animation-delay: 0.3s;" class="animated fadeIn" id="slideoutButtons">
-            <!--Make the close menu the same color as the landing page buttons blue-->
-            <i id="closeButton" class="material-icons">close</i>
-            <!--<a href="frequent.html" class="slideButtons">Frequent Flyer Program</a> -->
+            <button id = "closeButton" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br />
+            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <br />
+            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <br />
+            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <br />
+            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <br />
+            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+
         </div>
     </div>
 
+    <!--
     <div id="mainImageElementWrapper">
-        <div id="secondaryImageElementWrapper">
-            <div class="mainImageElement">
-                <h1 style="animation-delay: 0.2s;" class="animated fadeInDown" id="mainImageText">Welcome to Red Rock
-                    Airlines</br><span style="font-size: 30px">Flying
-                        made easier</span></h1>
-            </div>
+        <div class="mainImageElement">
+            <h1 style="animation-delay: 0.2s;" class="animated fadeInDown" id="mainImageText">Welcome to Red Rock
+                Airlines</br><span style="font-size: 30px">Flying
+                    made easier</span></h1>
+        </div>
 
-            <div class="mainImageElement" style="background-color: white; padding-left: 1.5%;">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+        <div class="mainImageElement" style="background-color: white; padding-left: 1.5%;">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
+-->
     <!--Make the buttons fade/red rock colors fade maybe-->
     <div id="bookingInfo">
         <img id="bookingImage" alt="plane in sky" src="/images/airplane-skyscrapers.jpg" />
@@ -122,7 +132,7 @@
         <a href="book.html" class="btn btn-primary">Book Now</a>
     </div>
 
-    <div id="wrapper">
+    <div id="wrapperCards">
         <div id="frequentInfo" class="card" style="margin-right: 7.5%;">
             <img src="/images/main-airport.jpeg" class="card-img-top" alt="plane passenger">
             <div class="card-body">
@@ -141,9 +151,9 @@
             </div>
         </div>
         <div id="jobInfo" class="card">
-            <img src="/images/airplane-window-sunset.jpg" class="card-img-top" alt="sunset from airplane window">
+            <img src="/images/airplane-window-sunset.jpg" class="card-img-top" alt="sunset from airplane">
             <div class="card-body">
-                <h5 class="card-title">Join our workforce today</h5>
+                <h5 class="card-title">Career Opportunities</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
                     Sagittis in
                     nullam imperdiet
@@ -174,7 +184,6 @@
         </div>
         <img src="/images/airport-terminal.jpg" alt="airport terminal" />
     </div>
-
 
     <footer>
         <div style="text-align: center;" class="footerPart" id="company">
@@ -216,47 +225,17 @@
             <a href="privacy.html">Privacy Policy</a> <br />
             <a href="terms.html">Terms & Conditions</a> <br />
             <a href="job.html">Jobs</a> <br />
-            <a href="about.html">About Red Rock Airlines</a>
+            <a href="about.html">About Red Rock Airlines</a> <br />
             <a href="about.html#faq">FAQs</a>
         </div>
 
     </footer>
-    <!--
-    <footer>
 
-        <div class="footerPart" id="company">
-            <img style="z-index: 1;" id="hamburgerImage" src="/images/favicon/red-rock-favicon.png"
-                alt="company image" />
-            &nbsp;&nbsp;&nbsp;<span style="font-weight: bolder; font-size: 25px;">Red Rock Airlines</span>
-        </div>
-        <div style="right: 10%;" class="footerPart" id="mediaHolder">
-            <h4 style="font-weight: bolder;">Visit Us</h4>
-            <br />
-            <a href="facebook.com/redrockairlines">Facebook</a> <br />
-            <a href="twitter.com/redrockairlines">Twitter</a> <br />
-            <a href="instagram.com/redrockairlines">Instagram</a>
-        </div>
-
-        <div class="footerPart" id="scheduleBookHolder">
-            <h4 style="font-weight: bolder;">Booking & Schedules</h4>
-            <br />
-            <a href="book.html">Book a flight</a> <br />
-            <a href="schedules.html">Flight Schedules</a>
-        </div>
-
-        <div class="footerPart" id="learnMoreHolder">
-            <h4 style="font-weight: bolder;">Learn More</h4>
-            <br />
-            <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
-            <a href="privacy.html">Privacy Policy</a> <br />
-            <a href="terms.html">Terms & Conditions</a> <br />
-            <a href="job.html">Jobs</a> <br />
-            <a href="about.html">About Red Rock Airlines</a>
-        </div>
-
-    </footer>
--->
-
+    <!--Makes it so theres no flickering-->
+    <script>
+        $(".navbar-expand-lg").hide();
+        $("#slideoutButtons").hide();    
+    </script>
 </body>
 
 </html>
