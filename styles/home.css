@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	color: #777;
 }
 
 p {
@@ -121,22 +121,56 @@ h1, h5 {
 
 .close {
 	float: left;
-	padding: 3%;
+	margin: 2.5% 0 0 2.5%;
 }
 
-#slideout button {
+.material-airplane {
+	-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#slideout button, #slideout a {
 	background-color: #f2f2f2;
 	border: 0;
-	
+	color: #4d4d4d;
+	padding: 5%;
 }
 
-#slideoutButtons a {
-	color: white;
-	font-size: 30px;
-	position: absolute;
-	top: 70px;
-	left: 5px;
+#slideout button i {
+	vertical-align: bottom;
+	font-size: 23px !important;
+	padding-right: 8px;
 }
+
+.btn-group {
+	padding: 5% 5% 0 10%;
+}
+
+.dropdown-menu {
+	width: 100px;
+	height: 100px;
+	padding: 15% 0.5% 2% 0.5%;
+	background-color: #f2f2f2;
+}
+
+#slideout button:hover {
+	text-decoration: underline;
+}
+
+#slideout img {
+	width: 20%;
+	height: 20%;
+}
+
+#sliderCompany {
+	font-weight: bolder;
+	color: #bfbfbf;
+	text-align: center;
+}
+
 /******************
 	Slideout End
 ******************/
@@ -260,6 +294,7 @@ footer {
 ***************/
 /*https://codepen.io/anon/pen/CGwgn*/
 
+/*
 .btn-primary {
 	background-color: skyblue;
 	border: 0;
@@ -268,3 +303,4 @@ footer {
 .btn-primary:hover {
 	background-color: red;
 }
+*/

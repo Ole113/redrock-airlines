@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Rock Airlines - Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
@@ -16,7 +21,6 @@
     <link rel="stylesheet" href="/styles/home.css">
     <script src="/scripts/home.js"></script>
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
@@ -64,19 +68,54 @@
 
     <div id="slideout">
         <div style="animation-delay: 0.3s;" class="animated fadeIn" id="slideoutButtons">
-            <button id = "closeButton" type="button" class="close" aria-label="Close">
+            <button type="button" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <br />
-            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
             <br />
-            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
             <br />
-            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <div id="sliderCompany">
+                <img style="z-index: 1;" id="slideoutImage" src="/images/grey-favicon-removebg-preview.png"
+                    alt="company image" />
+                &nbsp;Red Rock Airlines
+            </div>
             <br />
-            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <button onclick="location.href='schedules.html'" type="button">
+                <i class="material-icons material-airplane">
+                    airplanemode_active
+                </i>Frequent Flyer
+            </button>
             <br />
-            <button onclick = "location.href='schedules.html'" type = "button">Schedules</button>
+            <button onclick="location.href='schedules.html'" type="button">
+                <i class="material-icons">
+                    work
+                </i>Jobs
+            </button>
+            <br />
+            <button onclick="location.href='schedules.html'" type="button">
+                <i class="material-icons">
+                    question_answer
+                </i>FAQs
+            </button>
+            <br />
+            <button onclick="location.href='schedules.html'" type="button">
+                <i class="material-icons">
+                    help_outline
+                </i>Contact
+            </button>
+            <br />
+            <hr />
+            <div class="btn-group">
+                <button type="button" class="btn btn-mine btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    More<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/html/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/html/terms.html">Terms & Conditions</a></li>
+                    <li><a href="/html//about.html">About Us</a></li>
+                </ul>
+            </div>
 
         </div>
     </div>

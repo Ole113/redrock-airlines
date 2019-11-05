@@ -8,14 +8,14 @@ var slideoutDisplayed = 0;
 function slideout() {
 
 	$("#hamburgerButton").click(function () {
-		$("#slideout").animate({ width: "13%" }, 500);
+		$("#slideout").animate({ width: "16%" }, 500);
 		//$("#slideoutButtons").fadeToggle(3000);
 		$("#slideoutButtons").show();
 		$("#hamburgerButton").hide();
 		slideoutDisplayed = 1;
 	});
 
-	$("#closeButton").click(function () {
+	$(".close").click(function () {
 		$("#slideoutButtons").hide();
 		$("#slideout").animate({ width: "0" }, 500);
 		$("#hamburgerButton").show();

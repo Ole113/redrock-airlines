@@ -36,6 +36,10 @@
    Thing on explore part is not correctly centered
    Fix the book your dream vacation now(text cant be highlighted(button cant be clicked))
    Make the explore western us in the middle of the book dream... and cards.
+   Last button on slideout be dropdown with remaining elements https://www.jquery-az.com/bootstrap-4-dropdown-menu-7-examples/
+   Decide if we want icons for the more options in slideout.
+   In footer and slideout in the bottom put &copy; Red Rock Airilines maybe
+   Hamburger shows too early in slide back in.
 
 
 
