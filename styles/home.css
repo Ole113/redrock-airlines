@@ -4,6 +4,12 @@ body {
 	color: #777;
 }
 
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 p {
 	font-family: "Lato", "Arial", sans-serif;
 }
@@ -15,31 +21,118 @@ h1, h5 {
 /**************
 	Navbar
 **************/
-.navbar-custom {
-	z-index: 2;
-	background-color: rgba(212, 212, 212, 0) !important;
-	margin-top: 2%;
-	position: absolute;
-	top: 2%;
-	width: 100%;
+/*desktops*/
+@media (min-width: 993px) {
+	.navbar-custom {
+		z-index: 2;
+		background-color: rgba(212, 212, 212, 0) !important;
+		margin-top: 2%;
+		position: absolute;
+		top: 2%;
+		width: 100%;
+	}
+
+	#hamburgerMainItems {
+		margin-right: 4%;
+		display: inline-block;
+		position: absolute;
+		right: 16%;
+	}
+
+	#hamburgerMainItems button {
+		padding: 10px;
+	}
+
+	#hamburgerImage {
+		width: 55px;
+		height: 40px;
+	}
+}
+/*phones*/
+@media (max-width: 992px) {
+	.navbar-custom {
+		z-index: 2;
+		background-color: rgba(212, 212, 212, 0) !important;
+		position: absolute;
+		top: 2%;
+		width: 100%;
+	}
+
+	.navbar-custom span {
+		color: white;
+		z-index: 1;
+		font-size: 19px;
+	}
+
+	#hamburgerMainItems {
+		display: none;
+	}
+
+	#hamburgerImage {
+		width: 40px;
+		height: 25px;
+	}
 }
 
 /* navbar when scrolling */
-.navbar-expand-lg {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 3;
+@media (min-width: 993px) {
+	.navbar-expand-lg a img {
+		width: 55px;
+		height: 40px;
+	}
+	
+	.navbar-expand-lg div li div {
+		width: 190px;
+		height: 120px;
+	}
+
+	.navbar-expand-lg {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+		-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+		box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	}
+
+	.nav-item i {
+		display: none;
+	}
+
+	.nav-item hr {
+		display: none;
+	}
 }
 
-.navbar-expand-lg a img {
-	width: 55px;
-	height: 40px;
+@media (max-width: 992px) {
+	.navbar-expand-lg a img {
+		width: 55px;
+		height: 40px;
+	}
+	
+	.navbar-expand-lg div li div {
+		width: 170px;
+		height: 100px;
+	}
+
+	.navbar-expand-lg {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+		-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+		box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	}
+
+	.nav-item i {
+		vertical-align: bottom;
+		font-size: 25px !important;
+		padding-right: 8px;
+	}
 }
 
-.navbar-expand-lg form {
-	width: 200px;
-}
 
 /***************
 	Navbar End
@@ -54,22 +147,6 @@ h1, h5 {
 	color: white;
 	font-size: 45px;
 }
-
-#hamburgerImage {
-	width: 55px;
-	height: 40px;
-}
-
-#hamburgerMainItems {
-	display: inline-block;
-	position: absolute;
-	right: 16%;
-}
-
-#hamburgerMainItems button {
-	padding: 10px;
-}
-
 /******************
 	Hamburger End
 ******************/
@@ -166,8 +243,8 @@ h1, h5 {
 }
 
 #sliderCompany {
-	font-weight: bolder;
-	color: #bfbfbf;
+	font-weight: 600;
+	color: #4d4d4d;
 	text-align: center;
 }
 
@@ -178,21 +255,21 @@ h1, h5 {
 /****************
 	Infos
 *****************/
-
-#bookingInfo {
+#bookingInfoWrapper {
+	position: relative;
 	width: 100%;
-	float: left;
-	padding-left: 20%;
-	padding-right: 20%;
-	padding-top: 10%;
-	overflow: auto;
+	text-align: center;
 }
 
-#bookingImage {
-	padding-right: 60px;
-	width: 45%;
-	height: 65%;
-	float: left;
+#bookingInfoWrapper img, #bookingInfoText {
+	display: inline-block;
+	width: 30%;
+	margin-top: 7%;
+	margin-bottom: 8%;
+}
+
+#bookingInfoText {
+	padding-left: 2%;
 }
 
 #wrapperCards {
@@ -203,10 +280,16 @@ h1, h5 {
 
 .card {
 	display: inline-block;
-	width: 600px;
+	width: 30%;
 	margin-top: 7%;
 	margin-bottom: 8%;
+	/*
+	-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	*/
 }
+
 /*************
 	Infos End
 **************/
@@ -246,13 +329,6 @@ h1, h5 {
 /***************
 	Parallax
 ****************/
-body,
-html {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
 .parallax {
 	background-image: url("/images/arches-picture.jpg");
 	height: 100%;

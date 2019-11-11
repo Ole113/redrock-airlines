@@ -27,11 +27,11 @@
     <div class="parallax"></div>
 
     <nav class="navbar navbar-custom">
-        <a style="padding-left: 30px" class="navbar-brand">
+        <a class="navbar-brand">
             <img id="hamburgerImage" alt="company logo" src="/images/red-rock-logo.png" />
-            &nbsp;<span style="color: white; z-index: 1;">Red Rock Airlines</span>
+            &nbsp;<span style = "color: white;">Red Rock Airlines</span>
 
-            <div id="hamburgerMainItems" style="margin-right: 3%;">
+            <div id="hamburgerMainItems">
                 <a style="margin-right: 30px;" href="/scripts/bookTest.php" class="btn btn-primary">BOOK</a>
                 <a href="schedules.html" class="btn btn-primary">SCHEDULES</a>
             </div>
@@ -40,30 +40,80 @@
     </nav>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a style="padding-left: 30px" class="navbar-brand">
-            <a class="navbar-brand" href="home.html">
-                <img alt="Brand" src="/images/favicon/favicon.ico">
-            </a>
+        <a class="navbar-brand" href="home.html">
+            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico">&nbsp;<span
+                style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">Red Rock Airlines</span>
         </a>
-        &nbsp;&nbsp;&nbsp;<span style="color: #1c1c1c; z-index: 1;">Red Rock Airlines</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="#">
+                        <i class="material-icons">
+                            home
+                        </i>
+                        <span class = "home-icon">Home</span>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/schedules.html">
+                        <i class="material-icons">
+                            schedule
+                        </i>
+                        Schedules
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/schedules.html">
+                        <i class="material-icons material-airplane">
+                            airplanemode_active
+                        </i>
+                        Frequent Flyer
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/schedules.html">
+                        <i class="material-icons">
+                            work
+                        </i>
+                        Jobs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/schedules.html">
+                        <i class="material-icons">
+                            question_answer
+                        </i>
+                        FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/schedules.html">
+                        <i class="material-icons">
+                            help_outline
+                        </i>
+                        Contact
+                    </a>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>
-
-        <form>
-            <i class="material-icons">search</i>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
-
+                    <hr />
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/html/privacy.html">Privacy Policy</a>
+                        <a class="dropdown-item" href="/html/terms.html">Terms & Conditions</a>
+                        <a class="dropdown-item" href="/html/about.html">About Us</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div id="slideout">
@@ -75,8 +125,7 @@
             <br />
             <br />
             <div id="sliderCompany">
-                <img style="z-index: 1;" id="slideoutImage" src="/images/grey-favicon-removebg-preview.png"
-                    alt="company image" />
+                <img style="z-index: 1;" id="slideoutImage" src="/images/red-rock-logo.png" alt="company image" />
                 &nbsp;Red Rock Airlines
             </div>
             <br />
@@ -151,31 +200,42 @@
     </div>
 -->
     <!--Make the buttons fade/red rock colors fade maybe-->
-    <div id="bookingInfo">
-        <img id="bookingImage" alt="plane in sky" src="/images/airplane-skyscrapers.jpg" />
-        <h1>Book your dream vacation now</h1>
+    <div id="bookingInfoWrapper">
+        <img style="vertical-align: top;" id="bookingImage" alt="plane in sky" src="/images/airplane-skyscrapers.jpg" />
+        <div id="bookingInfoText">
+
+            <h3 style="font-weight: 700;">Book your dream vacation now</h3>
+            <br />
+            <br />
+            <p style="font-size: 20px;">
+                Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
+                nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
+                lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
+                nascetur.
+            </p>
+            <br />
+            <br />
+            <p style="font-size: 20px;">
+                Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
+                nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
+                fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
+                quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
+                odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
+                enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
+                consequat leo ut.
+            </p>
+
+            <a style="float: left;" href="book.html" class="btn btn-primary">Book Now</a>
+        </div>
         <br />
-        <p>
-            Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
-            nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
-            lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
-            nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
-            nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
-            fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
-            quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
-            odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
-            enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
-            consequat leo ut.
-        </p>
-        <br />
-        <a href="book.html" class="btn btn-primary">Book Now</a>
     </div>
 
     <div id="wrapperCards">
-        <div id="frequentInfo" class="card" style="margin-right: 7.5%;">
+        <div class="card" style="margin-right: 7.5%;">
             <img src="/images/main-airport.jpeg" class="card-img-top" alt="plane passenger">
             <div class="card-body">
                 <h5 class="card-title">Our Frequent Flyers</h5>
+                <hr />
                 <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
                     Sagittis in
                     nullam imperdiet
@@ -189,10 +249,11 @@
                 <a href="frequent.html" class="btn btn-primary">Join Today</a>
             </div>
         </div>
-        <div id="jobInfo" class="card">
+        <div class="card">
             <img src="/images/airplane-window-sunset.jpg" class="card-img-top" alt="sunset from airplane">
             <div class="card-body">
                 <h5 class="card-title">Career Opportunities</h5>
+                <hr />
                 <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
                     Sagittis in
                     nullam imperdiet
@@ -226,7 +287,7 @@
 
     <footer>
         <div style="text-align: center;" class="footerPart" id="company">
-            <img style="z-index: 1;" id="hamburgerImage" src="/images/grey-favicon-removebg-preview.png"
+            <img style="z-index: 1;" src="/images/grey-favicon-removebg-preview.png"
                 alt="company image" />
             &nbsp;&nbsp;&nbsp;<span style="font-weight: bolder; font-size: 25px;">Red Rock Airlines</span>
             <br />
