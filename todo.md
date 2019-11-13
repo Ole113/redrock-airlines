@@ -42,8 +42,8 @@
    depending on amount of text for booking, schedules ...
    In nav bar make active color not pure black
    Material icons next to text is not equal when screen becomes smaller.
-
-
+   When having slideout out and changing screen size the x button is unclickable.
+   Animation deley on main text image is not deleyed.
 
 
 

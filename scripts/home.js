@@ -25,7 +25,7 @@ function slideout() {
 		} else if(window.innerWidth < 992 && window.innerWidth > 450) {
 			$("#slideout").animate({ width: "35%" }, 500);
 		} else {
-			$("#slideout").animate({ width: "16%" }, 500);
+			$("#slideout").animate({ width: "18%" }, 500);
 			$(".navbar-custom").show();
 		}
 

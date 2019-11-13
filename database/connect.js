@@ -1,4 +1,4 @@
-const dbConfigFile = require("./config.json");
+const dbConfigFile = require("./config.json.js");
 
 const mysql = require("mysql");
 

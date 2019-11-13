@@ -25,10 +25,9 @@ h1, h5 {
 @media (min-width: 993px) {
 	.navbar-custom {
 		z-index: 2;
-		background-color: rgba(212, 212, 212, 0) !important;
-		margin-top: 2%;
+		background-color: rgba(212, 212, 212, 0);
 		position: absolute;
-		top: 2%;
+		top: 3%;
 		width: 100%;
 	}
 
@@ -130,6 +129,7 @@ h1, h5 {
 		vertical-align: bottom;
 		font-size: 25px !important;
 		padding-right: 8px;
+		color: red;
 	}
 }
 
@@ -161,25 +161,27 @@ h1, h5 {
 	width: 100%;
 }
 
-#mainImageElementWrapper {
-	position: relative
+.mainImageElement {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 60%;
+	-ms-transform: translateY(-60%);
+	transform: translateY(-60%);
+}
+
+.mainImageItem {
+	display: inline-block;
+	font-size: 20px;
+	width: 30%;
+	color: white;
+	text-align: left;
 }
 
 .mainImageElement h1 {
-    width: 600px;
-	float:left;
 	color: white;
-	font-weight: 800;
+	font-size: 60px;
 }
-.mainImageElement form {
-	width: 30%;
-	float: left;
-	background-color: white;
-	padding: 4.5%;
-	color: #1c1c1c;
-}
-
-
 /************************
 	Main Image Items End
 ************************/
@@ -283,11 +285,9 @@ h1, h5 {
 	width: 30%;
 	margin-top: 7%;
 	margin-bottom: 8%;
-	/*
 	-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-	*/
 }
 
 /*************
@@ -330,7 +330,7 @@ h1, h5 {
 	Parallax
 ****************/
 .parallax {
-	background-image: url("/images/arches-picture.jpg");
+	background-image: url("/images/favicon/tessss.jpeg");
 	height: 100%;
 	background-attachment: fixed;
 	background-position: center;
@@ -380,3 +380,8 @@ footer {
 	background-color: red;
 }
 */
+
+.btn {
+	background-color: red;
+	border: 0;
+}
