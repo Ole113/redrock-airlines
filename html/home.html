@@ -30,13 +30,7 @@
     <nav class="navbar navbar-custom">
         <a class="navbar-brand">
             <img id="hamburgerImage" alt="company logo" src="/images/red-rock-logo.png" />
-            &nbsp;<span style="color: white; font-size: 25px; font-weight: 700px;
-">Red Rock Airlines</span>
-
-            <div id="hamburgerMainItems">
-                <a style="margin-right: 25px;" href="/scripts/bookTest.php" class="btn btn-primary">BOOK</a>
-                <a href="schedules.html" class="btn btn-primary">SCHEDULES</a>
-            </div>
+            &nbsp;<span style="color: white; font-weight: 700px;">Red Rock Airlines</span>
         </a>
         <i id="hamburgerButton" class="material-icons">menu</i>
     </nav>
@@ -171,48 +165,24 @@
         </div>
     </div>
 
-        <div class="mainImageElement">
-            <h1 class="animated fadeInDown" id="mainImageText">PLACES TO FIND WITH CONVENIENCE IN MIND</h1>
-            <div class="mainImageItem" style = "padding-left: 5%;">
-                <p>
-                    Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam
-                    imperdiet
-                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
-                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
-                    nascetur.
-                </p>
-                <a href="schedules.html" class="btn btn-primary">BOOK</a>
-            </div>
-            <div class="mainImageItem" style = "padding-right: 5%;padding-left: 3%;">
-                <p>
-                    Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam
-                    imperdiet
-                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
-                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
-                    nascetur.
-                </p>
-                <a href="schedules.html" class="btn btn-primary">SCHEDULES</a>
-            </div>
+    <div class="mainImageElement">
+        <h1 class="animated fadeInDown" id="mainImageText">PLACES TO FIND WITH CONVENIENCE IN MIND</h1><br /><br />
+            <a style = "margin-right: 1.5%;" href="schedules.html" class="btn btn-primary">BOOK</a>
+            <a style = "margin-left: 1.5%;" href="schedules.html" class="btn btn-primary">SCHEDULES</a>
+    </div>
 
-        </div>
-
-    <!--Make the buttons fade/red rock colors fade maybe-->
     <div id="bookingInfoWrapper">
         <img style="vertical-align: top;" id="bookingImage" alt="plane in sky" src="/images/airplane-skyscrapers.jpg" />
         <div id="bookingInfoText">
 
-            <h3 style="font-weight: 700;">Book your dream vacation now</h3>
-            <br />
-            <br />
-            <p style="font-size: 20px;">
+            <h3 class="bookingInfoTextElement" style="font-weight: 700;">Book your dream vacation now</h3>
+            <p class="bookingInfoTextElement">
                 Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
                 nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
                 lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
                 nascetur.
             </p>
-            <br />
-            <br />
-            <p style="font-size: 20px;">
+            <p class="bookingInfoTextElement">
                 Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
                 nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
                 fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
@@ -221,8 +191,7 @@
                 enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
                 consequat leo ut.
             </p>
-
-            <a style="float: left;" href="book.html" class="btn btn-primary">Book Now</a>
+            <a style="float: middle" href="book.html" class="btn btn-primary">Book Now</a>
         </div>
         <br />
     </div>
@@ -327,7 +296,6 @@
 
     </footer>
 
-    <!--Makes it so theres no flickering-->
     <script>
         $(".navbar-expand-lg").hide();
         $("#slideoutButtons").hide();    

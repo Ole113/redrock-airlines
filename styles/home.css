@@ -31,17 +31,6 @@ h1, h5 {
 		width: 100%;
 	}
 
-	#hamburgerMainItems {
-		margin-right: 4%;
-		display: inline-block;
-		position: absolute;
-		right: 16%;
-	}
-
-	#hamburgerMainItems button {
-		padding: 10px;
-	}
-
 	#hamburgerImage {
 		width: 55px;
 		height: 40px;
@@ -170,17 +159,36 @@ h1, h5 {
 	transform: translateY(-60%);
 }
 
-.mainImageItem {
+.mainImageElement a {
 	display: inline-block;
 	font-size: 20px;
-	width: 30%;
 	color: white;
 	text-align: left;
+	font-size: 1.1vw;
+	padding: 1%;
+	border-radius: 10%;
+}
+
+@media (max-width: 600px) and (min-width: 0) {
+	.mainImageElement a {
+		padding: 3%;
+		font-size: 2.5vw;
+		border-radius: 10%;
+	}
+}
+
+@media (max-width: 1500px) and (min-width: 601px)  {
+	.mainImageElement a {
+		padding: 2%;
+		border-radius: 10%;
+		font-size: 2vw;
+	}
 }
 
 .mainImageElement h1 {
 	color: white;
-	font-size: 60px;
+	padding: 0 5% 0 5%;
+	font-size: 5vw;
 }
 /************************
 	Main Image Items End
@@ -200,9 +208,7 @@ h1, h5 {
 
 .close {
 	float: left;
-	margin: 2.5% 0 0 2.5%;
 }
-
 .material-airplane {
 	-webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -257,22 +263,53 @@ h1, h5 {
 /****************
 	Infos
 *****************/
-#bookingInfoWrapper {
-	position: relative;
-	width: 100%;
-	text-align: center;
+@media (max-width: 1760px) {
+	#bookingInfoWrapper {
+		width: 100%;
+		text-align: center;
+	}
+	
+	#bookingInfoWrapper img, #bookingInfoText {
+		display: inline-block;
+		width: 30%;
+		margin-top: 7%;
+		margin-bottom: 8%;
+	}
+	
+	.bookingInfoTextElement {
+		padding-left: 3%;
+		font-size: 20px;
+		font-size: 1.1vw;
+		
+	}
+
+	#bookingInfoText a {
+		font-size: 1.1vw;
+	}
+ 
 }
 
-#bookingInfoWrapper img, #bookingInfoText {
-	display: inline-block;
-	width: 30%;
-	margin-top: 7%;
-	margin-bottom: 8%;
+@media (min-width: 1761px) {
+	#bookingInfoWrapper {
+		position: relative;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#bookingInfoWrapper img, #bookingInfoText {
+		display: inline-block;
+		width: 30%;
+		margin-top: 7%;
+		margin-bottom: 8%;
+	}
+	
+	.bookingInfoTextElement {
+		padding-left: 3%;
+		font-size: 50px;
+		font-size: 1.2vw;
+	}
 }
 
-#bookingInfoText {
-	padding-left: 2%;
-}
 
 #wrapperCards {
 	position: relative;
@@ -288,6 +325,11 @@ h1, h5 {
 	-webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	font-size: 1.1vw;
+}
+
+.card h1 {
+	font-size: 1.1vw;
 }
 
 /*************
