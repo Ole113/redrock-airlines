@@ -4,12 +4,9 @@
    make sure the fonts at specific spots is correct
    when you scroll down the navbar changes to gray and stays fixed top. when at top of main page it becomes clear.(position: fixed;)
    Use boostrap input for booking credit card info etc..
-   Get beter images for main page frequent and job card images that correlate better.
-   Add box shadow to cards
    Change font, in slideshow make sure its know that is a "safe web font"
    Once booked posibly use https://getbootstrap.com/docs/4.3/components/toasts/
    when booking flights make more expensive booking blue button(less expensive just blue outline)
-   https://github.com/sidorares/node-mysql2 for mysql driver 
    Make sure to specify when all the departing/arrival times in what time zone they are.
    For flight DB maybe add different prices for basic, First class, different # of seats for basic/first. Add if its round way, if round way make it cheaper. Add cents to prices.
    Add around 10-15 more flights to various airports.
@@ -44,7 +41,9 @@
    Material icons next to text is not equal when screen becomes smaller.
    When having slideout out and changing screen size the x button is unclickable.
    Animation deley on main text image is not deleyed.
-
-
-
-    Current good size: 992x800
+   Change button hover
+   fix x button on slideout when changing size and other stuff
+   Make sure all buttons have pointer
+   Make sure home in nav isnt too close.
+   Fix slideout icon size when window gets smaller
+   Iphone 4 size
