@@ -47,3 +47,7 @@
    Make sure home in nav isnt too close.
    Fix slideout icon size when window gets smaller
    Iphone 4 size
+   see if can add padding to close button slider
+   bug when changing image size and clicking hamburger
+   change image names and organize by file
+   rename css class names from camel case

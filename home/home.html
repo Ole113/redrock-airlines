@@ -20,7 +20,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles/home.css">
     <script src="/scripts/home.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
 
@@ -28,7 +29,7 @@
     <div class="parallax"></div>
 
     <nav class="navbar navbar-custom">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href = "home.html">
             <img id="hamburgerImage" alt="company logo" src="/images/red-rock-logo.png" />
             &nbsp;<span style="color: white; font-weight: 700px;">Red Rock Airlines</span>
         </a>
@@ -37,8 +38,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home.html">
-            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico">&nbsp;<span
-                style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">Red Rock Airlines</span>
+            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
+                style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock Airlines</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -102,10 +103,11 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         More
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/html/privacy.html">Privacy Policy</a>
-                        <a class="dropdown-item" href="/html/terms.html">Terms & Conditions</a>
-                        <a class="dropdown-item" href="/html/about.html">About Us</a>
+                    <div class="dropdown-menu dropdown-menu-nav" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="info.html#privacy-policy">Privacy Policy</a>
+                        <a class="dropdown-item" href="info.html#terms-and-conditions">Terms & Conditions</a>
+                        <a class="dropdown-item" href="info.html#about">About Us</a>
+                        <a class = "dropdown-item" href = "info.html#faq">FAQs</a>
                     </div>
                 </li>
             </ul>
@@ -121,41 +123,41 @@
             <br />
             <br />
             <div id="sliderCompany">
-                <img style="z-index: 1;" id="slideoutImage" src="/images/red-rock-logo.png" alt="company image" />
+                <a href = "home.html"><img style="z-index: 1;" id="slideoutImage" src="/images/red-rock-logo.png" alt="company image" /></a>
                 &nbsp;Red Rock Airlines
             </div>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons">
                     home
                 </i>Home
             </button>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons">
                     schedule
                 </i>Schedules
             </button>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons material-airplane">
                     airplanemode_active
                 </i>Frequent Flyer
             </button>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons">
                     work
                 </i>Jobs
             </button>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons">
                     question_answer
                 </i>FAQs
             </button>
             <br />
-            <button onclick="location.href='schedules.html'" type="button">
+            <button class="slideout-button" onclick="location.href='schedules.html'" type="button">
                 <i class="material-icons">
                     help_outline
                 </i>Contact
@@ -167,81 +169,65 @@
                     aria-haspopup="true" aria-expanded="false">
                     More<span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a href="/html/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/html/terms.html">Terms & Conditions</a></li>
-                    <li><a href="/html//about.html">About Us</a></li>
+                <ul class="dropdown-menu dropdown-menu-slideout">
+                    <li><a href="info.html#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="info.html#terms-and-conditions">Terms & Conditions</a></li>
+                    <li><a href="info.html#about">About Us</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 
     <div class="mainImageElement">
-        <h1 class="animated fadeInDown" id="mainImageText">ADVENTURE NEVER FELT SO CONVENIENT</h1><br /><br />
+        <h1 class="animated fadeInDown" id="mainImageText" style="font-family: 'Abel', sans-serif;
+        ">ADVENTURE NEVER FELT SO CONVENIENT</h1><br /><br />
         <a style="margin-right: 1.5%;" href="schedules.html" class="btn btn-primary">BOOK</a>
         <a style="margin-left: 1.5%;" href="schedules.html" class="btn btn-primary">SCHEDULES</a>
     </div>
 
     <div id="bookingInfoWrapper">
-        <img style="vertical-align: top;" id="bookingImage" alt="plane in sky" src="/images/airplane-skyscrapers.jpg" />
+        <img style="vertical-align: top;" id="bookingImage" alt="plane in sky" src="/images/landing/airplane-skyscrapers.jpg" />
         <div id="bookingInfoText">
 
-            <h3 class="bookingInfoTextElement" style="font-weight: 700;">Book your dream vacation now</h3>
-            <p class="bookingInfoTextElement">
-                Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque. Sagittis in nullam imperdiet
-                nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit vitae
-                lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh lectus
-                nascetur.
-            </p>
-            <p class="bookingInfoTextElement">
-                Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper mauris
-                nunc laoreet tristique. Convallis lacus nunc lorem urna orci. Nunc condimentum ante tempus sed tincidunt
-                fusce. Ultrices justo, semper pretium tortor itaque, eleifend ut sit nec condimentum sed est, amet
-                quisque nascetur urna semper turpis dolor, quisque tortor id eu tincidunt enim. Fringilla ullamcorper
-                odio vel odio, eu aliquam nascetur, quis urna et, orci quisque ante curabitur, in labore nulla cillum
-                enim amet. In dolor nulla, donec nostra at curabitur sodales pharetra praesent. Vel aliquam sed
-                consequat leo ut.
+            <h3 class="bookingInfoTextElement" style="font-weight: 700; font-size: 20px;">Book your dream vacation now
+            </h3>
+            <br />
+            <p class="bookingInfoTextElement bookingParaOne">
+                Red Rock Airlines provides access to world class locations in the Western United States.
+                We strive to bring you the best flight possible along with incredible prices.
             </p>
             <a style="float: middle" href="book.html" class="btn btn-primary">Book Now</a>
+            <br /><br />
+            <p class="bookingInfoTextElement bookingParaTwo">
+                Still deciding where to travel? Red Rock Airlines provides access to world class locations in the
+                Western United States.
+                We strive to bring you the best flight possible along with incredible prices.Red Rock Airlines
+                provides access to world class locations in the Western United States.
+                We strive to bring you the best flight possible along with incredible prices.
+            </p>
+            <a style="float: middle" href="book.html" class="btn btn-primary">Schedules</a>
+            <br />
         </div>
         <br />
     </div>
 
     <div id="wrapperCards">
         <div class="card">
-            <img src="/images/main-airport.jpeg" class="card-img-top" alt="plane passenger">
+            <img src="/images/landing/main-airport.jpeg" class="card-img-top" alt="plane passenger">
             <div class="card-body">
                 <h5 class="card-title">Our Frequent Flyers</h5>
                 <hr />
-                <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
-                    Sagittis in
-                    nullam imperdiet
-                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam, sit
-                    vitae
-                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh
-                    lectus
-                    nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa, ullamcorper
-                    mauris
-                    nunc laoreet tristique.</p>
+                <p class="card-text">Our most loyal customers enjoy amazing benefits and opportunities of a lifetime.
+                </p>
                 <a href="frequent.html" class="btn btn-primary">Join Today</a>
             </div>
         </div>
         <div class="card">
-            <img src="/images/airplane-window-sunset.jpg" class="card-img-top" alt="sunset from airplane">
+            <img src="/images/landing/airplane-window-sunset.jpg" class="card-img-top" alt="sunset from airplane">
             <div class="card-body">
                 <h5 class="card-title">Career Opportunities</h5>
                 <hr />
-                <p class="card-text">Lorem ipsum dolor sit amet, lacus hymenaeos erat accumsan mauris cumque.
-                    Sagittis in
-                    nullam imperdiet
-                    nulla habitasse, natoque odio, urna placerat nec eros nullam integer. Pharetra urna quam,
-                    sit vitae
-                    lectus. Eu nec lectus nisl purus mi proin, et dui nec feugiat quam, mus pretium nullam nibh
-                    lectus
-                    nascetur. Nec non in varius, metus nunc, nibh vel in nec pellentesque nunc massa,
-                    ullamcorper mauris
-                    nunc laoreet tristique.</p>
+                <p class="card-text"></p>
                 <a href="job.html" class="btn btn-primary">Apply Today</a>
             </div>
         </div>
@@ -284,19 +270,18 @@
             </p>
         </div>
     </div>-->
-    <footer>
+    <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
-            <img style="z-index: 1; width: 15%; height: 15%;" src="/images/grey-favicon-removebg-preview.png"
-                alt="company image" />
-            &nbsp;&nbsp;&nbsp;<span style="font-weight: bolder; font-size: 25px;">Red Rock Airlines</span>
+            <a href = "home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
             <br />
             <br />
             <br />
             <br />
             <br />
         </div>
-        <div class="footerPart" id="mediaHolder">
-            <h5 style="font-weight: bolder;">Visit Us</h5>
+        <div style="text-align: center;" class="footerPart">
+            <h5>Visit Us</h5>
             <br />
             <a href="https://facebook.com/redrockairlines">Facebook</a> <br />
             <a href="https://twitter.com/redrockairlines">Twitter</a> <br />
@@ -307,7 +292,7 @@
         </div>
 
         <div class="footerPart" id="scheduleBookHolder">
-            <h5 style="font-weight: bolder;">Booking & Schedules</h5>
+            <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
             <br />
             <a href="book.html">Book a flight</a> <br />
             <a href="schedules.html">Flight Schedules</a>
@@ -318,22 +303,54 @@
         </div>
 
         <div class="footerPart" id="learnMoreHolder">
-            <h5 style="font-weight: bolder;">Learn More</h5>
+            <br />
+            <h5>Learn More</h5>
             <br />
             <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
-            <a href="privacy.html">Privacy Policy</a> <br />
-            <a href="terms.html">Terms & Conditions</a> <br />
+            <a href="info.html#privacy-policy">Privacy Policy</a> <br />
+            <a href="info.html#terms-and-conditions">Terms & Conditions</a> <br />
             <a href="job.html">Jobs</a> <br />
-            <a href="about.html">About Red Rock Airlines</a> <br />
-            <a href="about.html#faq">FAQs</a>
+            <a href="info.html#about">About Red Rock Airlines</a> <br />
+            <a href="info.html#faq">FAQs</a>
         </div>
 
+    </footer>
+
+    <footer class="small-footer">
+        <br />
+        <div class="footer-part-small">
+            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
+        </div>
+        <div class="footer-part-small">
+            <h5>Visit Us</h5>
+            <a href="https://facebook.com/redrockairlines">Facebook</a>&nbsp;&nbsp;
+            <a href="https://twitter.com/redrockairlines">Twitter</a>&nbsp;&nbsp;
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+        </div>
+
+        <div class="footer-part-small" id="scheduleBookHolder">
+            <h5>Booking & Schedules</h5>
+            <a href="book.html">Book a flight</a>&nbsp;&nbsp;
+            <a href="schedules.html">Flight Schedules</a>
+        </div>
+
+        <div class="footer-part-small" id="learnMoreHolder">
+            <h5>Learn More</h5>
+            <a href="mailto:redrockairlines@help.com">Contact Us</a>&nbsp;&nbsp;
+            <a href="info.html#privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;
+            <a href="job.html">Jobs</a>&nbsp;&nbsp;
+            <a href="info.html#about">About Red Rock Airlines</a>&nbsp;&nbsp;
+            <a href="info.html#faq">FAQs</a>
+        </div>
     </footer>
 
     <script>
         $(".navbar-expand-lg").hide();
         $("#slideoutButtons").hide();    
     </script>
+
 </body>
 
 </html>

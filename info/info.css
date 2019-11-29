@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #777;
+    position: relative;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+h1,
+h5 {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/***********
+	Footer
+************/
+.large-footer {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    width: 100%;
+    height: 350px;
+    background-color: #f2f2f2;
+    font-size: 15px;
+}
+
+.small-footer {
+    background-color: #f2f2f2;
+}
+
+.footerPart a {
+    color: #1c1c1c;
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+    .footerPart span {
+        font-size: 20px;
+    }
+
+    .large-footer {
+        display: none;
+    }
+
+    .small-footer img {
+        width: 8%;
+        height: 8%;
+    }
+}
+
+@media (max-width: 600px) {
+    .small-footer img {
+        width: 16%;
+        height: 16%;
+    }
+
+    .large-footer {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px) {
+    .footerPart span {
+        font-size: 30px;
+    }
+
+    .small-footer {
+        display: none;
+    }
+
+    .small-footer {
+        width: 7.5%;
+        height: 7.5%;
+    }
+}
+
+.footerPart h5 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footerPart img {
+    width: 25%;
+    height: 25%;
+}
+
+.footerPart span {
+    color: #bfbfbf;
+    font-weight: bolder;
+}
+
+.footerPart {
+    width: 25%;
+}
+
+.footerPart:nth-child(1) {
+    padding: 0 2.5% 0 2.5%;
+}
+
+.small-footer a {
+    display: inline-block;
+}
+
+.footer-part-small {
+    padding: 2% 0 3.5% 5%;
+}
+
+.footer-part-small a {
+    color: #bfbfbf;
+}
+
+.footerPart h5 {
+    font-size: 15px;
+    color: #1c1c1c;
+}
+
+/**************
+	Footer End
+***************/
+
+/**************
+	Navbar
+**************/
+/* navbar when scrolling */
+@media (min-width: 992px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg div li div {
+        width: 190px;
+        height: 145px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-item i {
+        display: none;
+    }
+
+    .nav-item hr {
+        display: none;
+    }
+
+    .home-icon {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu-nav {
+        padding: 1.2% 1.2% 1.2% 1%;
+        width: 200px;
+    }
+
+    .dropdown-menu-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-item i {
+        vertical-align: bottom;
+        font-size: 25px !important;
+        padding-right: 8px;
+    }
+
+    .home-icon {
+        padding-left: 0;
+    }
+}
+
+/***************
+	Navbar End
+***************/
+
+/****************
+    Infos Start
+****************/
+
+ul.nav-pills {
+    position: fixed;
+    margin-left: 2%;
+}
+
+.nav-link {
+    color: red;
+}
+
+.nav-link:hover {
+    color: #cc0008;
+}
+
+.nav-pills .nav-link.active {
+    background-color: red;
+}
+
+@media (max-width: 1200px) {
+    ul.nav-pills {
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 800px) {
+    ul.nav-pills {
+        margin-top: 1%;
+    }
+}
+
+@media (min-width: 800px) {
+
+}
+
+div.col-8 div {
+    padding-right: 5%;
+}
+
+#wrapper {
+    margin-top: 5%;
+}
+
+.element-text a {
+    color: red;
+}
+
+.element-text h1, .element-text h2, .element-text h3, .element-text h4, .element-text h5, .element-text h6 {
+    font-weight: 700;
+}
+
+/****************
+    Infos End
+****************/
