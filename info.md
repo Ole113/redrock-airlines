@@ -46,7 +46,7 @@
   https://about.twitter.com/en_us/company/brand-resources.html
   https://en.instagram-brand.com/assets/icons
   https://www.pexels.com/photo/canyon-arizona-1672813/
-  Animate the landing page main text using https://daneden.github.io/animate.css/ fadeInDown. Animation similar to career website theme.
+  Animate the home page main text using https://daneden.github.io/animate.css/ fadeInDown. Animation similar to career website theme.
   https://pixabay.com/photos/terminal-airport-terminal-airport-1210006/
   https://www.pexels.com/photo/plane-trail-1366870/
   https://www.pexels.com/photo/view-of-airliner-wing-above-the-clouds-2147486/

@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -25,8 +24,8 @@ h5 {
 	Parallax
 ****************/
 .parallax {
-    background-image: url("/images/frequent/airport-silo.jpeg");
-    height: 100%;
+    background-image: url("/images/cooling-tower-4210918.jpg");
+    height: 65%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,6 +35,89 @@ h5 {
 /****************
 	Parallax End
 *****************/
+
+/**************
+	Navbar
+**************/
+@media (min-width: 992px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg div li div {
+        width: 190px;
+        height: 145px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-item i {
+        display: none;
+    }
+
+    .nav-item hr {
+        display: none;
+    }
+
+    .home-icon {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg div li div {
+        width: 190px;
+        height: 145px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu-nav {
+        padding: 1.2% 1.2% 1.2% 1%;
+        width: 200px;
+    }
+
+    .dropdown-menu-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-item i {
+        vertical-align: bottom;
+        font-size: 25px !important;
+        padding-right: 8px;
+    }
+
+    .home-icon {
+        padding-left: 0;
+    }
+}
+
+
+/***************
+	Navbar End
+***************/
 
 /***********
 	Footer
@@ -143,82 +225,4 @@ h5 {
 
 /**************
 	Footer End
-***************/
-
-/**************
-	Navbar
-**************/
-/* navbar when scrolling */
-@media (min-width: 992px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg div li div {
-        width: 190px;
-        height: 120px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-item i {
-        display: none;
-    }
-
-    .nav-item hr {
-        display: none;
-    }
-
-    .home-icon {
-        padding-left: 25px;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown-menu-nav {
-        padding: 1.2% 1.2% 1.2% 1%;
-        width: 200px;
-    }
-
-    .dropdown-menu-nav a:hover {
-        text-decoration: underline;
-    }
-
-    .nav-item i {
-        vertical-align: bottom;
-        font-size: 25px !important;
-        padding-right: 8px;
-    }
-
-    .home-icon {
-        padding-left: 0;
-    }
-}
-
-/***************
-	Navbar End
 ***************/

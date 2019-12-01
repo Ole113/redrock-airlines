@@ -24,14 +24,13 @@ h5 {
 	Parallax
 ****************/
 .parallax {
-    background-image: url("/images/landing/main-image.jpeg");
+    background-image: url("/images/home/main-image.jpeg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /****************
 	Parallax End
 *****************/
@@ -90,7 +89,7 @@ h5 {
 
     .navbar-expand-lg div li div {
         width: 190px;
-        height: 145px;
+        height: 115px;
     }
 
     .navbar-expand-lg {
@@ -122,10 +121,7 @@ h5 {
         height: 40px;
     }
 
-    .navbar-expand-lg div li div {
-        width: 190px;
-        height: 145px;
-    }
+
 
     .navbar-expand-lg {
         position: fixed;
@@ -161,6 +157,7 @@ h5 {
 /***************
 	Navbar End
 ***************/
+
 /******************
 	Hamburger
 ******************/
@@ -456,7 +453,7 @@ h5 {
 /***************** 
   Explore Start
 ******************/
-
+/*
 #explore {
     background-color: #f5f7fa;
     width: 100%;
@@ -480,7 +477,7 @@ h5 {
     height: 65%;
     padding: 4%;
 }
-
+*/
 /***************** 
 	Explore End 
 ******************/

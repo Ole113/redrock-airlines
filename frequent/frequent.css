@@ -1,8 +1,9 @@
-
-body {
+    body {
     margin: 0;
     padding: 0;
     color: #777;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body,
@@ -21,22 +22,181 @@ h5 {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-/***************
-	Parallax
-****************/
-.parallax {
-    background-image: url("/images/frequent/airport-silo.jpeg");
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.btn {
+    background-color: red;
+    border: none;
 }
 
-/****************
-	Parallax End
-*****************/
+.btn:hover {
+    background-color: #cc0000;
+}
+/**************
+	Navbar
+**************/
+@media (min-width: 992px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
 
+    .navbar-expand-lg div li div {
+        width: 190px;
+        height: 115px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-item i {
+        display: none;
+    }
+
+    .nav-item hr {
+        display: none;
+    }
+
+    .home-icon {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu-nav {
+        padding: 1.2% 1.2% 1.2% 1%;
+        width: 200px;
+    }
+
+    .dropdown-menu-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-item i {
+        vertical-align: bottom;
+        font-size: 25px !important;
+        padding-right: 8px;
+    }
+
+    .home-icon {
+        padding-left: 0;
+    }
+}
+
+.material-airplane {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}   
+
+/***************
+	Navbar End
+***************/
+
+/*****************
+    Media Start
+******************/
+.media {
+    padding: 150px 25% 50px 20%;
+}
+
+.media img {
+    width: 70px;
+    height: 50px;
+}
+
+.card {
+    -webkit-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    margin-bottom: 150px;
+}
+
+.card h5 {
+    font-weight: 700;
+}
+
+.navigate-icon {
+    font-size: 48px;
+    vertical-align: -16.5px;
+    color: red;
+}
+
+#explore-title {
+    margin-bottom: 100px;
+    margin-left: 1.5%;
+}
+
+#explore-title h2 {
+    display: inline-block;
+    font-weight: 700;
+
+}
+/*****************
+    Media Start
+******************/
+
+/**********************
+    Main Points Start
+**********************/
+
+#main-points-wrapper {
+    text-align: center; 
+    background-color: #f5f6fa;
+    margin: 5% 0 100px 0;
+    padding: 150px 0 150px 0;
+}
+
+@media (min-width: 631px) {
+    .point:nth-child(1) {
+        padding-right: 10%;
+    }
+    
+    .point:nth-child(3) {
+        padding-left: 10%;
+    }
+
+    .point {
+        display: inline-block;
+        text-align: center;
+    }   
+}
+
+@media (max-width: 630px) {
+    .point {
+        display: block;
+        padding-top: 25px;
+    }
+}
+
+.point i {
+    font-size: 64px;
+}
+/**********************
+    Main Points End
+**********************/
 /***********
 	Footer
 ************/
@@ -144,93 +304,3 @@ h5 {
 /**************
 	Footer End
 ***************/
-
-/**************
-	Navbar
-**************/
-/* navbar when scrolling */
-@media (min-width: 992px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg div li div {
-        width: 190px;
-        height: 120px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-item i {
-        display: none;
-    }
-
-    .nav-item hr {
-        display: none;
-    }
-
-    .home-icon {
-        padding-left: 25px;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown-menu-nav {
-        padding: 1.2% 1.2% 1.2% 1%;
-        width: 200px;
-    }
-
-    .dropdown-menu-nav a:hover {
-        text-decoration: underline;
-    }
-
-    .nav-item i {
-        vertical-align: bottom;
-        font-size: 25px !important;
-        padding-right: 8px;
-    }
-
-    .home-icon {
-        padding-left: 0;
-    }
-}
-
-/***************
-	Navbar End
-***************/
-
-
-
-
-
-
-.navbar-expand-lg div li div {
-    width: 190px;
-    height: 145px;
-}
-
-<a class = "dropdown-item" href = "about.html#faq">FAQs</a>

@@ -51,3 +51,4 @@
    bug when changing image size and clicking hamburger
    change image names and organize by file
    rename css class names from camel case
+   Make it so theres another DB to see if you're a frequent flyer and if you are it lowers the boowking prices.
