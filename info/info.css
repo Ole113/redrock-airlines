@@ -17,10 +17,11 @@ p {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-h1,
-h5 {
+h1, h2, h3, h4, h5, h6 {
+    color: #595959;
     font-family: "Helvetica", "Arial", sans-serif;
 }
+
 
 
 
@@ -85,6 +86,7 @@ h5 {
 
     .dropdown-menu-nav a:hover {
         text-decoration: underline;
+        cursor: pointer;
     }
 
     .nav-item i {
@@ -171,6 +173,24 @@ div.col-8 div {
     font-weight: 700;
 }
 
+.navigate-icon {
+    font-size: 48px;
+    vertical-align: -12px;
+    color: red;
+}
+
+.title {
+    margin-bottom: 100px;
+}
+
+.title h1 {
+    display: inline-block;
+    font-weight: 700;
+}
+
+#sub {
+    padding-left: 4%;
+}
 /****************
     Infos End
 ****************/

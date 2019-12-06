@@ -39,19 +39,31 @@
   Images attribution:
   https://www.pexels.com/photo/low-angle-photography-of-airplane-1157255/
   https://pixabay.com/photos/airplane-window-wing-flight-travel-2619434/
-  https://pixabay.com/photos/architecture-skyscraper-2256489/
   https://pixabay.com/photos/cooling-tower-concrete-perspective-4210918/
-  https://www.pexels.com/photo/low-angle-photo-of-airplane-1154619/
-  https://en.facebookbrand.com/assets/f-logo/
-  https://about.twitter.com/en_us/company/brand-resources.html
-  https://en.instagram-brand.com/assets/icons
-  https://www.pexels.com/photo/canyon-arizona-1672813/
   Animate the home page main text using https://daneden.github.io/animate.css/ fadeInDown. Animation similar to career website theme.
   https://pixabay.com/photos/terminal-airport-terminal-airport-1210006/
   https://www.pexels.com/photo/plane-trail-1366870/
   https://www.pexels.com/photo/view-of-airliner-wing-above-the-clouds-2147486/
   https://www.pexels.com/photo/photo-of-airplanes-at-airport-3140204/
   https://www.pexels.com/photo/aerial-photo-of-crater-lake-2695664/
+https://pixabay.com/photos/airport-vnukovo-plane-terminal-1406162/
+https://pixabay.com/photos/airport-travel-flights-times-690556/
+https://www.pexels.com/photo/airplane-wing-towards-clouds-731217/
 
 
+
+
+https://www.pexels.com/photo/people-inside-commercial-air-plane-1309644/
+
+
+Name
+Email
+Departure Date
+From
+To
+Round trip/one way(radio button)
+Credit card number
+Experation Date
+CVS
+Address
 

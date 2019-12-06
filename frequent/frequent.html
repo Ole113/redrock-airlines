@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/schedules/schedules.html">
+                    <a class="nav-link" href="/schedules/schedules.php">
                         <i class="material-icons">
                             schedule
                         </i>
@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/book/book.html">
+                    <a class="nav-link" href="/book/book.php">
                         <i class="material-icons">
                             book
                         </i>
@@ -113,30 +113,48 @@
         </div>
     </nav>
 
-    <div class="media">
-        <img src="/images/favicon/favicon.ico" class="mr-3" alt="red rock logo">
-        <div class="media-body">
-            <h5 class="mt-0">Our Frequent Flyer Rewards</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-            purus
-            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
-            vulputate
-            fringilla. Donec lacinia congue felis in faucibus.
+    <div id="main-image-holder">
+        <img src="/images/frequent/airport-departures.jpg" alt="airport people walking" />
+    </div>
+
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>Join our Frequent Flyer Program</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
+    </div>
+    
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h1 class="display-4">Red Rock Airline Adventure Miles</h1>
+                    <br /><br />
+                    <h1 class = "display-5">How it works</h1>
+                    <p class="lead">MICHAEL DO THIS(add more h1 tags about important information and then describe it below it There needs to be enough text that the image next to it looks full height) Some Main text</p>
+                    <hr class="my-4">
+                    <p>Some additional information small print</p>
+                </div>
+                <div class="col-sm">
+                    <img src="/images/frequent/airplane-wing-clouds.jpg" alt="airplane window w/ wing">
+                </div>
+            </div>
         </div>
     </div>
+
 
     <div id="main-points-wrapper">
         <div class="point">
             <i class="material-icons-outlined">
                 explore
             </i>
-            <h5>Your miles don't expire</h5>
+            <h5>Points don't expire</h5>
         </div>
         <div class="point">
             <i class="material-icons-outlined">
                 monetization_on
             </i>
-            <h5>It's free to join</h5>
+            <h5>Free to join</h5>
         </div>
         <div class="point">
             <i class="material-icons-outlined">
@@ -147,12 +165,11 @@
     </div>
 
     <div class="container-fluid">
-        <div id="explore-title">
+        <div id="explore-title" style="margin-left: 1.5%;">
             <h2>Explore With Your Rewards</h2>
             <i class="material-icons navigate-icon">
                 navigate_next
             </i>
-
         </div>
         <div class="row">
             <div class="col d-flex align-items-center justify-content-center">
@@ -160,19 +177,24 @@
                     <img src="/images/frequent/walkingArches.jpeg" class="card-img-top" alt="utah arches image">
                     <div class="card-body">
                         <h5 class="card-title">Utah</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">From delightful desert areas to snowy white mountains, Utah has it all. To
+                            the South, adventures are greeted with 5 national parks, Arches, Zion, Bryce Canyon,
+                            Canyonlands, and Capital Reef. In the North, you can ski or snowboard at several different
+                            resorts in the Wasatch Mountains.
+                        </p>
                         <a href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 25rem;">
-                    <img src="/images/frequent/desert-arizona.jpg" class="card-img-top" alt="arizona canyon">
+                    <img src="/images/frequent/arizona-desert.jpg" class="card-img-top" alt="arizona canyon">
                     <div class="card-body">
                         <h5 class="card-title">Arizona</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">This state is home to the massive and jaw-dropping Grand Canyon. The result
+                            of 6 million years of erosion, the vast Grand Canyon is beautiful, daunting and unique. You
+                            can also go sightseeing at Antelope Canyon and Horseshoe Bend.
+                        </p>
                         <a href="https://www.nps.gov/state/az/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -182,8 +204,9 @@
                     <img src="/images/frequent/crater-lake.jpeg" class="card-img-top" alt="crater lake">
                     <div class="card-body">
                         <h5 class="card-title">Oregon</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">Whether you want to see the Pacific Ocean or climb the volcanic Mount Hood,
+                            Oregon will not disappoint. Oregon has a diverse landscape of forests, mountains, farms, and
+                            beaches. </p>
                         <a href="https://www.nps.gov/state/or/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -193,8 +216,10 @@
                     <img src="/images/frequent/wyoming-canyon.jpeg" class="card-img-top" alt="wyoming canyon">
                     <div class="card-body">
                         <h5 class="card-title">Wyoming</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">This state is home to the National Parks, Grand Teton and Yellowstone. Here
+                            you can find amazing landmarks like Old Faithful, the Grand Prismatic Spring, the Teton
+                            Range and Yellowstone Lake.
+                        </p>
                         <a href="https://www.nps.gov/grte/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -226,8 +251,8 @@
         <div class="footerPart" id="scheduleBookHolder">
             <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
             <br />
-            <a href="/book/book.html">Book a flight</a> <br />
-            <a href="/schedules/schedules.html">Flight Schedules</a>
+            <a href="/book/book.php">Book a flight</a> <br />
+            <a href="/schedules/schedules.php">Flight Schedules</a>
             <br />
             <br />
             <br />
@@ -243,7 +268,8 @@
             <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a> <br />
             <a href="/jobs/job.html">Jobs</a> <br />
             <a href="/info/info.html#about">About Red Rock Airlines</a> <br />
-            <a href="/info/info.html#faq">FAQs</a>
+            <a href="/info/info.html#faq">FAQs</a><br />
+            <a href="/info/info.html#credits">Credits</a>
         </div>
 
     </footer>
@@ -263,8 +289,8 @@
 
         <div class="footer-part-small" id="scheduleBookHolder">
             <h5>Booking & Schedules</h5>
-            <a href="/book/book.html">Book a flight</a>&nbsp;&nbsp;
-            <a href="/schedules/schedules.html">Flight Schedules</a>
+            <a href="/book/book.php">Book a flight</a>&nbsp;&nbsp;
+            <a href="/schedules/schedules.php">Flight Schedules</a>
         </div>
 
         <div class="footer-part-small" id="learnMoreHolder">
@@ -274,7 +300,8 @@
             <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;
             <a href="/jobs/job.html">Jobs</a>&nbsp;&nbsp;
             <a href="/info/info.html#about">About Red Rock Airlines</a>&nbsp;&nbsp;
-            <a href="/info/info.html#faq">FAQs</a>
+            <a href="/info/info.html#faq">FAQs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#credits">Credits</a>
         </div>
     </footer>
 </body>

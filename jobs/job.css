@@ -15,26 +15,11 @@ p {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-h1,
-h5 {
+h1, h2, h3, h4, h5, h6 {
+    color: #595959;
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-/***************
-	Parallax
-****************/
-.parallax {
-    background-image: url("/images/cooling-tower-4210918.jpg");
-    height: 65%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/****************
-	Parallax End
-*****************/
 
 /**************
 	Navbar
@@ -119,6 +104,82 @@ h5 {
 	Navbar End
 ***************/
 
+/*********************
+    Main Image Start
+**********************/
+
+#main-image-holder img {
+    height: 600px;
+    padding: 0 5% 100px 5%;
+    width: 100%;
+}
+
+/*********************
+    Main Image End
+**********************/
+
+/**********************
+    Titles Start
+**********************/
+
+#explore-title {
+    margin-bottom: 100px;
+}
+
+#explore-title h2 {
+    display: inline-block;
+    font-weight: 700;
+}
+
+.navigate-icon {
+    font-size: 48px;
+    vertical-align: -16.5px;
+    color: red;
+}
+
+/**********************
+    Titles End
+**********************/
+
+/**********************
+    Main Image Start
+**********************/
+
+.element {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.element img,
+.text {
+    width: 100%;
+    margin-top: -2.5%;
+    margin-bottom: 8%;
+    text-align: left;
+}
+
+.bookingInfoTextElement {
+    padding-left: 3%;
+    font-size: 18px;
+}
+
+.element img {
+    padding-top: 115px;
+}
+
+.text h1, .text p {
+    padding: 2% 10% 0 0%;
+}
+
+.text h1 {
+    padding-bottom: 25px;
+    font-weight: 700;
+    color: #595959;
+}
+/**********************
+    Main Image End
+**********************/
 /***********
 	Footer
 ************/

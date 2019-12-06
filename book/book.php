@@ -113,17 +113,40 @@
     </nav>
 
 
-    <!--Form for booking-->
     <form style = "padding-top: 200px" method="post" action="book.php">
         Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
         Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
         Message : <textarea name="user_text"></textarea><br />
         <input type="submit" value="Submit" />
-        </form>
+    </form>
 
-
+	<?php 
+		/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", "admin", "aelb8362580", "booking");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+// Escape user inputs for security
+$first_name = mysqli_real_escape_string($link, $_REQUEST['user_name']);
+$last_name = mysqli_real_escape_string($link, $_REQUEST['user_email']);
+$email = mysqli_real_escape_string($link, $_REQUEST['user_text']);
+ 
+// Attempt insert query execution
+$sql = "INSERT INTO reservations (name, email, departureDate, from, to) VALUES (";
+if(mysqli_query($link, $sql)){
+    echo "Records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+ 
+// Close connection
+mysqli_close($link);
+	?>
       
-
 <!--
     <div id = "reviews">
         <div class = "review">

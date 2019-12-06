@@ -18,7 +18,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="schedules.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
