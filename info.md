@@ -54,6 +54,8 @@ https://www.pexels.com/photo/airplane-wing-towards-clouds-731217/
 
 
 https://www.pexels.com/photo/people-inside-commercial-air-plane-1309644/
+https://www.pexels.com/photo/people-sign-traveling-blur-2069/
+https://www.pexels.com/photo/white-airplane-1098745/
 
 
 Name
@@ -66,4 +68,3 @@ Credit card number
 Experation Date
 CVS
 Address
-

@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     color: #777;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body,
@@ -15,15 +17,31 @@ p {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #595959;
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
+.btn {
+    background-color: red;
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #cc0008;
+    color: white;
+}
 
 /**************
 	Navbar
 **************/
+/* navbar when scrolling */
 @media (min-width: 992px) {
     .navbar-expand-lg a img {
         width: 55px;
@@ -32,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .navbar-expand-lg div li div {
         width: 190px;
-        height: 145px;
+        height: 115px;
     }
 
     .navbar-expand-lg {
@@ -64,11 +82,6 @@ h1, h2, h3, h4, h5, h6 {
         height: 40px;
     }
 
-    .navbar-expand-lg div li div {
-        width: 190px;
-        height: 145px;
-    }
-
     .navbar-expand-lg {
         position: fixed;
         top: 0;
@@ -86,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .dropdown-menu-nav a:hover {
         text-decoration: underline;
+        cursor: pointer;
     }
 
     .nav-item i {
@@ -99,6 +113,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.material-airplane {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 /***************
 	Navbar End
@@ -110,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-image-holder img {
     height: 600px;
-    padding: 0 5% 100px 5%;
+    padding: 0 10% 100px 10%;
     width: 100%;
 }
 
@@ -121,10 +142,6 @@ h1, h2, h3, h4, h5, h6 {
 /**********************
     Titles Start
 **********************/
-
-#explore-title {
-    margin-bottom: 100px;
-}
 
 #explore-title h2 {
     display: inline-block;
@@ -142,13 +159,27 @@ h1, h2, h3, h4, h5, h6 {
 **********************/
 
 /**********************
-    Main Image Start
+    Main Elements Start
 **********************/
 
 .element {
     position: relative;
     width: 100%;
     text-align: center;
+    margin-top: 100px;
+}
+
+.element {
+    padding: 0 25% 5% 25%;
+}
+
+#form-wrapper {
+    padding: 5% 10% 5% 10%;
+    text-align: left;
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .element img,
@@ -159,17 +190,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
-.bookingInfoTextElement {
-    padding-left: 3%;
-    font-size: 18px;
-}
-
 .element img {
     padding-top: 115px;
 }
 
-.text h1, .text p {
-    padding: 2% 10% 0 0%;
+.text h1,
+.text p {
+    padding: 2% 10% 0 10%;
 }
 
 .text h1 {
@@ -177,9 +204,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #595959;
 }
+
 /**********************
-    Main Image End
+    Main Elements End
 **********************/
+
 /***********
 	Footer
 ************/

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Rock Airlines - Book</title>
+    <title>Red Rock Airlines - Schedule</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="schedules.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
 
@@ -47,16 +46,16 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/schedules/schedules.php">
+                <li class="nav-item active">
+                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/schedules/schedules.php">
                         <i class="material-icons">
                             schedule
                         </i>
                         Schedules
                     </a>
                 </li>
-                <li class = "nav-item active">
-                    <a style="color: #595959; font-weight: bold;" class = "nav-link" href = "/book/book.php">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "/book/book.php">
                         <i class = "material-icons">
                             book
                         </i>
@@ -112,40 +111,134 @@
         </div>
     </nav>
 
-
-    <!--Form for booking-->
-    <form style = "padding-top: 200px" method="post" action="book.php">
-        Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
-        Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
-        Message : <textarea name="user_text"></textarea><br />
-        <input type="submit" value="Submit" />
-        </form>
-
-
-      
-
-<!--
-    <div id = "reviews">
-        <div class = "review">
-            <h5 class="review-title">Tony Platt<br /><small><i>Aspen Colorado</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
-        <div class = "review">
-            <h5 class="review-title">Jack Callistar<br /><small><i>Salt Lake City Utah</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
-        <div class = "review">
-            <h5 class="review-title">Sophia Johnson<br /><small><i>Salt Lake City Utah</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
+    <div id="main-image-holder">
+        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
     </div>
--->
+
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>Find a flight today!</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
+    </div>
+
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>What our customers are saying!</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
+    </div>
+    
+    <div id = "reviews-container">
+      <div class = "reviews-row">
+        <img src = "/images/schedules/customer-1.jpeg" />
+        <div class = "reviews-text">
+        <h5>Tony Platt<br /><small><i>Aspen Colorado</i></small></h5>
+        <i class="material-icons">
+            format_quote
+        </i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </div>
+      </div>
+      <div class = "reviews-row">
+      <img src = "/images/schedules/customer-1.jpeg" />
+         <div class = "reviews-text">
+         <h5>Jack Callistar<br /><small><i>Salt Lake City Utah</i></small></h5>
+         <i class="material-icons">
+            format_quote
+        </i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </div>
+      </div>
+      <div class = "reviews-row">
+      <img src = "/images/schedules/customer-1.jpeg" />
+        <div class = "reviews-text">
+        <h5>Sophia Johnson<br /><small><i>Salt Lake City Utah</i></small></h5>
+        <i class="material-icons">
+            format_quote
+        </i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </div>
+      </div>
+    </div>
+    <footer class="large-footer">
+        <div style="text-align: center;" class="footerPart">
+            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div style="text-align: center;" class="footerPart">
+            <h5>Visit Us</h5>
+            <br />
+            <a href="https://facebook.com/redrockairlines">Facebook</a> <br />
+            <a href="https://twitter.com/redrockairlines">Twitter</a> <br />
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div class="footerPart" id="scheduleBookHolder">
+            <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
+            <br />
+            <a href="/book/book.php">Book a flight</a> <br />
+            <a href="/schedules/schedules.php">Flight Schedules</a>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div class="footerPart" id="learnMoreHolder">
+            <br />
+            <h5>Learn More</h5>
+            <br />
+            <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a> <br />
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a> <br />
+            <a href="/jobs/job.html">Jobs</a> <br />
+            <a href="/info/info.html#about">About Red Rock Airlines</a> <br />
+            <a href="/info/info.html#faq">FAQs</a><br />
+            <a href="/info/info.html#credits">Credits</a>
+        </div>
+
+    </footer>
+
+    <footer class="small-footer">
+        <br />
+        <div class="footer-part-small">
+            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
+        </div>
+        <div class="footer-part-small">
+            <h5>Visit Us</h5>
+            <a href="https://facebook.com/redrockairlines">Facebook</a>&nbsp;&nbsp;
+            <a href="https://twitter.com/redrockairlines">Twitter</a>&nbsp;&nbsp;
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+        </div>
+
+        <div class="footer-part-small" id="scheduleBookHolder">
+            <h5>Booking & Schedules</h5>
+            <a href="/book/book.php">Book a flight</a>&nbsp;&nbsp;
+            <a href="/schedules/schedules.php">Flight Schedules</a>
+        </div>
+
+        <div class="footer-part-small" id="learnMoreHolder">
+            <h5>Learn More</h5>
+            <a href="mailto:redrockairlines@help.com">Contact Us</a>&nbsp;&nbsp;
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;
+            <a href="/jobs/job.html">Jobs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#about">About Red Rock Airlines</a>&nbsp;&nbsp;
+            <a href="/info/info.html#faq">FAQs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#credits">Credits</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>

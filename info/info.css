@@ -17,13 +17,15 @@ p {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #595959;
     font-family: "Helvetica", "Arial", sans-serif;
 }
-
-
-
 
 /**************
 	Navbar
@@ -153,7 +155,7 @@ ul.nav-pills {
     .row div {
         padding-left: 10%;
         padding-right: 10%;
-        
+
     }
 }
 
@@ -169,7 +171,12 @@ div.col-8 div {
     color: red;
 }
 
-.element-text h1, .element-text h2, .element-text h3, .element-text h4, .element-text h5, .element-text h6 {
+.element-text h1,
+.element-text h2,
+.element-text h3,
+.element-text h4,
+.element-text h5,
+.element-text h6 {
     font-weight: 700;
 }
 
@@ -191,6 +198,7 @@ div.col-8 div {
 #sub {
     padding-left: 4%;
 }
+
 /****************
     Infos End
 ****************/
