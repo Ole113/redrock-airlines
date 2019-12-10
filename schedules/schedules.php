@@ -54,9 +54,9 @@
                         Schedules
                     </a>
                 </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href = "/book/book.php">
-                        <i class = "material-icons">
+                <li class="nav-item">
+                    <a class="nav-link" href="/book/book.php">
+                        <i class="material-icons">
                             book
                         </i>
                         Book
@@ -122,44 +122,102 @@
         </i>
     </div>
 
+    <form name="form" method="post" action="schedules.php">
+        <div class="form-group">
+            <label for="airport-select">Choose an airport to see the available flights!</label>
+            <select name="airport-select" class="form-control" id="airport-select">
+                <option>-----</option>
+                <option>Denver International Airport, Colorado</option>
+                <option>Colorado Springs Airport, Colorado</option>
+                <option>Salt Lake International Airport, Utah</option>
+                <option>Saint George Municipal Airport, Utah</option>
+                <option>McCarran International Airport, Nevada</option>
+                <option>Reno-Tahoe International Airport, Nevada</option>
+                <option>Phoenix Sky Harbor International Airport, Arizona</option>
+                <option>Tuscon International Airport, Arizona</option>
+                <option>Portland International Airport, Oregon</option>
+                <option>Rogue Valley International-Medford Airport, Oregon</option>
+                <option>Boise Airport, Idaho</option>
+                <option>Idaho Falls Regional Airport, Idaho</option>
+                <option>Jackson Hole Airport, Wyoming</option>
+                <option>Yellowstone Regional Airport, Wyoming</option>
+            </select>
+            <br /><br />
+            <input name="submit" type="submit" value="Submit">
+
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
     <div id="explore-title" style="margin-left: 7%;">
         <h2>What our customers are saying!</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
     </div>
-    
-    <div id = "reviews-container">
-      <div class = "reviews-row">
-        <img src = "/images/schedules/customer-1.jpeg" />
-        <div class = "reviews-text">
-        <h5>Tony Platt<br /><small><i>Aspen Colorado</i></small></h5>
-        <i class="material-icons">
-            format_quote
-        </i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+    <div id="reviews-container">
+        <div class="reviews-row">
+            <img src="/images/schedules/customer-1.jpeg" />
+            <div class="reviews-text">
+                <h5>Tony Platt<br /><small><i>Aspen, Colorado</i></small></h5>
+
+                <div class="reviews-holder">
+                    <p> <i class="material-icons">
+                            format_quote
+                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class = "reviews-row">
-      <img src = "/images/schedules/customer-1.jpeg" />
-         <div class = "reviews-text">
-         <h5>Jack Callistar<br /><small><i>Salt Lake City Utah</i></small></h5>
-         <i class="material-icons">
-            format_quote
-        </i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        <div class="reviews-row">
+            <img src="/images/schedules/customer-1.jpeg" />
+            <div class="reviews-text">
+                <h5>Jack Callistar<br /><small><i>Salt Lake City, Utah</i></small></h5>
+
+                <div class="reviews-holder">
+
+                    <p> <i class="material-icons">
+                            format_quote
+                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class = "reviews-row">
-      <img src = "/images/schedules/customer-1.jpeg" />
-        <div class = "reviews-text">
-        <h5>Sophia Johnson<br /><small><i>Salt Lake City Utah</i></small></h5>
-        <i class="material-icons">
-            format_quote
-        </i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        <div class="reviews-row">
+            <img src="/images/schedules/customer-1.jpeg" />
+            <div class="reviews-text">
+                <h5>Sophia Johnson<br /><small><i>Denver, Colorado</i></small></h5>
+
+                <div class="reviews-holder">
+                    <p> <i class="material-icons">
+                            format_quote
+                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
@@ -239,6 +297,44 @@
         </div>
     </footer>
 
+    <?php
+    /*
+        $connection = mysqli_connect(
+        "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+        "admin", //user
+        "aelb8362580", //password
+        "booking" //database
+        );
+
+        $airport_dropdown = $_POST["airport-select"];
+
+        if(!$connection) { 
+            die("ERROR: Could not connect. ".mysqli_connect_error());
+        }
+        
+        
+        $query = "SELECT * FROM FLIGHTS WHERE airport_name = $airport_dropdown";
+        $result = mysql_query($query, $connection);
+
+        if(!$result) {
+            die("Could not get data: " . mysql_error());
+        }
+
+        while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+            echo "Airports :{$row[0]}  <br> ";
+        }
+         
+        echo "Fetched data successfully\n";
+
+        mysqli_close($connection);
+    */
+    $airport_dropdown = $_POST["airport-select"];
+    if($airport_dropdown !== "-----") {
+        echo($airport_dropdown);
+    } else {
+        echo("Please select a program");
+    }
+    ?>
 </body>
 
 </html>

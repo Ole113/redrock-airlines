@@ -27,6 +27,16 @@ h6 {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
+.btn {
+    background-color: red;
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #cc0008;
+    color: white;
+}
 
 /**************
 	Navbar
@@ -151,19 +161,58 @@ h6 {
     Titles End
 **********************/
 
+/********************
+    Form Start
+********************/
+
+form {
+    margin: 0 10% 100px 10%;
+    padding: 5% 10% 5% 10%;
+    text-align: left;
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+    margin-top: 75px;
+}
+
+/********************
+    Form Start
+********************/
+
 /*********************
     Reviews Start
 *********************/
 
 .reviews-row img {
-    width: 320px;
-    height: 320px;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
 }
 
-.reviews-row {
-    display: inline-block;
-    width: 25%;
+@media (min-width: 1131px) {
+    .reviews-row {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .reviews-holder {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .reviews-row {
+        display: block;
+        width: 100%;
+    }
+
+    .reviews-holder {
+        padding-bottom: 20%;
+    }
 }
 
 #reviews-container {
@@ -173,14 +222,22 @@ h6 {
 }
 
 .reviews-text {
-    text-align: left;
-    padding: 8% 30% 0 30%;
+    padding: 8% 20% 0 20%;
 }
 
+.reviews-holder {
+    text-align: center;
+}
+
+.reviews-holder p {
+    text-align: left;
+    padding-left: 10%;
+}
 
 /*********************
     Reviews End
 *********************/
+
 /***********
 	Footer
 ************/

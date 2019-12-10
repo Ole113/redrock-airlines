@@ -51,16 +51,12 @@ https://pixabay.com/photos/airport-travel-flights-times-690556/
 https://www.pexels.com/photo/airplane-wing-towards-clouds-731217/
 
 
-
-
-https://www.pexels.com/photo/people-inside-commercial-air-plane-1309644/
-https://www.pexels.com/photo/people-sign-traveling-blur-2069/
-https://www.pexels.com/photo/white-airplane-1098745/
-
+https://pixabay.com/photos/airport-people-walking-waiting-4120835/
 
 Name
 Email
 Departure Date
+
 From
 To
 Round trip/one way(radio button)

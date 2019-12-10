@@ -8,11 +8,9 @@ var slideoutDisplayed = 0;
 
 // not done(when iphone 4 size and moving up to 1000x? + slideout doesnt hide)
 function resize() {
-	$(window).resize(function () {
-		if (slideoutDisplayed) {
-			$("#slideout").hide();
-			$("#hamburgerButton").show();
-			slideoutDisplayed = 0;
+	window.addEventListener("resize", function() {
+		if(slideoutDisplayed) {
+			alert(2);
 		}
 	});
 }
