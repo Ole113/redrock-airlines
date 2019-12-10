@@ -143,7 +143,7 @@
                 <option>Yellowstone Regional Airport, Wyoming</option>
             </select>
             <br /><br />
-            <input name="submit" type="submit" value="Submit">
+            <button name = "submit" class="btn" type="submit">Submit</button>
 
         </div>
 
@@ -297,43 +297,62 @@
         </div>
     </footer>
 
+    <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
     <?php
-    /*
         $connection = mysqli_connect(
-        "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
-        "admin", //user
-        "aelb8362580", //password
-        "booking" //database
-        );
+            "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+            "admin", //user
+            "aelb8362580", //password
+            "booking" //database
+            );
+    
+    
+            if(!$connection) { 
+                die("ERROR: Could not connect. ".mysqli_connect_error());
+            }
 
+            $sql = "SELECT departingFrom FROM flights";
+            $result = $conn->query($sql);
+            if($result = mysqli_query($link, $sql)){
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";
+                            echo "<td>" . $row["departingFrom"] . "</td>";
+                        echo "</tr>";
+                    }
+                }
+            }
+            mysqli_free_result($result);
+
+        /*
         $airport_dropdown = $_POST["airport-select"];
 
-        if(!$connection) { 
-            die("ERROR: Could not connect. ".mysqli_connect_error());
-        }
-        
-        
-        $query = "SELECT * FROM FLIGHTS WHERE airport_name = $airport_dropdown";
-        $result = mysql_query($query, $connection);
-
-        if(!$result) {
-            die("Could not get data: " . mysql_error());
-        }
-
-        while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-            echo "Airports :{$row[0]}  <br> ";
-        }
-         
-        echo "Fetched data successfully\n";
-
-        mysqli_close($connection);
-    */
-    $airport_dropdown = $_POST["airport-select"];
     if($airport_dropdown !== "-----") {
         echo($airport_dropdown);
     } else {
         echo("Please select a program");
     }
+*/
+        mysqli_close($connection);
+
     ?>
 </body>
 

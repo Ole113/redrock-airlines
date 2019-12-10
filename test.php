@@ -17,10 +17,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/schedules/schedules.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="schedules.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
 <body>
 <form name = "form" method = "post" action = "test.php">
@@ -34,7 +34,7 @@
       <option>Saint George Municipal Airport, Utah</option>
       <option>McCarran International Airport, Nevada</option>
       <option>Reno-Tahoe International Airport, Nevada</option>
-      <option>Phoenix Sky Harbor International Airport, Arizona</option>
+      <option>Phoenix Sky H	arbor International Airport, Arizona</option>
       <option>Tuscon International Airport, Arizona</option>
       <option>Portland International Airport, Oregon</option>
       <option>Rogue Valley International-Medford Airport, Oregon</option>
@@ -44,7 +44,7 @@
       <option>Yellowstone Regional Airport, Wyoming</option>
     </select>
     <br /><br />
-    <input name = "submit" type = "submit" value = "Submit">
+    <button name = "submit" class="btn" type="submit">Submit</button>
 
     </div>
 
@@ -68,8 +68,40 @@
     </table>
     </form>
     <?php
-    $airport_dropdown = $_POST["airport-select"];
-    echo $airport_dropdown;
+        $connection = mysqli_connect(
+            "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+            "admin", //user
+            "aelb8362580", //password
+            "booking" //database
+            );
+
+            $airport_dropdown = $_POST["airport-select"];
+
+            if(!$connection) { 
+                die("ERROR: Could not connect. ".mysqli_connect_error());
+            }
+
+			$sql = "SELECT departingFrom, id FROM flights WHERE departingFrom = '".$airport_dropdown."'";
+            if($result = mysqli_query($connection, $sql)){
+                if(mysqli_num_rows($result) > 0){
+                  while($row = mysqli_fetch_array($result)){
+                      
+						echo "<td>" . $row["id"] . "<br></td>";
+						echo "<td>" . $row["departingFrom"] . "</td>";
+				  }
+              }
+			}
+			
+
+        
+/*
+    if($airport_dropdown !== "-----") {
+        echo($airport_dropdown);
+    } else {
+        echo("Please select a program");
+    }*/
+        mysqli_close($connection);
+
     ?>
 </body>
 </html>

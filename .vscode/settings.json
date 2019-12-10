@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "booking",
+            "dialect": "MySQL",
+            "name": "FBLA-2020",
+            "password": "aelb8362580",
+            "port": 3306,
+            "server": "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com",
+            "username": "admin"
+        }
+    ]
+}
