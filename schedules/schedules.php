@@ -124,47 +124,93 @@
 
     <form name="form" method="post" action="schedules.php">
         <div class="form-group">
-            <label for="airport-select">Choose an airport to see the available flights!</label>
-            <select name="airport-select" class="form-control" id="airport-select">
+            <label for="state-select">Choose a state to see available flights!</label>
+            <select name="state-select" class="form-control" id="state-select">
                 <option>-----</option>
-                <option>Denver International Airport, Colorado</option>
-                <option>Colorado Springs Airport, Colorado</option>
-                <option>Salt Lake International Airport, Utah</option>
-                <option>Saint George Municipal Airport, Utah</option>
-                <option>McCarran International Airport, Nevada</option>
-                <option>Reno-Tahoe International Airport, Nevada</option>
-                <option>Phoenix Sky Harbor International Airport, Arizona</option>
-                <option>Tuscon International Airport, Arizona</option>
-                <option>Portland International Airport, Oregon</option>
-                <option>Rogue Valley International-Medford Airport, Oregon</option>
-                <option>Boise Airport, Idaho</option>
-                <option>Idaho Falls Regional Airport, Idaho</option>
-                <option>Jackson Hole Airport, Wyoming</option>
-                <option>Yellowstone Regional Airport, Wyoming</option>
+                <option>Colorado</option>
+                <option>Utah</option>
+                <option>Nevada</option>
+                <option>Arizona</option>
+                <option>Oregon</option>
+                <option>Idaho</option>
+                <option>Wyoming</option>
             </select>
             <br /><br />
             <button name = "submit" class="btn" type="submit">Submit</button>
 
-        </div>
+            <?php
+                $connection = mysqli_connect(
+                    "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+                    "admin", //user
+                    "aelb8362580", //password
+                    "booking" //database
+                );
+    
+                if(!$connection) { 
+                    die("ERROR: Could not connect. ".mysqli_connect_error());
+                }
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-            </tbody>
-        </table>
+                $state_dropdown = $_POST["state-select"];
+                $state;
+                if($state_dropdown !== "-----") {
+                    $state = $state_dropdown;
+                }
+                
+                $sql = "SELECT * FROM flights WHERE departing_state = '".$state_dropdown."'";
+
+                if($result = mysqli_query($connection, $sql)){
+                    if(mysqli_num_rows($result) > 0){
+                        echo "
+                        <h1>" . "<br /><br /><br />Showing flights from " . $state_dropdown . "</h1>
+                        <div class='table-responsive'>
+                            <table class='table'>
+                                <thead>
+                                    <tr>
+                                        <th scope='col'>#</th>
+                                        <th scope='col'>Departing From</th>
+                                        <th scope='col'>Departing At</th>
+                                        <th scope='col'>Arrival To</th>
+                                        <th scope='col'>Arrival At</th>
+                                        <th scope='col'>Seats Available</th>
+                                        <th scope='col'>Price</th>
+                                    </tr>
+                                </thead>
+                            <tbody>";
+
+                        while($row = mysqli_fetch_array($result)){
+
+                            $id = $row['id'];
+
+                            echo "
+                            <tr>
+                                <th scope='row'>$id</th>
+                                    <td>" . $row['departing_airport'] . ", " . $row['departing_state'] . "</td>
+                                    <td>" . $row['departing_time'] . " on " . $row['departing_date'] . "</td>
+                                    <td>" . $row['arriving_airport'] . ", " . $row['arriving_state'] . "</td>
+                                    <td>" . $row['arriving_time'] . " on " . $row['arriving_date'] . "</td>
+                                    <td>" . $row['seats_available'] . "</td>
+                                    <td>" . "$ " . $row['price'] . "</td>
+                                    </tr>";
+                        }
+
+                        echo "
+                                </tbody>
+                            </table>
+                        </div>
+                        <br /><br />
+                        <a class = 'btn' href = '/book/book.php'>Book Now</a>";
+
+                    } else if($state_dropdown === "-----") {
+                        echo "<br /><br /><br /><br /><h1>No results found.</h1>";
+                    }
+                }
+
+                mysqli_free_result($result);
+
+                mysqli_close($connection);
+            ?>
+ 
+        </div>
     </form>
 
     <div id="explore-title" style="margin-left: 7%;">
@@ -296,64 +342,6 @@
             <a href="/info/info.html#credits">Credits</a>
         </div>
     </footer>
-
-    <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-    <?php
-        $connection = mysqli_connect(
-            "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
-            "admin", //user
-            "aelb8362580", //password
-            "booking" //database
-            );
-    
-    
-            if(!$connection) { 
-                die("ERROR: Could not connect. ".mysqli_connect_error());
-            }
-
-            $sql = "SELECT departingFrom FROM flights";
-            $result = $conn->query($sql);
-            if($result = mysqli_query($link, $sql)){
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_array($result)){
-                        echo "<tr>";
-                            echo "<td>" . $row["departingFrom"] . "</td>";
-                        echo "</tr>";
-                    }
-                }
-            }
-            mysqli_free_result($result);
-
-        /*
-        $airport_dropdown = $_POST["airport-select"];
-
-    if($airport_dropdown !== "-----") {
-        echo($airport_dropdown);
-    } else {
-        echo("Please select a program");
-    }
-*/
-        mysqli_close($connection);
-
-    ?>
 </body>
 
 </html>
