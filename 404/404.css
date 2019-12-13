@@ -1,8 +1,9 @@
-
 body {
     margin: 0;
     padding: 0;
     color: #777;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body,
@@ -16,27 +17,130 @@ p {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     color: #595959;
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-
-/***************
-	Parallax
-****************/
-.parallax {
-    background-image: url("/images/frequent/airport-silo.jpeg");
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+a {
+    color: red;
 }
 
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+/**************
+	Navbar
+**************/
+/* navbar when scrolling */
+@media (min-width: 992px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg div li div {
+        width: 190px;
+        height: 115px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-item i {
+        display: none;
+    }
+
+    .nav-item hr {
+        display: none;
+    }
+
+    .home-icon {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg a img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .navbar-expand-lg {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu-nav {
+        padding: 1.2% 1.2% 1.2% 1%;
+        width: 200px;
+    }
+
+    .dropdown-menu-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-item i {
+        vertical-align: bottom;
+        font-size: 25px !important;
+        padding-right: 8px;
+    }
+
+    .home-icon {
+        padding-left: 0;
+    }
+}
+
+.material-airplane {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}   
+
+/***************
+	Navbar End
+***************/
+
 /****************
-	Parallax End
-*****************/
+    Main Start
+****************/
+
+#main-element h1 {
+    display: inline-block;
+    font-size: 150px;
+    padding-left: 25px;
+}
+
+#main-element {
+    text-align: center;
+    padding: 175px 0 150px 0;
+}
+
+#main-element img {
+    padding-bottom: 75px;
+    width: 175px;
+    padding-right: 25px;
+}
+
+
+/****************
+    Main End
+****************/
 
 /***********
 	Footer
@@ -144,82 +248,4 @@ h1, h2, h3, h4, h5, h6 {
 
 /**************
 	Footer End
-***************/
-
-/**************
-	Navbar
-**************/
-/* navbar when scrolling */
-@media (min-width: 992px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg div li div {
-        width: 190px;
-        height: 120px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-item i {
-        display: none;
-    }
-
-    .nav-item hr {
-        display: none;
-    }
-
-    .home-icon {
-        padding-left: 25px;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar-expand-lg a img {
-        width: 55px;
-        height: 40px;
-    }
-
-    .navbar-expand-lg {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 3;
-        -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown-menu-nav {
-        padding: 1.2% 1.2% 1.2% 1%;
-        width: 200px;
-    }
-
-    .dropdown-menu-nav a:hover {
-        text-decoration: underline;
-    }
-
-    .nav-item i {
-        vertical-align: bottom;
-        font-size: 25px !important;
-        padding-right: 8px;
-    }
-
-    .home-icon {
-        padding-left: 0;
-    }
-}
-
-/***************
-	Navbar End
 ***************/

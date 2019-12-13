@@ -166,7 +166,7 @@
                             <table class='table'>
                                 <thead>
                                     <tr>
-                                        <th scope='col'>#</th>
+                                        <th scope='col'>ID</th>
                                         <th scope='col'>Departing From</th>
                                         <th scope='col'>Departing At</th>
                                         <th scope='col'>Arrival To</th>

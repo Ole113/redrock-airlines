@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Rock Airlines - Welcome</title>
+    <title>Red Rock Airlines - Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -18,20 +18,19 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/frequent.css">
-    <script src="/scripts/frequent.js"></script>
+    <link rel="stylesheet" href="404.css">
+    <script src="404.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
 
 <body>
-    <div class="parallax"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">
+        <a class="navbar-brand" href="/home/home.html">
             <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
-                style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock Airlines</span>
+                style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock
+                Airlines</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/home/home.html">
                         <i class="material-icons">
                             home
                         </i>
@@ -49,15 +48,23 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/schedules.php">
+                    <a class="nav-link" href="/schedules/schedules.php">
                         <i class="material-icons">
                             schedule
                         </i>
                         Schedules
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/html/schedules.php">
+                <li class="nav-item">
+                    <a class="nav-link" href="/book/book.php">
+                        <i class="material-icons">
+                            book
+                        </i>
+                        Book
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/frequent/frequent.html">
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
@@ -65,7 +72,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/schedules.php">
+                    <a class="nav-link" href="/jobs/job.html">
                         <i class="material-icons">
                             work
                         </i>
@@ -73,7 +80,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/schedules.php">
+                    <a class="nav-link" href="/info/info.html#faq">
                         <i class="material-icons">
                             question_answer
                         </i>
@@ -81,7 +88,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/schedules.php">
+                    <a class="nav-link" href="/info/info.html#privacy-policy">
                         <i class="material-icons">
                             help_outline
                         </i>
@@ -96,18 +103,27 @@
                         More
                     </a>
                     <div class="dropdown-menu dropdown-menu-nav" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/html/privacy.html">Privacy Policy</a>
-                        <a class="dropdown-item" href="/html/terms.html">Terms & Conditions</a>
-                        <a class="dropdown-item" href="/html/about.html">About Us</a>
+                        <a class="dropdown-item" href="/info/info.html#privacy-policy">Privacy Policy</a>
+                        <a class="dropdown-item" href="/info/info.html#terms-and-conditions">Terms & Conditions</a>
+                        <a class="dropdown-item" href="/info/info.html#about">About Us</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <div id = "main-element">
+        <a href = "/home/home.html"><img src = "/images/red-rock-logo.png" alt = "Red rock logo" /></a>
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <br />
+        <br />
+        <h4>The page you are looking for doesn't exist or another error occurred.<br />Go <a href = "/home/home.html">home</a>, or choose more options from the top bar.</h4>
+    </div>
+
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
-            <a href = "home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
             <br />
             <br />
@@ -129,8 +145,8 @@
         <div class="footerPart" id="scheduleBookHolder">
             <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
             <br />
-            <a href="book.php">Book a flight</a> <br />
-            <a href="schedules.php">Flight Schedules</a>
+            <a href="/book/book.php">Book a flight</a> <br />
+            <a href="/schedules/schedules.php">Flight Schedules</a>
             <br />
             <br />
             <br />
@@ -142,11 +158,12 @@
             <h5>Learn More</h5>
             <br />
             <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
-            <a href="privacy.html">Privacy Policy</a> <br />
-            <a href="terms.html">Terms & Conditions</a> <br />
-            <a href="job.html">Jobs</a> <br />
-            <a href="about.html">About Red Rock Airlines</a> <br />
-            <a href="about.html#faq">FAQs</a>
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a> <br />
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a> <br />
+            <a href="/jobs/job.html">Jobs</a> <br />
+            <a href="/info/info.html#about">About Red Rock Airlines</a> <br />
+            <a href="/info/info.html#faq">FAQs</a><br />
+            <a href="/info/info.html#credits">Credits</a>
         </div>
 
     </footer>
@@ -166,18 +183,21 @@
 
         <div class="footer-part-small" id="scheduleBookHolder">
             <h5>Booking & Schedules</h5>
-            <a href="book.php">Book a flight</a>&nbsp;&nbsp;
-            <a href="schedules.php">Flight Schedules</a>
+            <a href="/book/book.php">Book a flight</a>&nbsp;&nbsp;
+            <a href="/schedules/schedules.php">Flight Schedules</a>
         </div>
 
         <div class="footer-part-small" id="learnMoreHolder">
             <h5>Learn More</h5>
             <a href="mailto:redrockairlines@help.com">Contact Us</a>&nbsp;&nbsp;
-            <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;
-            <a href="terms.html">Terms & Conditions</a>&nbsp;&nbsp;
-            <a href="job.html">Jobs</a>&nbsp;&nbsp;
-            <a href="about.html">About Red Rock Airlines</a>&nbsp;&nbsp;
-            <a href="about.html#faq">FAQs</a>
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;
+            <a href="/jobs/job.html">Jobs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#about">About Red Rock Airlines</a>&nbsp;&nbsp;
+            <a href="/info/info.html#faq">FAQs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#credits">Credits</a>
         </div>
     </footer>
 </body>
+
+</html>

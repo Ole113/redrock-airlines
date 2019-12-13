@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="book.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
 
@@ -55,9 +54,9 @@
                         Schedules
                     </a>
                 </li>
-                <li class = "nav-item active">
-                    <a style="color: #595959; font-weight: bold;" class = "nav-link" href = "/book/book.php">
-                        <i class = "material-icons">
+                <li class="nav-item active">
+                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/book/book.php">
+                        <i class="material-icons">
                             book
                         </i>
                         Book
@@ -112,63 +111,108 @@
         </div>
     </nav>
 
+    <div id="main-image-holder">
+        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
+    </div>
 
-    <form style = "padding-top: 200px" method="post" action="book.php">
-        Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
-        Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
-        Message : <textarea name="user_text"></textarea><br />
-        <input type="submit" value="Submit" />
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>Find a flight today!</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
+    </div>
+
+    <form name="form" method="post" action="book.php">
+        <div class="form-group row">
+            <label for="state-select">Already know the <a href = "schedules.php">ID</a> of the flight you want to book?</label>
+            <input type="text" class="form-control" id="id-input" placeholder="ID">
+        </div>
     </form>
 
-	<?php 
-		/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-$link = mysqli_connect("fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", "admin", "aelb8362580", "booking");
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
- 
-// Escape user inputs for security
-$first_name = mysqli_real_escape_string($link, $_REQUEST['user_name']);
-$last_name = mysqli_real_escape_string($link, $_REQUEST['user_email']);
-$email = mysqli_real_escape_string($link, $_REQUEST['user_text']);
- 
-// Attempt insert query execution
-$sql = "INSERT INTO reservations (name, email, departureDate, from, to) VALUES (";
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
- 
-// Close connection
-mysqli_close($link);
-	?>
-      
-<!--
-    <div id = "reviews">
-        <div class = "review">
-            <h5 class="review-title">Tony Platt<br /><small><i>Aspen Colorado</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
-        <div class = "review">
-            <h5 class="review-title">Jack Callistar<br /><small><i>Salt Lake City Utah</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
-        <div class = "review">
-            <h5 class="review-title">Sophia Johnson<br /><small><i>Salt Lake City Utah</i></small></h5>
-            <p class = "review-body">
-
-            </p>
-        </div>
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>What our customers are saying!</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
     </div>
--->
+
+    <footer class="large-footer">
+        <div style="text-align: center;" class="footerPart">
+            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div style="text-align: center;" class="footerPart">
+            <h5>Visit Us</h5>
+            <br />
+            <a href="https://facebook.com/redrockairlines">Facebook</a> <br />
+            <a href="https://twitter.com/redrockairlines">Twitter</a> <br />
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div class="footerPart" id="scheduleBookHolder">
+            <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
+            <br />
+            <a href="/book/book.php">Book a flight</a> <br />
+            <a href="/schedules/schedules.php">Flight Schedules</a>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div class="footerPart" id="learnMoreHolder">
+            <br />
+            <h5>Learn More</h5>
+            <br />
+            <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a> <br />
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a> <br />
+            <a href="/jobs/job.html">Jobs</a> <br />
+            <a href="/info/info.html#about">About Red Rock Airlines</a> <br />
+            <a href="/info/info.html#faq">FAQs</a><br />
+            <a href="/info/info.html#credits">Credits</a>
+        </div>
+
+    </footer>
+
+    <footer class="small-footer">
+        <br />
+        <div class="footer-part-small">
+            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
+        </div>
+        <div class="footer-part-small">
+            <h5>Visit Us</h5>
+            <a href="https://facebook.com/redrockairlines">Facebook</a>&nbsp;&nbsp;
+            <a href="https://twitter.com/redrockairlines">Twitter</a>&nbsp;&nbsp;
+            <a href="https://instagram.com/redrockairlines">Instagram</a>
+        </div>
+
+        <div class="footer-part-small" id="scheduleBookHolder">
+            <h5>Booking & Schedules</h5>
+            <a href="/book/book.php">Book a flight</a>&nbsp;&nbsp;
+            <a href="/schedules/schedules.php">Flight Schedules</a>
+        </div>
+
+        <div class="footer-part-small" id="learnMoreHolder">
+            <h5>Learn More</h5>
+            <a href="mailto:redrockairlines@help.com">Contact Us</a>&nbsp;&nbsp;
+            <a href="/info/info.html#privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;
+            <a href="/jobs/job.html">Jobs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#about">About Red Rock Airlines</a>&nbsp;&nbsp;
+            <a href="/info/info.html#faq">FAQs</a>&nbsp;&nbsp;
+            <a href="/info/info.html#credits">Credits</a>
+        </div>
+    </footer>
 </body>
 
 </html>

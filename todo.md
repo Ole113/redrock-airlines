@@ -52,3 +52,4 @@
    change image names and organize by file
    rename css class names from camel case
    Make it so theres another DB to see if you're a frequent flyer and if you are it lowers the boowking prices.
+   Maybe make it so you can see input user feedback
