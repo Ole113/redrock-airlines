@@ -19,6 +19,7 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="book.css">
+    <script src="book.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
 </head>
@@ -112,11 +113,11 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
+        <img src="/images/book/walking-airport.jpg" alt="airport people walking" />
     </div>
 
     <div id="explore-title" style="margin-left: 7%;">
-        <h2>Find a flight today!</h2>
+        <h2>Book by ID!</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
@@ -130,7 +131,7 @@
     </form>
 
     <div id="explore-title" style="margin-left: 7%;">
-        <h2>What our customers are saying!</h2>
+        <h2></h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>

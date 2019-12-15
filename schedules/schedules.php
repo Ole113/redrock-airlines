@@ -124,7 +124,7 @@
 
     <form name="form" method="post" action="schedules.php">
         <div class="form-group">
-            <label for="state-select">Choose a state to see available flights!</label>
+            <label for="state-select">Choose a state to see available flights!<br />For faster booking use the flight ID.</label>
             <select name="state-select" class="form-control" id="state-select">
                 <option>-----</option>
                 <option>Colorado</option>

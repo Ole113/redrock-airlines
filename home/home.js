@@ -1,19 +1,9 @@
 $(function run() {
 	slideout();
 	scroll();
-	resize();
 });
 
 var slideoutDisplayed = 0;
-
-// not done(when iphone 4 size and moving up to 1000x? + slideout doesnt hide)
-function resize() {
-	window.addEventListener("resize", function() {
-		if(slideoutDisplayed) {
-			alert(2);
-		}
-	});
-}
 
 function slideout() {
 
@@ -58,19 +48,5 @@ function scroll() {
 		if ($(document).scrollTop() >= 600) $(".navbar-expand-lg").fadeIn(300);
 
 		if ($(document).scrollTop() <= 300) $(".navbar-expand-lg").fadeOut(200);
-		/*
-				if($(document).scrollTop() >= 600) {
-					if($(".navbar-toggler").attr("aria-expanded") == "true") {
-						$(".navbar-toggler").attr("aria-expanded") = "false";
-					}
-				}
-				*/
 	});
 }
-/* if mobile https://getbootstrap.com/docs/4.3/components/dropdowns/ or jquery below
-$(function() {
-	$("#item").click(function() {
-		$("#submenu").slideToggle(500);
-	});
-});
-*/

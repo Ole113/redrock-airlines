@@ -1,8 +1,9 @@
 let percent;
-let paragraph = document.querySelector("p");
 
 window.onload = () => {
-    $('#main-element').appear(function() {
-        $(this).text('Hello world');
-      });
+	let amount;
+	window.addEventListener("scroll", () => {
+		amount = $(window).scrollTop();
+		console.log(amount > 200 && amount < 250);
+	});
 }
