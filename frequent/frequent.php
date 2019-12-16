@@ -47,6 +47,14 @@
                         <span class="home-icon">Home</span>
                         <span class="sr-only">(current)</span>
                     </a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/book/book.php">
+                        <i class="material-icons">
+                            book
+                        </i>
+                        Book
+                    </a>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/schedules/schedules.php">
@@ -54,14 +62,6 @@
                             schedule
                         </i>
                         Schedules
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/book/book.php">
-                        <i class="material-icons">
-                            book
-                        </i>
-                        Book
                     </a>
                 </li>
                 <li class="nav-item active">
@@ -128,18 +128,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="display-4">Red Rock Adventure Miles</h1>
+                    <h1 class="display-5">Red Rock Adventure Miles</h1>
                     <br>
                     <ul><li>Miles will be earned based on ticket price</li>
                     <br><li>Miles are earned at a rate of 3 miles per USD</li>
                     <br><li>Miles can be spent on trips, flights, and hotels</li>
                     <br><li>Miles can also be used on upgrading seats and other amenities.</li>
                     <br><li>Miles are used as currency</li>
-                    <br><li>
-                    
+                    <br>
+                    <br /><br />
                     <a href = "#joinNow" class = "btn">Join now</a>
-                    <hr class="my-4">
-                    <p>Some additional information small print</p>
+
+
                 </div>
                 <div class="col-sm">
                     <img src="/images/frequent/airplane-wing-clouds.jpg" alt="airplane window w/ wing">
@@ -231,72 +231,66 @@
         </div>
     </div>
 
-    <div id = "joinNow">
-        <?php
-            $connection = mysqli_connect(
-                "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
-                "admin", //user
-                "aelb8362580", //password
-                "booking" //database
-            );
-                
-            if(!$connection) { 
-                die("ERROR: Could not connect. ".mysqli_connect_error());
-            }
-
-            $sql = "";
-
-            if($result = mysqli_query($connection, $sql)){
-                if(mysqli_num_rows($result) > 0){
-                    //echo "<form method = 'post' name = 'sign-up'>";
-                    echo "Worked";
-                }
-            }
-
-            mysqli_free_result($result);
-
-            mysqli_close($connection);
-        ?>
+    <div id="explore-title" style="margin-left: 7%;">
+        <h2>Join Adventure Miles Today!</h2>
+        <i class="material-icons navigate-icon">
+            navigate_next
+        </i>
     </div>
+
 
     <form name="frequentFlierForm" method="post" action="frequent.php">
 
         <!-- first name -->
-<div class="form-group form-row">
+<div class="form-row">
     <div class="col">
+        <div class="form-group">
         <label for="ff-first-name">First Name</label>
-        <input type="text" class="form-control" id="ff-first-name" placeholder="Enter first name">
+        <input name = "ff-first-name" type="text" class="form-control" id="ff-first-name" placeholder="Enter first name" required>
+        </div>
     </div>
         <!-- last name -->
     <div class = "col">
         <div class="form-group">
-        <label for="ff-last-name">First Name</label>
-        <input type="text" class="form-control" id="ff-last-name" placeholder="Enter last name">
+        <label for="ff-last-name">Last Name</label>
+        <input name = "ff-last-name" type="text" class="form-control" id="ff-last-name" placeholder="Enter last name" required>
+        </div>
     </div>
 </div>
 
   <!-- birthday -->
-    <div class="form-group">
-        <label for="ff-birthday">Date of Birth</label>
-        <input name = "ff-birthday" type="date" class="custom-select" id="ff-birthday">
-    </div>
+<div class="form-group">
+    <label for="ff-birthday">Date of Birth</label>
+    <input name = "ff-birthday" type="date" class="custom-select" id="ff-birthday">
+</div>
+
+<!--email-->
+<div class="form-group">
+    <label for="ff-email">Email address</label>
+    <input name = "ff-email" type="email" class="form-control" id="ff-email" aria-describedby="ff-email" placeholder="Enter email address" required>
+</div>
+
 
 <!-- address -->
 <div class="form-group">
     <label for="ff-address">Street Address</label>
-    <input type="text" class="form-control" id="ff-address" placeholder="Enter your street address">
-  </div>
+    <input name = "ff-address" type="text" class="form-control" id="ff-address" placeholder="Enter your street address" required>
+</div>
+
 
 <!-- city -->
-<div class="form-group">
-    <label for="ff-city">City Name</label>
-    <input type="text" class="form-control" id="ff-city" placeholder="Enter city name">
-  </div>
-
+<div class="form-row">
+    <div class="col">
+        <div class="form-group">
+            <label for="ff-city">City Name</label>
+            <input name = "ff-city" type="text" class="form-control" id="ff-city" placeholder="Enter city name" required>
+        </div>
+    </div>
 <!-- state -->
-<div class="form-group">
+    <div class="col">
+        <div class="form-group">
             <label for="state-select">State Name</label>
-            <select name="state-select" class="form-control" id="state-select">
+            <select name="state-select" class="form-control" id="state-select" required>
                 <option>-----</option>
                 <option>Colorado</option>
                 <option>Utah</option>
@@ -306,23 +300,93 @@
                 <option>Idaho</option>
                 <option>Wyoming</option>
             </select>
+        </div>
+    </div>
 
 <!-- postal code-->
-<div class="form-group">
-    <label for="ff-postal-code">Postal Code</label>
-    <input type="integer" class="form-control" id="ff-postal-code" placeholder="Enter postal code">
-  </div>
+    <div class="col">
+        <div class="form-group">
+            <label for="ff-zip">ZIP Code</label>
+            <input name = "ff-zip" type="integer" class="form-control" id="ff-zip" placeholder="Enter ZIP code" required>
+        </div>
+    </div>
+</div>
 
-<!--email-->
-<div class="form-group">
-    <label for="ff-email">Email address</label>
-    <input type="email" class="form-control" id="ff-email" aria-describedby="ff-email" placeholder="Enter email address">
-  </div>
+<br></br>
 
-    <button name = "submit" class="btn" type="submit">Submit</button>
+<button name = "submit" class="btn" type="submit">Submit</button>
 
+
+<!-- php stuff-->
+<div id = "joinNow">
+        <?php
+
+
+         $ff_first_name = $_POST["ff-first-name"];
+         $ff_last_name = $_POST["ff-last-name"];
+         $ff_birthday = $_POST["ff-birthday"];
+         $ff_email = $_POST["ff-email"];
+         $ff_address = $_POST["ff-address"];
+         $ff_city = $_POST["ff-city"];
+
+         $select_state = $_POST["state-select"];
+         $ff_state;
+         if($select_state !== "-----") {
+             $ff_state = $select_state;
+         }
+
+         $ff_zip = $_POST["ff-zip"];
+
+        // database info for connection
+        $host = "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com";//host
+        $user = "admin"; //user
+        $password = "aelb8362580"; //password
+        $databaseName = "booking"; //database
+
+
+        $conn = new mysqli($host, $user, $password, $databaseName);
+                
+            //if(!$connection) { 
+            //    die("ERROR: Could not connect. ".mysqli_connect_error());
+            //}
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+            $sql = "INSERT INTO frequent(
+                first_name, 
+                last_name, 
+                birthday, 
+                address, 
+                city, 
+                state, 
+                zip_code, 
+                email)
+                VALUES('$ff_first_name', '$ff_last_name', '$ff_birthday', '$ff_address', '$ff_city', '$ff_state', '$ff_zip', '$ff_email')";
+
+//            if($result = mysqli_query($connection, $sql)){
+//                if(mysqli_num_rows($result) > 0){
+//                   //echo "<form method = 'post' name = 'sign-up'>";
+//                    echo "Worked";
+//                }
+//            }
+
+//            mysqli_free_result($result);
+
+//            mysqli_close($connection);
+
+            if(isset($_POST["submit"])) {
+                echo "<br></br> <h1>Thanks for joining Adventure Miles! We'll see you soon!</h1>";
+            }
+
+            
+            $conn->close();
+        ?>
+    </div>
 
 </form>
+
+
 
 
     <footer class="large-footer">
@@ -336,7 +400,7 @@
             <br />
         </div>
         <div style="text-align: center;" class="footerPart">
-            <h5>Visit Us</h5>
+            <h5 style="font size: 20px text-transform: none">Visit Us</h5>
             <br />
             <a href="https://facebook.com/redrockairlines">Facebook</a> <br />
             <a href="https://twitter.com/redrockairlines">Twitter</a> <br />
@@ -344,13 +408,15 @@
             <br />
             <br />
             <br />
+            <br />
         </div>
 
         <div class="footerPart" id="scheduleBookHolder">
-            <h5>Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
+            <h5 style="font size: 20px text-transform: none">Booking & Schedules&nbsp;&nbsp;&nbsp;</h5>
             <br />
             <a href="/book/book.php">Book a flight</a> <br />
             <a href="/schedules/schedules.php">Flight Schedules</a>
+            <br />
             <br />
             <br />
             <br />
@@ -359,7 +425,7 @@
 
         <div class="footerPart" id="learnMoreHolder">
             <br />
-            <h5>Learn More</h5>
+            <h5 style="font size: 20px text-transform: none">Learn More</h5>
             <br />
             <a href="mailto:redrockairlines@help.com">Contact Us</a> <br />
             <a href="/info/info.html#privacy-policy">Privacy Policy</a> <br />
@@ -379,20 +445,20 @@
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
         </div>
         <div class="footer-part-small">
-            <h5>Visit Us</h5>
+            <h5 style="font-size: 20px text-transform: none">Visit Us</h5>
             <a href="https://facebook.com/redrockairlines">Facebook</a>&nbsp;&nbsp;
             <a href="https://twitter.com/redrockairlines">Twitter</a>&nbsp;&nbsp;
             <a href="https://instagram.com/redrockairlines">Instagram</a>
         </div>
 
         <div class="footer-part-small" id="scheduleBookHolder">
-            <h5>Booking & Schedules</h5>
+            <h5 style="font-size: 20px text-transform: none">Booking & Schedules</h5>
             <a href="/book/book.php">Book a flight</a>&nbsp;&nbsp;
             <a href="/schedules/schedules.php">Flight Schedules</a>
         </div>
 
         <div class="footer-part-small" id="learnMoreHolder">
-            <h5>Learn More</h5>
+            <h5 style="font size: 20px text-transform: none">Learn More</h5>
             <a href="mailto:redrockairlines@help.com">Contact Us</a>&nbsp;&nbsp;
             <a href="/info/info.html#privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
             <a href="/info/info.html#terms-and-conditions">Terms & Conditions</a>&nbsp;&nbsp;

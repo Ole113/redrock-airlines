@@ -6,6 +6,6 @@ CREATE TABLE frequent (
     address            TEXT NOT NULL,
     city               TEXT NOT NULL,
     state              TEXT NOT NULL,
-    postal_code        TEXT NOT NULL,
+    zip_code           TEXT NOT NULL,
     email              TEXT NOT NULL
 );

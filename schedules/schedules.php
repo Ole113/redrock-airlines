@@ -46,20 +46,20 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active">
-                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/schedules/schedules.php">
-                        <i class="material-icons">
-                            schedule
-                        </i>
-                        Schedules
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/book/book.php">
                         <i class="material-icons">
                             book
                         </i>
                         Book
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/schedules/schedules.php">
+                        <i class="material-icons">
+                            schedule
+                        </i>
+                        Schedules
                     </a>
                 </li>
                 <li class="nav-item">

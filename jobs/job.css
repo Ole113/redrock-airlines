@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
     color: #595959;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Abel", sans-serif;
 }
 
 .btn {
@@ -170,7 +170,7 @@ h6 {
 }
 
 .element {
-    padding: 0 25% 5% 25%;
+    padding: 0 10% 5% 15%;
 }
 
 #form-wrapper {
@@ -185,9 +185,10 @@ h6 {
 .element img,
 .text {
     width: 100%;
-    margin-top: -2.5%;
-    margin-bottom: 8%;
+    margin-top: 50px;
+    margin-bottom: 0%;
     text-align: left;
+    font-size: 20px;
 }
 
 .element img {
@@ -309,7 +310,7 @@ h6 {
 }
 
 .footerPart h5 {
-    font-size: 15px;
+    font-size: 20px;
     color: #1c1c1c;
 }
 

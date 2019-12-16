@@ -291,7 +291,7 @@ form {
     width: 100%;
     height: 350px;
     background-color: #f2f2f2;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .small-footer {
@@ -379,7 +379,7 @@ form {
 }
 
 .footerPart h5 {
-    font-size: 15px;
+    font-size: 20px;
     color: #1c1c1c;
 }
 

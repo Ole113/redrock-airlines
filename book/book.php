@@ -47,14 +47,6 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/schedules/schedules.php">
-                        <i class="material-icons">
-                            schedule
-                        </i>
-                        Schedules
-                    </a>
-                </li>
                 <li class="nav-item active">
                     <a style="color: #595959; font-weight: bold;" class="nav-link" href="/book/book.php">
                         <i class="material-icons">
@@ -63,6 +55,15 @@
                         Book
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/schedules/schedules.php">
+                        <i class="material-icons">
+                            schedule
+                        </i>
+                        Schedules
+                    </a>
+                </li>
+            
                 <li class="nav-item">
                     <a class="nav-link" href="/frequent/frequent.php">
                         <i class="material-icons material-airplane">
@@ -113,7 +114,7 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
+        <img src="/images/book/flying.jpg" alt="airport people walking" />
     </div>
 
     <div id="explore-title" style="margin-left: 7%;">
@@ -124,25 +125,79 @@
     </div>
 
     <form method="post" action="book.php">
+        <div id = "initial">
+        <div class = "form-row">
+            <div class = "col">
         <div class="form-group">
-            <label for="state-select">Choose a state to see available flights!</label>
-            <select name="state-select" class="form-control" id="state-select">
+            <label for="state-select">Choose a departing location!</label>
+            <select name="from-select" class="form-control" id="from-select">
                 <option>-----</option>
-                <option>Colorado</option>
-                <option>Utah</option>
-                <option>Nevada</option>
-                <option>Arizona</option>
-                <option>Oregon</option>
-                <option>Idaho</option>
-                <option>Wyoming</option>
+                <option>McCarran International Airport</option>
+                <option>Reno-Tahoe International Airport</option>
+                <option>Boise Airport</option>
+                <option>Idaho Falls Regional Airport</option>
+                <option>Phoenix Sky Harbor International Airport</option>
+                <option>Tuscon International Airport</option>
+                <option>Denver International Airport</option>
+                <option>Rogue Valley International-Medford Airport</option>
+                <option>Jackson Hole Airport</option>
+                <option>Portland International Airport</option>
+                <option>Salt Lake International Airport</option>
+                <option>Colorado Springs Airport</option>
+                <option>Saint George Municipal Airport</option>
             </select>
-            <br /><br />
-            <button name = "submit" class="btn" type="submit">Submit</button>
+        </div>
+        </div>
+        <div class = "col">
+        <div class="form-group">
+            <label for="state-select">Choose an arriving location!</label>
+            <select name="to-select" class="form-control" id="to-select">
+                <option>-----</option>
+                <option>McCarran International Airport</option>
+                <option>Reno-Tahoe International Airport</option>
+                <option>Boise Airport</option>
+                <option>Idaho Falls Regional Airport</option>
+                <option>Phoenix Sky Harbor International Airport</option>
+                <option>Tuscon International Airport</option>
+                <option>Denver International Airport</option>
+                <option>Rogue Valley International-Medford Airport</option>
+                <option>Jackson Hole Airport</option>
+                <option>Portland International Airport</option>
+                <option>Salt Lake International Airport</option>
+                <option>Colorado Springs Airport</option>
+                <option>Saint George Municipal Airport</option>
+            </select>
+        </div>
+        </div>
+        </div>
+        <div class = "form-row">
+            <div class = "col">
+                <div class="form-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input class="form-control" type="date" id="daparture-date">
+                </div>
+            </div>
+
+            <div class = "col">
+                <div class="form-group">
+                    <label for="arrival-date">Arrival Date</label>
+                    <input class="form-control" type="date" id="arrival-date">
+                </div>
+            </div>
         </div>
 
-        <div class = "form-group">
-            
+        <div class = "form-row">
+            <div class = "col">
+                <div class="form-group">
+                    <label for="numberPassengers" class="col-form-label">Number of passengers</label>
+                    <input name = "numberPassengers" type="number" class="form-control" id="numberPassengers" placeholder="Number of passengers">
+                </div>
+            </div>
+            </div>
         </div>
+        <br /><br />
+        <button name = "submit" class="btn" type="submit">Search</button>
+    </div>
             <?php
                 $connection = mysqli_connect(
                     "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
@@ -155,22 +210,30 @@
                     die("ERROR: Could not connect. ".mysqli_connect_error());
                 }
 
-                $state_dropdown = $_POST["state-select"];
-                $state;
-                if($state_dropdown !== "-----") {
-                    $state = $state_dropdown;
+                $departing_location = $_POST["from-select"];
+                $departing;
+                if($departing_location !== "-----") {
+                    $departing = $departing_location;
                 }
                 
-                $sql = "SELECT * FROM flights WHERE departing_state = '".$state_dropdown."'";
+                $arriving_location = $_POST["to-select"];
+                $arriving;
+                if($arriving_location !== "-----") {
+                    $arriving = $arriving_location;
+                }
 
+                //$number_passengers = $_POST["numberPassengers"];
+
+                $sql = "SELECT * FROM flights WHERE departing_airport = '".$departing_location."' AND arriving_airport = '".$arriving_location."'";
                 if($result = mysqli_query($connection, $sql)){
                     if(mysqli_num_rows($result) > 0){
                         echo "
-                        <h1>" . "<br /><br /><br />Showing flights from " . $state_dropdown . "</h1>
+                        <h1><br /><br /><br />Select a flight from below</h1>
                         <div class='table-responsive'>
                             <table class='table'>
                                 <thead>
                                     <tr>
+                                        <th scope ='col'>Select</th>
                                         <th scope='col'>ID</th>
                                         <th scope='col'>Departing From</th>
                                         <th scope='col'>Departing At</th>
@@ -185,10 +248,13 @@
                         while($row = mysqli_fetch_array($result)){
 
                             $id = $row['id'];
-
+                            $global_id = $row['id'];
                             echo "
                             <tr>
-                                <th scope='row'>$id</th>
+                                <td><div style = 'text-align: center;' class='form-check'>
+                                <input class='form-check-input' type='radio' name='choice' value='option1'>
+                              </div></td>
+                                <th scope = 'row'>$id</th>
                                     <td>" . $row['departing_airport'] . ", " . $row['departing_state'] . "</td>
                                     <td>" . $row['departing_time'] . " on " . $row['departing_date'] . "</td>
                                     <td>" . $row['arriving_airport'] . ", " . $row['arriving_state'] . "</td>
@@ -203,18 +269,96 @@
                             </table>
                         </div>
                         <br /><br />
-                        <a class = 'btn' href = '/book/book.php'>Book Now</a>";
-
-                    } else if($state_dropdown === "-----") {
-                        echo "<br /><br /><br /><br /><h1>No results found.</h1>";
+                        <form method = 'post' action = 'book.php'>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='first-name' class='col-form-label'>First Name</label>
+                                    <input name = 'first-name' type='text' class='form-control' id='first-name' placeholder='First name' required>
+                                </div>
+                            </div>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='last-name' class='col-form-label'>Last Name</label>
+                                    <input name = 'last-name' type='text' class='form-control' id='last-name' placeholder='Last name' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='telephone1' class='col-form-label'>Phone Number</label>
+                                    <input name = 'telephone1' type='tel' class='form-control' id='telephone1' placeholder='801-543-2100' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='email' class='col-form-label'>Email</label>
+                                    <input name = 'email' type='email' class='form-control' id='email' placeholder='Email address' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='credit-card-number' class='col-form-label'>Credit Card Number</label>
+                                    <input name = 'credit-card-number' type='text' class='form-control' id='credit-card-number' placeholder='Credit card number' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='cvv' class='col-form-label'>CVV</label>
+                                    <input name = 'cvv' type='text' class='form-control' id='cvv' placeholder='CVV' required>
+                                </div>
+                            </div>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='card-expiration'>Card Expiration Date</label>
+                                    <input name='card-expiration' class='form-control' type='date' id='card-expiration' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'form-row'>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='card-name-first' class='col-form-label'>Credit Card First Name</label>
+                                    <input name = 'card-name-first' type='text' class='form-control' id='card-name-first' placeholder='First name' required>
+                                </div>
+                            </div>
+                            <div class = 'col'>
+                                <div class='form-group'>
+                                    <label for='card-name-last' class='col-form-label'>Credit Card Last Name</label>
+                                    <input name = 'card-name-last' type='text' class='form-control' id='card-name-last' placeholder='Last name' required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button name = 'book' class='btn' type='submit'>Book</button>
+                    </form>";                           
+                    
+                    } else if($departing_location === "-----") {
+                        if(isset($_POST["book"])) {
+                            echo "<br><br><h1>You have been booked successfully</h1>";
+                        }
+                        }
+                    } else {
+                        if(isset($_POST["submit"])) {
+                            echo "<br /><br /><br /><br /><h1>No results found.</h1>";
+                        }
                     }
-                }
+                
 
                 mysqli_free_result($result);
 
                 mysqli_close($connection);
+            
             ?>
- 
+        <br />
+        <br />
     </form>
 
 

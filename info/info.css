@@ -24,7 +24,8 @@ h4,
 h5,
 h6 {
     color: #595959;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Abel", sans-serif;
+    text-transform: uppercase
 }
 
 /**************
@@ -295,7 +296,7 @@ div.col-8 div {
 }
 
 .footer-part-small {
-    padding: 2% 0 3.5% 5%;
+    padding: 2% 0 3.5% 5%; 
 }
 
 .footer-part-small a {
