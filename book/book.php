@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/frequent/frequent.html">
+                    <a class="nav-link" href="/frequent/frequent.php">
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
@@ -113,29 +113,110 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/book/walking-airport.jpg" alt="airport people walking" />
+        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
     </div>
 
     <div id="explore-title" style="margin-left: 7%;">
-        <h2>Book by ID!</h2>
+        <h2>Find a flight today!</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
     </div>
 
-    <form name="form" method="post" action="book.php">
-        <div class="form-group row">
-            <label for="state-select">Already know the <a href = "schedules.php">ID</a> of the flight you want to book?</label>
-            <input type="text" class="form-control" id="id-input" placeholder="ID">
+    <form method="post" action="book.php">
+        <div class="form-group">
+            <label for="state-select">Choose a state to see available flights!</label>
+            <select name="state-select" class="form-control" id="state-select">
+                <option>-----</option>
+                <option>Colorado</option>
+                <option>Utah</option>
+                <option>Nevada</option>
+                <option>Arizona</option>
+                <option>Oregon</option>
+                <option>Idaho</option>
+                <option>Wyoming</option>
+            </select>
+            <br /><br />
+            <button name = "submit" class="btn" type="submit">Submit</button>
         </div>
+
+        <div class = "form-group">
+            
+        </div>
+            <?php
+                $connection = mysqli_connect(
+                    "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+                    "admin", //user
+                    "aelb8362580", //password
+                    "booking" //database
+                );
+    
+                if(!$connection) { 
+                    die("ERROR: Could not connect. ".mysqli_connect_error());
+                }
+
+                $state_dropdown = $_POST["state-select"];
+                $state;
+                if($state_dropdown !== "-----") {
+                    $state = $state_dropdown;
+                }
+                
+                $sql = "SELECT * FROM flights WHERE departing_state = '".$state_dropdown."'";
+
+                if($result = mysqli_query($connection, $sql)){
+                    if(mysqli_num_rows($result) > 0){
+                        echo "
+                        <h1>" . "<br /><br /><br />Showing flights from " . $state_dropdown . "</h1>
+                        <div class='table-responsive'>
+                            <table class='table'>
+                                <thead>
+                                    <tr>
+                                        <th scope='col'>ID</th>
+                                        <th scope='col'>Departing From</th>
+                                        <th scope='col'>Departing At</th>
+                                        <th scope='col'>Arrival To</th>
+                                        <th scope='col'>Arrival At</th>
+                                        <th scope='col'>Seats Available</th>
+                                        <th scope='col'>Price</th>
+                                    </tr>
+                                </thead>
+                            <tbody>";
+
+                        while($row = mysqli_fetch_array($result)){
+
+                            $id = $row['id'];
+
+                            echo "
+                            <tr>
+                                <th scope='row'>$id</th>
+                                    <td>" . $row['departing_airport'] . ", " . $row['departing_state'] . "</td>
+                                    <td>" . $row['departing_time'] . " on " . $row['departing_date'] . "</td>
+                                    <td>" . $row['arriving_airport'] . ", " . $row['arriving_state'] . "</td>
+                                    <td>" . $row['arriving_time'] . " on " . $row['arriving_date'] . "</td>
+                                    <td>" . $row['seats_available'] . "</td>
+                                    <td>" . "$ " . $row['price'] . "</td>
+                                    </tr>";
+                        }
+
+                        echo "
+                                </tbody>
+                            </table>
+                        </div>
+                        <br /><br />
+                        <a class = 'btn' href = '/book/book.php'>Book Now</a>";
+
+                    } else if($state_dropdown === "-----") {
+                        echo "<br /><br /><br /><br /><h1>No results found.</h1>";
+                    }
+                }
+
+                mysqli_free_result($result);
+
+                mysqli_close($connection);
+            ?>
+ 
     </form>
 
-    <div id="explore-title" style="margin-left: 7%;">
-        <h2></h2>
-        <i class="material-icons navigate-icon">
-            navigate_next
-        </i>
-    </div>
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">

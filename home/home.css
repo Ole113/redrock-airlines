@@ -394,6 +394,9 @@ h6 {
     margin-right: 7.5%;
 }
 
+.card p {
+    text-align: left;
+}
 @media (max-width: 1150px) {
     .card {
         font-size: 1.4vw;

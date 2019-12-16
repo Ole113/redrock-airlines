@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/frequent/frequent.html">
+                    <a class="nav-link" href="/frequent/frequent.php">
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
@@ -122,9 +122,9 @@
         </i>
     </div>
 
-    <form name="form" method="post" action="schedules.php">
+    <form method="post" action="schedules.php">
         <div class="form-group">
-            <label for="state-select">Choose a state to see available flights!<br />For faster booking use the flight ID.</label>
+            <label for="state-select">Choose a state to see available flights!</label>
             <select name="state-select" class="form-control" id="state-select">
                 <option>-----</option>
                 <option>Colorado</option>

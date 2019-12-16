@@ -22,13 +22,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-form a {
-    color: red;
+.btn {
+    background-color: red;
+    border: none;
+    color: white;
 }
 
-form a:hover {
-    text-decoration: underline;
-    color: red;
+.btn:hover {
+    background-color: #cc0000;
+    color: white;
 }
 
 /**************

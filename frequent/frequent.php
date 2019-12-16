@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/frequent/frequent.html">
+                    <a style="color: #595959; font-weight: bold;" class="nav-link" href="/frequent/frequent.php">
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
@@ -128,12 +128,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="display-4">Red Rock Airline Adventure Miles</h1>
-                    <br /><br />
-                    <h1 class="display-5">How it works</h1>
-                    <p class="lead">MICHAEL DO THIS(add more h1 tags about important information and then describe it
-                        below it There needs to be enough text that the image next to it looks full height) Some Main
-                        text</p>
+                    <h1 class="display-4">Red Rock Adventure Miles</h1>
+                    <br>
+                    <ul><li>Miles will be earned based on ticket price</li>
+                    <br><li>Miles are earned at a rate of 3 miles per USD</li>
+                    <br><li>Miles can be spent on trips, flights, and hotels</li>
+                    <br><li>Miles can also be used on upgrading seats and other amenities.</li>
+                    <br><li>Miles are used as currency</li>
+                    <br><li>
+                    
+                    <a href = "#joinNow" class = "btn">Join now</a>
                     <hr class="my-4">
                     <p>Some additional information small print</p>
                 </div>
@@ -143,7 +147,6 @@
             </div>
         </div>
     </div>
-
 
     <div id="main-points-wrapper">
         <div class="point">
@@ -181,8 +184,7 @@
                         <h5 class="card-title">Utah</h5>
                         <p class="card-text">From delightful desert areas to snowy white mountains, Utah has it all. To
                             the South, adventures are greeted with 5 national parks, Arches, Zion, Bryce Canyon,
-                            Canyonlands, and Capital Reef. In the North, you can ski or snowboard at several different
-                            resorts in the Wasatch Mountains.
+                            Canyonlands, and Capital Reef. To the North, you can hit the slopes in the Wasatch mountains.
                         </p>
                         <a href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
@@ -208,7 +210,7 @@
                         <h5 class="card-title">Oregon</h5>
                         <p class="card-text">Whether you want to see the Pacific Ocean or climb the volcanic Mount Hood,
                             Oregon will not disappoint. Oregon has a diverse landscape of forests, mountains, farms, and
-                            beaches. </p>
+                            beaches. Portland, Oregon's largest city, is home to several performing arts institutions and microbreweries.</p>
                         <a href="https://www.nps.gov/state/or/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -218,9 +220,9 @@
                     <img src="/images/frequent/wyoming-canyon.jpeg" class="card-img-top" alt="wyoming canyon">
                     <div class="card-body">
                         <h5 class="card-title">Wyoming</h5>
-                        <p class="card-text">This state is home to the National Parks, Grand Teton and Yellowstone. Here
+                        <p class="card-text">This state is home to National Parks: Grand Teton and Yellowstone. Here
                             you can find amazing landmarks like Old Faithful, the Grand Prismatic Spring, the Teton
-                            Range and Yellowstone Lake.
+                            Range and Yellowstone Lake. Wyoming is home to Cheyenne Frontier Days, the largest rodeo in the US.
                         </p>
                         <a href="https://www.nps.gov/grte/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
@@ -228,6 +230,100 @@
             </div>
         </div>
     </div>
+
+    <div id = "joinNow">
+        <?php
+            $connection = mysqli_connect(
+                "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
+                "admin", //user
+                "aelb8362580", //password
+                "booking" //database
+            );
+                
+            if(!$connection) { 
+                die("ERROR: Could not connect. ".mysqli_connect_error());
+            }
+
+            $sql = "";
+
+            if($result = mysqli_query($connection, $sql)){
+                if(mysqli_num_rows($result) > 0){
+                    //echo "<form method = 'post' name = 'sign-up'>";
+                    echo "Worked";
+                }
+            }
+
+            mysqli_free_result($result);
+
+            mysqli_close($connection);
+        ?>
+    </div>
+
+    <form name="frequentFlierForm" method="post" action="frequent.php">
+
+        <!-- first name -->
+<div class="form-group form-row">
+    <div class="col">
+        <label for="ff-first-name">First Name</label>
+        <input type="text" class="form-control" id="ff-first-name" placeholder="Enter first name">
+    </div>
+        <!-- last name -->
+    <div class = "col">
+        <div class="form-group">
+        <label for="ff-last-name">First Name</label>
+        <input type="text" class="form-control" id="ff-last-name" placeholder="Enter last name">
+    </div>
+</div>
+
+  <!-- birthday -->
+    <div class="form-group">
+        <label for="ff-birthday">Date of Birth</label>
+        <input name = "ff-birthday" type="date" class="custom-select" id="ff-birthday">
+    </div>
+
+<!-- address -->
+<div class="form-group">
+    <label for="ff-address">Street Address</label>
+    <input type="text" class="form-control" id="ff-address" placeholder="Enter your street address">
+  </div>
+
+<!-- city -->
+<div class="form-group">
+    <label for="ff-city">City Name</label>
+    <input type="text" class="form-control" id="ff-city" placeholder="Enter city name">
+  </div>
+
+<!-- state -->
+<div class="form-group">
+            <label for="state-select">State Name</label>
+            <select name="state-select" class="form-control" id="state-select">
+                <option>-----</option>
+                <option>Colorado</option>
+                <option>Utah</option>
+                <option>Nevada</option>
+                <option>Arizona</option>
+                <option>Oregon</option>
+                <option>Idaho</option>
+                <option>Wyoming</option>
+            </select>
+
+<!-- postal code-->
+<div class="form-group">
+    <label for="ff-postal-code">Postal Code</label>
+    <input type="integer" class="form-control" id="ff-postal-code" placeholder="Enter postal code">
+  </div>
+
+<!--email-->
+<div class="form-group">
+    <label for="ff-email">Email address</label>
+    <input type="email" class="form-control" id="ff-email" aria-describedby="ff-email" placeholder="Enter email address">
+  </div>
+
+    <button name = "submit" class="btn" type="submit">Submit</button>
+
+
+</form>
+
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
