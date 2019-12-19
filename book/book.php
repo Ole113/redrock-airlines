@@ -286,10 +286,10 @@
                         </div>
                         <div class = 'form-row'>
                             <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='telephone1' class='col-form-label'>Phone Number</label>
-                                    <input name = 'telephone1' type='tel' class='form-control' id='telephone1' placeholder='801-543-2100' required>
-                                </div>
+                            <div class='form-group'>
+                            <label for='phone' class='col-form-label'>Telephone Number</label>
+                            <input name = 'phone' type='tel' class='form-control' id='phone' placeholder='801-543-2100' required>
+                        </div>
                             </div>
                         </div>
                         <div class = 'form-row'>
@@ -337,19 +337,35 @@
                             </div>
                         </div>
                     </div>
+                    <br /><br />
                     <button name = 'book' class='btn' type='submit'>Book</button>
                     </form>";                           
                     
                     } else if($departing_location === "-----") {
                         if(isset($_POST["book"])) {
-                            echo "<br><br><h1>You have been booked successfully</h1>";
-                        }
-                        }
-                    } else {
-                        if(isset($_POST["submit"])) {
-                            echo "<br /><br /><br /><br /><h1>No results found.</h1>";
+                            $card_name_last = $_POST["card-name-last"];
+                            $card_name_first = $_POST["card-name-first"];
+                            $card_expiration = $_POST["card-expiration"];
+                            $cvv = $_POST["cvv"];
+                            $credit_card_number = $_POST["credit-card-number"];
+                            $email = $_POST["email"];
+                            $phone = $_POST["phone"];
+                            $last_name = $_POST["last-name"];
+                            $first_name = $_POST["first-name"];
+
+                            $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '1', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
+                            if($query_result = mysqli_query($connection, $sql_insert)){
+                                echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";
+                            } else {
+                                echo "<br /><br /><br /><br /><br /><h1>Sorry, an error occurred.</h1>";
+                            }
                         }
                     }
+                } else {
+                    if(isset($_POST["submit"])) {
+                        echo "<br /><br /><br /><br /><br /><h1>No results found.</h1>";
+                    }
+                }
                 
 
                 mysqli_free_result($result);

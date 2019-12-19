@@ -1,14 +1,14 @@
 CREATE TABLE book (
-    orderNum         INT PRIMARY KEY AUTO_INCREMENT,
+    id               INT PRIMARY KEY AUTO_INCREMENT,
     client_name      TEXT NOT NULL,
     client_last      TEXT NOT NULL,
-    flightID         TEXT NOT NULL,
+    flight_id        TEXT NOT NULL,
     --freqFlyerNum   INT NOT NULL,
-    client_phone INT NOT NULL,
+    client_phone     BIGINT NOT NULL,
     client_email     TEXT NOT NULL,
-    cardNumber       INT NOT NULL,
-    expDate          DATE NOT NULL,   
-    CVV              INT NOT NULL,
-    firstNameOnCard  TEXT NOT NULL,
-    lastNameOnCard   TEXT NOT NULL
+    card_number      BIGINT NOT NULL,
+    exp_date         DATE NOT NULL,   
+    cvv              SMALLINT NOT NULL,
+    card_first_name  TEXT NOT NULL,
+    card_last_name   TEXT NOT NULL
 );
