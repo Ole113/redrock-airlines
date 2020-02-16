@@ -48,7 +48,6 @@
                         <button type="submit" class="btn btn-primary">Login</button>
                     </form>
                     <?php
-                    //in here check if password and username are in employee, admin, customer individually and if one of them returns true 
                         $connection = mysqli_connect(
                             "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
                             "admin", //user
@@ -63,20 +62,33 @@
                         $username = $_POST["username"];
                         $password = $_POST["password"];
 
-
-                        $sql = "SELECT * FROM admin WHERE departing_airport = '".$departing_location."' AND arriving_airport = '".$arriving_location."'";
+                        $sql = "SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'";
                         if($result = mysqli_query($connection, $sql)){
                             if(mysqli_num_rows($result) > 0){
                                 while($row = mysqli_fetch_array($result)){
+                                    $position = $row["position"];
 
+                                    switch($position) {
+                                        case "admin":
+                                            require "../logined/admin/admin.php";
+                                            require "../../logined/admin/admin.css";
+                                            break;
+                                        case "employee":
+                                            //include "/logined/employee/employee.php";
+                                            break;
+                                        case "customer":
+                                            //include "/logined/customer/customer.php";
+                                            break;
+                                    }
                                 }
-                                    
                             } else {
-                                
+                                //output password not right
+                                echo "
+                                    <h1>The password or username was incorrect.</h1>
+                                ";
                             }
                         }
                     
-
                         mysqli_free_result($result);
                         mysqli_close($connection);
                     ?>

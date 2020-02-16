@@ -26,6 +26,16 @@
 
 <body>
 
+    <!-- Makes it so when the page is refreshed forms are not submitted again, problem was that when adding to flights when user 
+    refreshed page it would be added again.
+    https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr
+    -->
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
             <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
@@ -63,7 +73,7 @@
                         Schedules
                     </a>
                 </li>
-            
+
                 <li class="nav-item">
                     <a class="nav-link" href="/frequent/frequent.php">
                         <i class="material-icons material-airplane">
@@ -125,80 +135,81 @@
     </div>
 
     <form method="post" action="book.php">
-        <div id = "initial">
-        <div class = "form-row">
-            <div class = "col">
-        <div class="form-group">
-            <label for="state-select">Choose a departing location!</label>
-            <select name="from-select" class="form-control" id="from-select">
-                <option>-----</option>
-                <option>McCarran International Airport</option>
-                <option>Reno-Tahoe International Airport</option>
-                <option>Boise Airport</option>
-                <option>Idaho Falls Regional Airport</option>
-                <option>Phoenix Sky Harbor International Airport</option>
-                <option>Tuscon International Airport</option>
-                <option>Denver International Airport</option>
-                <option>Rogue Valley International-Medford Airport</option>
-                <option>Jackson Hole Airport</option>
-                <option>Portland International Airport</option>
-                <option>Salt Lake International Airport</option>
-                <option>Colorado Springs Airport</option>
-                <option>Saint George Municipal Airport</option>
-            </select>
-        </div>
-        </div>
-        <div class = "col">
-        <div class="form-group">
-            <label for="state-select">Choose an arriving location!</label>
-            <select name="to-select" class="form-control" id="to-select">
-                <option>-----</option>
-                <option>McCarran International Airport</option>
-                <option>Reno-Tahoe International Airport</option>
-                <option>Boise Airport</option>
-                <option>Idaho Falls Regional Airport</option>
-                <option>Phoenix Sky Harbor International Airport</option>
-                <option>Tuscon International Airport</option>
-                <option>Denver International Airport</option>
-                <option>Rogue Valley International-Medford Airport</option>
-                <option>Jackson Hole Airport</option>
-                <option>Portland International Airport</option>
-                <option>Salt Lake International Airport</option>
-                <option>Colorado Springs Airport</option>
-                <option>Saint George Municipal Airport</option>
-            </select>
-        </div>
-        </div>
-        </div>
-        <div class = "form-row">
-            <div class = "col">
-                <div class="form-group">
-                    <label for="departure-date">Departure Date</label>
-                    <input class="form-control" type="date" id="daparture-date">
+        <div id="initial">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="state-select">Choose a departing location!</label>
+                        <select name="from-select" class="form-control" id="from-select">
+                            <option>-----</option>
+                            <option>McCarran International Airport</option>
+                            <option>Reno-Tahoe International Airport</option>
+                            <option>Boise Airport</option>
+                            <option>Idaho Falls Regional Airport</option>
+                            <option>Phoenix Sky Harbor International Airport</option>
+                            <option>Tuscon International Airport</option>
+                            <option>Denver International Airport</option>
+                            <option>Rogue Valley International-Medford Airport</option>
+                            <option>Jackson Hole Airport</option>
+                            <option>Portland International Airport</option>
+                            <option>Salt Lake International Airport</option>
+                            <option>Colorado Springs Airport</option>
+                            <option>Saint George Municipal Airport</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="state-select">Choose an arriving location!</label>
+                        <select name="to-select" class="form-control" id="to-select">
+                            <option>-----</option>
+                            <option>McCarran International Airport</option>
+                            <option>Reno-Tahoe International Airport</option>
+                            <option>Boise Airport</option>
+                            <option>Idaho Falls Regional Airport</option>
+                            <option>Phoenix Sky Harbor International Airport</option>
+                            <option>Tuscon International Airport</option>
+                            <option>Denver International Airport</option>
+                            <option>Rogue Valley International-Medford Airport</option>
+                            <option>Jackson Hole Airport</option>
+                            <option>Portland International Airport</option>
+                            <option>Salt Lake International Airport</option>
+                            <option>Colorado Springs Airport</option>
+                            <option>Saint George Municipal Airport</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="departure-date">Departure Date</label>
+                        <input class="form-control" type="date" id="daparture-date">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="arrival-date">Arrival Date</label>
+                        <input class="form-control" type="date" id="arrival-date">
+                    </div>
                 </div>
             </div>
 
-            <div class = "col">
-                <div class="form-group">
-                    <label for="arrival-date">Arrival Date</label>
-                    <input class="form-control" type="date" id="arrival-date">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="numberPassengers" class="col-form-label">Number of passengers</label>
+                        <input name="numberPassengers" type="number" class="form-control" id="numberPassengers"
+                            placeholder="Number of passengers">
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class = "form-row">
-            <div class = "col">
-                <div class="form-group">
-                    <label for="numberPassengers" class="col-form-label">Number of passengers</label>
-                    <input name = "numberPassengers" type="number" class="form-control" id="numberPassengers" placeholder="Number of passengers">
-                </div>
-            </div>
             </div>
         </div>
         <br /><br />
-        <button name = "submit" class="btn" type="submit">Search</button>
-    </div>
-            <?php
+        <button name="submit" class="btn" type="submit">Search</button>
+        </div>
+        <?php
                 $connection = mysqli_connect(
                     "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com", //host
                     "admin", //user
@@ -252,7 +263,8 @@
                             echo "
                             <tr>
                                 <td><div style = 'text-align: center;' class='form-check'>
-                                <input class='form-check-input' type='radio' name='choice' value='option1'>
+                                <input class='form-check-input' type='radio' name='choice' value='$id'> 
+                            
                               </div></td>
                                 <th scope = 'row'>$id</th>
                                     <td>" . $row['departing_airport'] . ", " . $row['departing_state'] . "</td>
@@ -352,7 +364,10 @@
                             $phone = $_POST["phone"];
                             $last_name = $_POST["last-name"];
                             $first_name = $_POST["first-name"];
-
+                            //check if radio button is selected
+                            $flight_id = $_POST["choice"];
+                            
+                            // add variable that is set to the flight id of the flight that the user selects with a radio button. put variable in place of the "1".
                             $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '1', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
                             if($query_result = mysqli_query($connection, $sql_insert)){
                                 echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";

@@ -24,7 +24,16 @@
 </head>
 
 <body>
-
+    <!-- Makes it so when the page is refreshed forms are not submitted again, problem was that when adding to flights when user 
+    refreshed page it would be added again.
+    https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr
+    -->
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
             <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span

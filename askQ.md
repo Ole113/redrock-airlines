@@ -1,0 +1,1 @@
+In flights.php for modify flights do we want to search by id or have a similar form to search

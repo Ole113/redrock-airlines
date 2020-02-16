@@ -27,6 +27,16 @@
 </head>
 
 <body>
+    <!-- Makes it so when the page is refreshed forms are not submitted again, problem was that when adding to flights when user 
+    refreshed page it would be added again.
+    https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr
+    -->
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
             <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
@@ -47,7 +57,7 @@
                         <span class="home-icon">Home</span>
                         <span class="sr-only">(current)</span>
                     </a>
-                    <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="/book/book.php">
                         <i class="material-icons">
                             book
@@ -130,14 +140,19 @@
                 <div class="col-sm">
                     <h1 class="display-5">Red Rock Adventure Miles</h1>
                     <br>
-                    <ul><li>Miles will be earned based on ticket price</li>
-                    <br><li>Miles are earned at a rate of 3 miles per USD</li>
-                    <br><li>Miles can be spent on trips, flights, and hotels</li>
-                    <br><li>Miles can also be used on upgrading seats and other amenities.</li>
-                    <br><li>Miles are used as currency</li>
-                    <br>
-                    <br /><br />
-                    <a href = "#joinNow" class = "btn">Join now</a>
+                    <ul>
+                        <li>Miles will be earned based on ticket price</li>
+                        <br>
+                        <li>Miles are earned at a rate of 3 miles per USD</li>
+                        <br>
+                        <li>Miles can be spent on trips, flights, and hotels</li>
+                        <br>
+                        <li>Miles can also be used on upgrading seats and other amenities.</li>
+                        <br>
+                        <li>Miles are used as currency</li>
+                        <br>
+                        <br /><br />
+                        <a href="#joinNow" class="btn">Join now</a>
 
 
                 </div>
@@ -184,7 +199,8 @@
                         <h5 class="card-title">Utah</h5>
                         <p class="card-text">From delightful desert areas to snowy white mountains, Utah has it all. To
                             the South, adventures are greeted with 5 national parks, Arches, Zion, Bryce Canyon,
-                            Canyonlands, and Capital Reef. To the North, you can hit the slopes in the Wasatch mountains.
+                            Canyonlands, and Capital Reef. To the North, you can hit the slopes in the Wasatch
+                            mountains.
                         </p>
                         <a href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
@@ -210,7 +226,8 @@
                         <h5 class="card-title">Oregon</h5>
                         <p class="card-text">Whether you want to see the Pacific Ocean or climb the volcanic Mount Hood,
                             Oregon will not disappoint. Oregon has a diverse landscape of forests, mountains, farms, and
-                            beaches. Portland, Oregon's largest city, is home to several performing arts institutions and microbreweries.</p>
+                            beaches. Portland, Oregon's largest city, is home to several performing arts institutions
+                            and microbreweries.</p>
                         <a href="https://www.nps.gov/state/or/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -222,7 +239,8 @@
                         <h5 class="card-title">Wyoming</h5>
                         <p class="card-text">This state is home to National Parks: Grand Teton and Yellowstone. Here
                             you can find amazing landmarks like Old Faithful, the Grand Prismatic Spring, the Teton
-                            Range and Yellowstone Lake. Wyoming is home to Cheyenne Frontier Days, the largest rodeo in the US.
+                            Range and Yellowstone Lake. Wyoming is home to Cheyenne Frontier Days, the largest rodeo in
+                            the US.
                         </p>
                         <a href="https://www.nps.gov/grte/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
@@ -242,149 +260,141 @@
     <form name="frequentFlierForm" method="post" action="frequent.php">
 
         <!-- first name -->
-<div class="form-row">
-    <div class="col">
-        <div class="form-group">
-        <label for="ff-first-name">First Name</label>
-        <input name = "ff-first-name" type="text" class="form-control" id="ff-first-name" placeholder="Enter first name" required>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ff-first-name">First Name</label>
+                    <input name="ff-first-name" type="text" class="form-control" id="ff-first-name"
+                        placeholder="Enter first name" required>
+                </div>
+            </div>
+            <!-- last name -->
+            <div class="col">
+                <div class="form-group">
+                    <label for="ff-last-name">Last Name</label>
+                    <input name="ff-last-name" type="text" class="form-control" id="ff-last-name"
+                        placeholder="Enter last name" required>
+                </div>
+            </div>
         </div>
-    </div>
-        <!-- last name -->
-    <div class = "col">
+
+        <!-- birthday -->
         <div class="form-group">
-        <label for="ff-last-name">Last Name</label>
-        <input name = "ff-last-name" type="text" class="form-control" id="ff-last-name" placeholder="Enter last name" required>
+            <label for="ff-birthday">Date of Birth</label>
+            <input name="ff-birthday" type="date" class="custom-select" id="ff-birthday">
         </div>
-    </div>
-</div>
 
-  <!-- birthday -->
-<div class="form-group">
-    <label for="ff-birthday">Date of Birth</label>
-    <input name = "ff-birthday" type="date" class="custom-select" id="ff-birthday">
-</div>
-
-<!--email-->
-<div class="form-group">
-    <label for="ff-email">Email address</label>
-    <input name = "ff-email" type="email" class="form-control" id="ff-email" aria-describedby="ff-email" placeholder="Enter email address" required>
-</div>
-
-
-<!-- address -->
-<div class="form-group">
-    <label for="ff-address">Street Address</label>
-    <input name = "ff-address" type="text" class="form-control" id="ff-address" placeholder="Enter your street address" required>
-</div>
-
-
-<!-- city -->
-<div class="form-row">
-    <div class="col">
+        <!--email-->
         <div class="form-group">
-            <label for="ff-city">City Name</label>
-            <input name = "ff-city" type="text" class="form-control" id="ff-city" placeholder="Enter city name" required>
+            <label for="ff-email">Email address</label>
+            <input name="ff-email" type="email" class="form-control" id="ff-email" aria-describedby="ff-email"
+                placeholder="Enter email address" required>
         </div>
-    </div>
-<!-- state -->
-    <div class="col">
+
+
+        <!-- address -->
         <div class="form-group">
-            <label for="state-select">State Name</label>
-            <select name="state-select" class="form-control" id="state-select" required>
-                <option>-----</option>
-                <option>Colorado</option>
-                <option>Utah</option>
-                <option>Nevada</option>
-                <option>Arizona</option>
-                <option>Oregon</option>
-                <option>Idaho</option>
-                <option>Wyoming</option>
-            </select>
+            <label for="ff-address">Street Address</label>
+            <input name="ff-address" type="text" class="form-control" id="ff-address"
+                placeholder="Enter your street address" required>
         </div>
-    </div>
 
-<!-- postal code-->
-    <div class="col">
-        <div class="form-group">
-            <label for="ff-zip">ZIP Code</label>
-            <input name = "ff-zip" type="integer" class="form-control" id="ff-zip" placeholder="Enter ZIP code" required>
+
+        <!-- city -->
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ff-city">City Name</label>
+                    <input name="ff-city" type="text" class="form-control" id="ff-city" placeholder="Enter city name"
+                        required>
+                </div>
+            </div>
+            <!-- state -->
+            <div class="col">
+                <div class="form-group">
+                    <label for="state-select">State Name</label>
+                    <select name="state-select" class="form-control" id="state-select" required>
+                        <option>-----</option>
+                        <option>Colorado</option>
+                        <option>Utah</option>
+                        <option>Nevada</option>
+                        <option>Arizona</option>
+                        <option>Oregon</option>
+                        <option>Idaho</option>
+                        <option>Wyoming</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- postal code-->
+            <div class="col">
+                <div class="form-group">
+                    <label for="ff-zip">ZIP Code</label>
+                    <input name="ff-zip" type="integer" class="form-control" id="ff-zip" placeholder="Enter ZIP code"
+                        required>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<br></br>
+        <br></br>
 
-<button name = "submit" class="btn" type="submit">Submit</button>
+        <button name="submit" class="btn" type="submit">Submit</button>
 
 
-<!-- php stuff-->
-<div id = "joinNow">
-        <?php
+        <div id="joinNow">
+            <?php
+                $ff_first_name = $_POST["ff-first-name"];
+                $ff_last_name = $_POST["ff-last-name"];
+                $ff_birthday = $_POST["ff-birthday"];
+                $ff_email = $_POST["ff-email"];
+                $ff_address = $_POST["ff-address"];
+                $ff_city = $_POST["ff-city"];
+
+                $select_state = $_POST["state-select"];
+                $ff_state;
+                if($select_state !== "-----") {
+                    $ff_state = $select_state;
+                }
+
+                $ff_zip = $_POST["ff-zip"];
+
+                // database info for connection
+                $host = "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com";//host
+                $user = "admin"; //user
+                $password = "aelb8362580"; //password
+                $databaseName = "booking"; //database
 
 
-         $ff_first_name = $_POST["ff-first-name"];
-         $ff_last_name = $_POST["ff-last-name"];
-         $ff_birthday = $_POST["ff-birthday"];
-         $ff_email = $_POST["ff-email"];
-         $ff_address = $_POST["ff-address"];
-         $ff_city = $_POST["ff-city"];
+                $conn = new mysqli($host, $user, $password, $databaseName);
+                        
+                    //if(!$connection) { 
+                    //    die("ERROR: Could not connect. ".mysqli_connect_error());
+                    //}
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-         $select_state = $_POST["state-select"];
-         $ff_state;
-         if($select_state !== "-----") {
-             $ff_state = $select_state;
-         }
+                $sql = "INSERT INTO frequent(
+                    first_name, 
+                    last_name, 
+                    birthday, 
+                    address, 
+                    city, 
+                    state, 
+                    zip_code, 
+                    email)
+                    VALUES('$ff_first_name', '$ff_last_name', '$ff_birthday', '$ff_address', '$ff_city', '$ff_state', '$ff_zip', '$ff_email')";
 
-         $ff_zip = $_POST["ff-zip"];
+                if(isset($_POST["submit"])) {
+                    echo "<br></br> <h1>Thanks for joining Adventure Miles! We'll see you soon!</h1>";
+                }
 
-        // database info for connection
-        $host = "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com";//host
-        $user = "admin"; //user
-        $password = "aelb8362580"; //password
-        $databaseName = "booking"; //database
-
-
-        $conn = new mysqli($host, $user, $password, $databaseName);
                 
-            //if(!$connection) { 
-            //    die("ERROR: Could not connect. ".mysqli_connect_error());
-            //}
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+                $conn->close();
+            ?>
+        </div>
 
-            $sql = "INSERT INTO frequent(
-                first_name, 
-                last_name, 
-                birthday, 
-                address, 
-                city, 
-                state, 
-                zip_code, 
-                email)
-                VALUES('$ff_first_name', '$ff_last_name', '$ff_birthday', '$ff_address', '$ff_city', '$ff_state', '$ff_zip', '$ff_email')";
-
-//            if($result = mysqli_query($connection, $sql)){
-//                if(mysqli_num_rows($result) > 0){
-//                   //echo "<form method = 'post' name = 'sign-up'>";
-//                    echo "Worked";
-//                }
-//            }
-
-//            mysqli_free_result($result);
-
-//            mysqli_close($connection);
-
-            if(isset($_POST["submit"])) {
-                echo "<br></br> <h1>Thanks for joining Adventure Miles! We'll see you soon!</h1>";
-            }
-
-            
-            $conn->close();
-        ?>
-    </div>
-
-</form>
+    </form>
 
 
 
