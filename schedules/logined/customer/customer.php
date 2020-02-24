@@ -20,13 +20,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="admin.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/logos/favicon.ico">
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
-            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
+            <img style="margin-left: 12%;" alt="Brand" src="/images/logos/favicon.ico"><span
                 style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock
                 Airlines</span>
         </a>

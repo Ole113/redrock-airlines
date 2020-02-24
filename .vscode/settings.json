@@ -9,5 +9,6 @@
             "server": "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com",
             "username": "admin"
         }
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

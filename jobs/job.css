@@ -166,11 +166,10 @@ h6 {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 100px;
 }
 
 .element {
-    padding: 0 10% 5% 15%;
+    padding: 0 10% 4% 15%;
 }
 
 #form-wrapper {

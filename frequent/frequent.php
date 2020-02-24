@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="frequent.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/logos/favicon.ico">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
-            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
+            <img style="margin-left: 12%;" alt="Brand" src="/images/logos/favicon.ico"><span
                 style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock
                 Airlines</span>
         </a>
@@ -124,22 +124,22 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/frequent/airport-departures.jpg" alt="airport people walking" />
+        <img src="/images/frequent/airport-people-blur.jpg" alt="airport people walking" />
     </div>
 
-    <div id="explore-title" style="margin-left: 7%;">
+    <div class = "animated fadeIn slower" id="explore-title" style="margin-left: 7%;">
         <h2>Join our Frequent Flyer Program</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
     </div>
 
-    <div class="jumbotron">
+    <div id = "infoHolder">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <div class="col-md jumbotron">
                     <h1 class="display-5">Red Rock Adventure Miles</h1>
-                    <br>
+                    <br /><br /><br />
                     <ul>
                         <li>Miles will be earned based on ticket price</li>
                         <br>
@@ -152,11 +152,10 @@
                         <li>Miles are used as currency</li>
                         <br>
                         <br /><br />
-                        <a href="#joinNow" class="btn">Join now</a>
-
-
+                    </ul>
+                    <a href="#joinNow" class="btn">Join now</a>
                 </div>
-                <div class="col-sm">
+                <div class="col-md">
                     <img src="/images/frequent/airplane-wing-clouds.jpg" alt="airplane window w/ wing">
                 </div>
             </div>
@@ -202,7 +201,7 @@
                             Canyonlands, and Capital Reef. To the North, you can hit the slopes in the Wasatch
                             mountains.
                         </p>
-                        <a href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Learn More</a>
+                        <a target = "_blank" href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -215,7 +214,7 @@
                             of 6 million years of erosion, the vast Grand Canyon is beautiful, daunting and unique. You
                             can also go sightseeing at Antelope Canyon and Horseshoe Bend.
                         </p>
-                        <a href="https://www.nps.gov/state/az/index.htm" class="btn btn-primary">Learn More</a>
+                        <a target = "_blank" href="https://www.nps.gov/state/az/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -228,7 +227,7 @@
                             Oregon will not disappoint. Oregon has a diverse landscape of forests, mountains, farms, and
                             beaches. Portland, Oregon's largest city, is home to several performing arts institutions
                             and microbreweries.</p>
-                        <a href="https://www.nps.gov/state/or/index.htm" class="btn btn-primary">Learn More</a>
+                        <a target = "_blank" href="https://www.nps.gov/state/or/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -242,7 +241,7 @@
                             Range and Yellowstone Lake. Wyoming is home to Cheyenne Frontier Days, the largest rodeo in
                             the US.
                         </p>
-                        <a href="https://www.nps.gov/grte/index.htm" class="btn btn-primary">Learn More</a>
+                        <a target = "_blank" href="https://www.nps.gov/grte/index.htm" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -257,7 +256,7 @@
     </div>
 
 
-    <form name="frequentFlierForm" method="post" action="frequent.php">
+    <form id = "joinNow" name="frequentFlierForm" method="post" action="frequent.php">
 
         <!-- first name -->
         <div class="form-row">
@@ -340,8 +339,6 @@
 
         <button name="submit" class="btn" type="submit">Submit</button>
 
-
-        <div id="joinNow">
             <?php
                 $ff_first_name = $_POST["ff-first-name"];
                 $ff_last_name = $_POST["ff-last-name"];
@@ -392,8 +389,6 @@
                 
                 $conn->close();
             ?>
-        </div>
-
     </form>
 
 
@@ -401,7 +396,7 @@
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
-            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            <a href="/home/home.html"><img src="/images/logos/grey-red-rock-logo.png" alt="company image" /></a>
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
             <br />
             <br />
@@ -451,7 +446,7 @@
     <footer class="small-footer">
         <br />
         <div class="footer-part-small">
-            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            <img src="/images/logos/grey-red-rock-logo.png" alt="company image" />
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
         </div>
         <div class="footer-part-small">

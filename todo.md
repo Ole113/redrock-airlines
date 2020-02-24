@@ -7,15 +7,14 @@ Maybe make it so you can see input user feedback
 https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr
 Make it so the user can choose economy, business and so forth
 Make it so the user can choose their seat, show picture of plane and if they enter a booked seat number show a red box around it and dont let it sumbit
-Add google location api iframe to contact
-Find a better color for button hover
 See if can add padding to close button slider
 When website is iphone 4 size and the slideout comes out you cannot scroll down to see the learn more part
-Get rid of the license part
-Flight id is always 1 in book, change to correct flight id
-Get rid of license in info.html
 Update book so it doesnt search by only departing and arriving
 Rephrase the flights.php search h3 text
 On admin, employee, and customer above the pills add their account info in a card(name, logout, account details)
 Time inputed in add flights isnt right
 Mkae sure in book you see what checkbox is actually checked
+Add Frequent flyer to footers
+maybe change form color to be lighter
+frequent flyer join now opens to sign up page
+finish the text for schedules customer testimonys

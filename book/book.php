@@ -19,9 +19,8 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="book.css">
-    <script src="book.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/logos/favicon.ico">
 </head>
 
 <body>
@@ -38,7 +37,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
-            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
+            <img style="margin-left: 12%;" alt="Brand" src="/images/logos/favicon.ico"><span
                 style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock
                 Airlines</span>
         </a>
@@ -124,17 +123,17 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/book/flying.jpg" alt="airport people walking" />
+        <img src="/images/book/bryce-canyon.jpg" alt="airport people walking" />
     </div>
 
-    <div id="explore-title" style="margin-left: 7%;">
-        <h2>Find a flight today!</h2>
+    <div class = "animated fadeIn slower" id="explore-title" style="margin-left: 7%;">
+        <h2>Book a flight today</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
     </div>
 
-    <form method="post" action="book.php">
+    <form method="post" action="book.php#result">
         <div id="initial">
             <div class="form-row">
                 <div class="col">
@@ -233,13 +232,13 @@
                     $arriving = $arriving_location;
                 }
 
-                //$number_passengers = $_POST["numberPassengers"];
+                $radio_id = 0;
 
                 $sql = "SELECT * FROM flights WHERE departing_airport = '".$departing_location."' AND arriving_airport = '".$arriving_location."'";
                 if($result = mysqli_query($connection, $sql)){
                     if(mysqli_num_rows($result) > 0){
                         echo "
-                        <h1><br /><br /><br />Select a flight from below</h1>
+                        <h1 id ='result'><br /><br /><br />Select a flight from below</h1><br />
                         <div class='table-responsive'>
                             <table class='table'>
                                 <thead>
@@ -264,7 +263,7 @@
                             <tr>
                                 <td><div style = 'text-align: center;' class='form-check'>
                                 <input class='form-check-input' type='radio' name='choice' value='$id'> 
-                            
+                                
                               </div></td>
                                 <th scope = 'row'>$id</th>
                                     <td>" . $row['departing_airport'] . ", " . $row['departing_state'] . "</td>
@@ -282,77 +281,76 @@
                         </div>
                         <br /><br />
                         <form method = 'post' action = 'book.php'>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='first-name' class='col-form-label'>First Name</label>
-                                    <input name = 'first-name' type='text' class='form-control' id='first-name' placeholder='First name' required>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='first-name' class='col-form-label'>First Name</label>
+                                        <input name = 'first-name' type='text' class='form-control' id='first-name' placeholder='First name' required>
+                                    </div>
+                                </div>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='last-name' class='col-form-label'>Last Name</label>
+                                        <input name = 'last-name' type='text' class='form-control' id='last-name' placeholder='Last name' required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class = 'col'>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
                                 <div class='form-group'>
-                                    <label for='last-name' class='col-form-label'>Last Name</label>
-                                    <input name = 'last-name' type='text' class='form-control' id='last-name' placeholder='Last name' required>
+                                <label for='phone' class='col-form-label'>Telephone Number</label>
+                                <input name = 'phone' type='tel' class='form-control' id='phone' placeholder='801-543-2100' required>
+                            </div>
+                                </div>
+                            </div>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='email' class='col-form-label'>Email</label>
+                                        <input name = 'email' type='email' class='form-control' id='email' placeholder='Email address' required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='credit-card-number' class='col-form-label'>Credit Card Number</label>
+                                        <input name = 'credit-card-number' type='text' class='form-control' id='credit-card-number' placeholder='Credit card number' required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='cvv' class='col-form-label'>CVV</label>
+                                        <input name = 'cvv' type='text' class='form-control' id='cvv' placeholder='CVV' required>
+                                    </div>
+                                </div>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='card-expiration'>Card Expiration Date</label>
+                                        <input name='card-expiration' class='form-control' type='date' id='card-expiration' required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = 'form-row'>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='card-name-first' class='col-form-label'>Credit Card First Name</label>
+                                        <input name = 'card-name-first' type='text' class='form-control' id='card-name-first' placeholder='First name' required>
+                                    </div>
+                                </div>
+                                <div class = 'col'>
+                                    <div class='form-group'>
+                                        <label for='card-name-last' class='col-form-label'>Credit Card Last Name</label>
+                                        <input name = 'card-name-last' type='text' class='form-control' id='card-name-last' placeholder='Last name' required>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                            <div class='form-group'>
-                            <label for='phone' class='col-form-label'>Telephone Number</label>
-                            <input name = 'phone' type='tel' class='form-control' id='phone' placeholder='801-543-2100' required>
-                        </div>
-                            </div>
-                        </div>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='email' class='col-form-label'>Email</label>
-                                    <input name = 'email' type='email' class='form-control' id='email' placeholder='Email address' required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='credit-card-number' class='col-form-label'>Credit Card Number</label>
-                                    <input name = 'credit-card-number' type='text' class='form-control' id='credit-card-number' placeholder='Credit card number' required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='cvv' class='col-form-label'>CVV</label>
-                                    <input name = 'cvv' type='text' class='form-control' id='cvv' placeholder='CVV' required>
-                                </div>
-                            </div>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='card-expiration'>Card Expiration Date</label>
-                                    <input name='card-expiration' class='form-control' type='date' id='card-expiration' required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = 'form-row'>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='card-name-first' class='col-form-label'>Credit Card First Name</label>
-                                    <input name = 'card-name-first' type='text' class='form-control' id='card-name-first' placeholder='First name' required>
-                                </div>
-                            </div>
-                            <div class = 'col'>
-                                <div class='form-group'>
-                                    <label for='card-name-last' class='col-form-label'>Credit Card Last Name</label>
-                                    <input name = 'card-name-last' type='text' class='form-control' id='card-name-last' placeholder='Last name' required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br /><br />
-                    <button name = 'book' class='btn' type='submit'>Book</button>
-                    </form>";                           
-                    
+                        <br /><br />
+                        <button name = 'book' class='btn' type='submit'>Book</button>
+                    </form>";
                     } else if($departing_location === "-----") {
                         if(isset($_POST["book"])) {
                             $card_name_last = $_POST["card-name-last"];
@@ -368,20 +366,19 @@
                             $flight_id = $_POST["choice"];
                             
                             // add variable that is set to the flight id of the flight that the user selects with a radio button. put variable in place of the "1".
-                            $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '1', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
+                            $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '$flight_id', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
                             if($query_result = mysqli_query($connection, $sql_insert)){
                                 echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";
                             } else {
                                 echo "<br /><br /><br /><br /><br /><h1>Sorry, an error occurred.</h1>";
                             }
                         }
-                    }
-                } else {
-                    if(isset($_POST["submit"])) {
-                        echo "<br /><br /><br /><br /><br /><h1>No results found.</h1>";
+                    } else if(mysqli_num_rows($result) == 0) {
+                        if(isset($_POST["submit"])) {
+                            echo "<br /><br /><br /><br /><br /><h1 id = 'result'>No results found.</h1>";
+                        }
                     }
                 }
-                
 
                 mysqli_free_result($result);
 
@@ -395,7 +392,7 @@
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
-            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            <a href="/home/home.html"><img src="/images/logos/grey-red-rock-logo.png" alt="company image" /></a>
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
             <br />
             <br />
@@ -443,7 +440,7 @@
     <footer class="small-footer">
         <br />
         <div class="footer-part-small">
-            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            <img src="/images/logos/grey-red-rock-logo.png" alt="company image" />
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
         </div>
         <div class="footer-part-small">

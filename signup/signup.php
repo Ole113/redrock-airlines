@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/logos/favicon.ico">
 </head>
 
 <body>

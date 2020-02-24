@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
     color: #595959;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Abel", sans-serif;
 }
 
 
@@ -174,7 +174,7 @@ h6 {
 #main-points-wrapper {
     text-align: center;
     background-color: #f5f6fa;
-    margin: 5% 0 100px 0;
+    margin: 100px 0 100px 0;
     padding: 150px 0 150px 0;
 }
 
@@ -201,8 +201,7 @@ h6 {
 }
 
 .point i {
-    font-size: 64px;
-    /*color: red;*/
+    font-size: 84px;
 }
 
 /**********************
@@ -226,36 +225,38 @@ h6 {
 /********************
     Jumbo Start
 *********************/
-.jumbotron {
-    margin: 5% 10% 5% 10%;
-    -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 770px) {
-    .col-sm img {
-        width: 100%;
+@media(max-width: 600px) {
+    #infoHolder {
+        padding: 0 20px 0 20px;
     }
 }
 
-@media (min-width: 771px) {
-    .col-sm img {
-        width: 500px;
+@media(max-width: 767px) {
+    .col-md img {
+        padding-top: 50px;
     }
 }
 
-.col-sm img {
+.col-md {
+    padding: 0;
+}
+
+.col-md img {
     height: 100%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.col-sm {
-    padding: 0 30px 0 30px;
+.jumbotron {
+    margin-bottom: 0;
+    -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    padding: 7.5%;
+    background-color: #f0f2f4;
 }
-
 /********************
     Jumbo End
 *********************/
@@ -277,11 +278,6 @@ form {
 
 .table {
     margin-top: 75px;
-}
-
-.jumbotron ul {
-    font-size: 23px;
-    line-height: 25px;
 }
 
 /********************

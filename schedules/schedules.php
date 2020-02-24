@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="schedules.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/logos/favicon.ico">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/home/home.html">
-            <img style="margin-left: 12%;" alt="Brand" src="/images/favicon/favicon.ico"><span
+            <img style="margin-left: 12%;" alt="Brand" src="/images/logos/favicon.ico"><span
                 style="color: #4d4d4d; z-index: 1; font-weight: 600; font-size: 15px;">&nbsp;&nbsp;Red Rock
                 Airlines</span>
         </a>
@@ -121,17 +121,17 @@
     </nav>
 
     <div id="main-image-holder">
-        <img src="/images/schedules/airport-people-blur.jpg" alt="airport people walking" />
+        <img src="/images/schedules/airport-departures.jpg" alt="airport flight board" />
     </div>
 
-    <div id="explore-title" style="margin-left: 7%;">
-        <h2>Find a flight today!</h2>
+    <div class = "animated fadeIn slower" id="explore-title" style="margin-left: 7%;">
+        <h2>Find a flight today</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
     </div>
 
-    <form method="post" action="schedules.php">
+    <form method="post" action="schedules.php#results">
         <div class="form-group">
             <label for="state-select">Choose a state to see available flights!</label>
             <select name="state-select" class="form-control" id="state-select">
@@ -170,7 +170,7 @@
                 if($result = mysqli_query($connection, $sql)){
                     if(mysqli_num_rows($result) > 0){
                         echo "
-                        <h1>" . "<br /><br /><br />Showing flights from " . $state_dropdown . "</h1>
+                        <h1 id = 'results'>" . "<br /><br /><br />Showing flights from " . $state_dropdown . "</h1>
                         <div class='table-responsive'>
                             <table class='table'>
                                 <thead>
@@ -223,7 +223,7 @@
     </form>
 
     <div id="explore-title" style="margin-left: 7%;">
-        <h2>What our customers are saying!</h2>
+        <h2>What our customers are saying</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
@@ -231,7 +231,7 @@
 
     <div id="reviews-container">
         <div class="reviews-row">
-            <img src="/images/schedules/customer-1.jpeg" />
+            <img src="/images/schedules/customer1.jpg" />
             <div class="reviews-text">
                 <h5>Tony Platt<br /><small><i>Aspen, Colorado</i></small></h5>
 
@@ -245,7 +245,7 @@
             </div>
         </div>
         <div class="reviews-row">
-            <img src="/images/schedules/customer-1.jpeg" />
+            <img src="/images/schedules/customer2.jpg" />
             <div class="reviews-text">
                 <h5>Jack Callistar<br /><small><i>Salt Lake City, Utah</i></small></h5>
 
@@ -260,7 +260,7 @@
             </div>
         </div>
         <div class="reviews-row">
-            <img src="/images/schedules/customer-1.jpeg" />
+            <img src="/images/schedules/customer3.jpg" />
             <div class="reviews-text">
                 <h5>Sophia Johnson<br /><small><i>Denver, Colorado</i></small></h5>
 
@@ -276,7 +276,7 @@
     </div>
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
-            <a href="/home/home.html"><img src="/images/grey-red-rock-logo.png" alt="company image" /></a>
+            <a href="/home/home.html"><img src="/images/logos/grey-red-rock-logo.png" alt="company image" /></a>
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
             <br />
             <br />
@@ -324,7 +324,7 @@
     <footer class="small-footer">
         <br />
         <div class="footer-part-small">
-            <img src="/images/grey-red-rock-logo.png" alt="company image" />
+            <img src="/images/logos/grey-red-rock-logo.png" alt="company image" />
             &nbsp;&nbsp;&nbsp;<span>Red Rock Airlines</span>
         </div>
         <div class="footer-part-small">
