@@ -14,7 +14,8 @@ Rephrase the flights.php search h3 text
 On admin, employee, and customer above the pills add their account info in a card(name, logout, account details)
 Time inputed in add flights isnt right
 Mkae sure in book you see what checkbox is actually checked
-Add Frequent flyer to footers
-maybe change form color to be lighter
-frequent flyer join now opens to sign up page
+Add Frequent flyer to footer maybe
+maybe change form color to be lighter maybe
+make the frequent flyer join now opens to sign up page
 finish the text for schedules customer testimonys
+after booking a flight make it not go to top of page go to thing that says "your flight booked..."

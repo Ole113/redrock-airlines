@@ -362,13 +362,18 @@
                             $phone = $_POST["phone"];
                             $last_name = $_POST["last-name"];
                             $first_name = $_POST["first-name"];
-                            //check if radio button is selected
-                            $flight_id = $_POST["choice"];
+                            //checks if a radio button is selected
+                            $flight_id;
+                            $error = false;
+                            if($flight_id == "") $error = true;
+                            else $flight_id = $_POST["choice"];
                             
                             // add variable that is set to the flight id of the flight that the user selects with a radio button. put variable in place of the "1".
                             $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '$flight_id', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
-                            if($query_result = mysqli_query($connection, $sql_insert)){
+                            if($query_result = mysqli_query($connection, $sql_insert) && !$error){
                                 echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";
+                            } else if($error) {
+                                echo "<br /><br /><br /><br /><br /><h1>A flight needs to be selected.</h1>";
                             } else {
                                 echo "<br /><br /><br /><br /><br /><h1>Sorry, an error occurred.</h1>";
                             }
@@ -388,7 +393,6 @@
         <br />
         <br />
     </form>
-
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">
