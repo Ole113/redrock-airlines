@@ -2,7 +2,6 @@
   "name": "db",
   "version": "1.0.0",
   "description": "connection element for fbla website",
-  "main": "connect.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
