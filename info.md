@@ -6,7 +6,7 @@
   Airline name and theme/slogan
   Introduction to the airline that includes animation
   Flight schedules, with the ability to book flights
-  Information on the frequent flyer program
+  Information on the Adventure Miles program
   How to apply for a job with the airline
   Social media links (NOTE: No live social media accounts should be created for this event.)
 

@@ -76,7 +76,7 @@
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
-                        Frequent Flyer
+                        Adventure Miles
                     </a>
                 </li>
                 <li class="nav-item">

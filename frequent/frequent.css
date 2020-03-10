@@ -31,6 +31,7 @@ h6 {
     background-color: red;
     border: none;
     color: white;
+    font-size: 17.5px;
 }
 
 .btn:hover {
@@ -163,7 +164,7 @@ h6 {
 }
 
 /*****************
-    Media Start
+    Navbar End
 ******************/
 
 /**********************
@@ -175,6 +176,10 @@ h6 {
     background-color: #f5f6fa;
     margin: 100px 0 100px 0;
     padding: 150px 0 150px 0;
+}
+
+.jumbotron ul {
+    font-size: 20px;
 }
 
 @media (min-width: 631px) {

@@ -78,7 +78,7 @@
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
-                        Frequent Flyer
+                        Adventure Miles
                     </a>
                 </li>
                 <li class="nav-item">
@@ -370,13 +370,13 @@
                             
                             // add variable that is set to the flight id of the flight that the user selects with a radio button. put variable in place of the "1".
                             $sql_insert = "INSERT INTO book(client_name, client_last, flight_id, client_phone, client_email, card_number, exp_date, cvv, card_first_name, card_last_name) VALUES ('$first_name', '$last_name', '$flight_id', '$phone', '$email', '$credit_card_number', '$card_expiration', '$cvv', '$card_name_first', '$card_name_last')";
-                            if($query_result = mysqli_query($connection, $sql_insert) && !$error){
+                            if($query_result = mysqli_query($connection, $sql_insert)){
                                 echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";
-                            } else if($error) {
-                                echo "<br /><br /><br /><br /><br /><h1>A flight needs to be selected.</h1>";
                             } else {
                                 echo "<br /><br /><br /><br /><br /><h1>Sorry, an error occurred.</h1>";
                             }
+                            // else if($error) {
+                                //echo "<br /><br /><br /><br /><br /><h1>A flight needs to be selected.</h1>";
                         }
                     } else if(mysqli_num_rows($result) == 0) {
                         if(isset($_POST["submit"])) {

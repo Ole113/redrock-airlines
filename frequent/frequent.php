@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Rock Airlines - Our Frequent Flyer Rewards</title>
+    <title>Red Rock Airlines - Our Adventure Miles Rewards</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -79,7 +79,7 @@
                         <i class="material-icons material-airplane">
                             airplanemode_active
                         </i>
-                        Frequent Flyer
+                        Adventure Miles
                     </a>
                 </li>
                 <li class="nav-item">
@@ -128,7 +128,7 @@
     </div>
 
     <div class = "animated fadeIn slower" id="explore-title" style="margin-left: 7%;">
-        <h2>Join our Frequent Flyer Program</h2>
+        <h2>Join our Adventure Miles Program</h2>
         <i class="material-icons navigate-icon">
             navigate_next
         </i>
@@ -138,7 +138,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md jumbotron">
-                    <h1 class="display-5">Red Rock Adventure Miles</h1>
+                    <h1 class="display-4">Red Rock Adventure Miles</h1>
                     <br /><br /><br />
                     <ul>
                         <li>Miles will be earned based on ticket price</li>
@@ -340,59 +340,55 @@
         <button name="submit" class="btn" type="submit">Submit</button>
 
             <?php
-                $ff_first_name = $_POST["ff-first-name"];
-                $ff_last_name = $_POST["ff-last-name"];
-                $ff_birthday = $_POST["ff-birthday"];
-                $ff_email = $_POST["ff-email"];
-                $ff_address = $_POST["ff-address"];
-                $ff_city = $_POST["ff-city"];
-
-                $select_state = $_POST["state-select"];
-                $ff_state;
-                if($select_state !== "-----") {
-                    $ff_state = $select_state;
-                }
-
-                $ff_zip = $_POST["ff-zip"];
-
-                // database info for connection
-                $host = "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com";//host
-                $user = "admin"; //user
-                $password = "aelb8362580"; //password
-                $databaseName = "booking"; //database
-
-
-                $conn = new mysqli($host, $user, $password, $databaseName);
-                        
-                    //if(!$connection) { 
-                    //    die("ERROR: Could not connect. ".mysqli_connect_error());
-                    //}
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                $sql = "INSERT INTO frequent(
-                    first_name, 
-                    last_name, 
-                    birthday, 
-                    address, 
-                    city, 
-                    state, 
-                    zip_code, 
-                    email)
-                    VALUES('$ff_first_name', '$ff_last_name', '$ff_birthday', '$ff_address', '$ff_city', '$ff_state', '$ff_zip', '$ff_email')";
-
                 if(isset($_POST["submit"])) {
-                    echo "<br></br> <h1>Thanks for joining Adventure Miles! We'll see you soon!</h1>";
-                }
+                    $ff_first_name = $_POST["ff-first-name"];
+                    $ff_last_name = $_POST["ff-last-name"];
+                    $ff_birthday = $_POST["ff-birthday"];
+                    $ff_email = $_POST["ff-email"];
+                    $ff_address = $_POST["ff-address"];
+                    $ff_city = $_POST["ff-city"];
+    
+                    $select_state = $_POST["state-select"];
+                    $ff_state;
+                    if($select_state !== "-----") {
+                        $ff_state = $select_state;
+                    }
+    
+                    $ff_zip = $_POST["ff-zip"];
+    
+                    // database info for connection
+                    $host = "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com";//host
+                    $user = "admin"; //user
+                    $password = "aelb8362580"; //password
+                    $databaseName = "booking"; //database
+    
+                    $conn = new mysqli($host, $user, $password, $databaseName);
+                    
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+    
+                    $sql = "INSERT INTO frequent(
+                        first_name, 
+                        last_name, 
+                        birthday, 
+                        address, 
+                        city, 
+                        state, 
+                        zip_code, 
+                        email)
+                        VALUES('$ff_first_name', '$ff_last_name', '$ff_birthday', '$ff_address', '$ff_city', '$ff_state', '$ff_zip', '$ff_email')";
+    
+                    if($query_result = mysqli_query($conn, $sql)){
+                        echo "<br /><br /><br /><br /><br /><h1>Your flight has been successfully booked!</h1>";
+                    } else {
+                        echo "<br /><br /><br /><br /><br /><h1>Sorry, an error occurred.</h1>";
+                    }
 
-                
-                $conn->close();
+                    $conn->close();
+                }
             ?>
     </form>
-
-
-
 
     <footer class="large-footer">
         <div style="text-align: center;" class="footerPart">

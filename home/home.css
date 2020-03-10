@@ -30,7 +30,7 @@ h6 {
 	Parallax
 ****************/
 .parallax {
-    background-image: url("/images/home/ff.jpg");
+    background-image: url("/images/home/main-image.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -74,7 +74,7 @@ h6 {
     .navbar-custom span {
         color: white;
         z-index: 1;
-        font-size: 19px;
+        font-size: 25px;
     }
 
     #hamburgerMainItems {
@@ -170,7 +170,7 @@ h6 {
 ******************/
 #hamburgerButton {
     position: relative;
-    right: 8%;
+    right: 4%;
     cursor: pointer;
     color: white;
     font-size: 45px;
@@ -341,14 +341,22 @@ h6 {
     #bookingInfoWrapper img,
     #bookingInfoText {
         display: inline-block;
-        width: 30%;
+        width: 40%;
         margin-top: 7%;
-        margin-bottom: 8%;
+        margin-bottom: 3%;
     }
 
     .bookingInfoTextElement {
-        padding-left: 3%;
-        font-size: 18px;
+        padding-left: 5%;
+        font-size: 1.1vw;
+    }
+
+    #bookingInfoText {
+        text-align: left;
+    }
+
+    #bookingInfoText a {
+        margin-left: 7.5%;
     }
 }
 
@@ -361,6 +369,17 @@ h6 {
 
     .bookingInfoTextElement {
         padding: 0 17.5% 0 17.5%;
+        padding-left: 5%;
+    }
+
+    #bookingInfoText {
+        text-align: left;
+        padding-left: 5%;
+        font-size: 2vw;
+    }
+
+    #bookingInfoText a {
+        margin-left: 5%;
     }
 
     #bookingInfoText h3 {
@@ -369,7 +388,7 @@ h6 {
 
     #bookingInfoWrapper img {
         padding-top: 10%;
-        width: 40%;
+        width: 85%;
     }
 }
 
