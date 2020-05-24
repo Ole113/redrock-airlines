@@ -141,15 +141,15 @@
                     <h1 class="display-4">Red Rock Adventure Miles</h1>
                     <br /><br /><br />
                     <ul>
-                        <li>Miles will be earned based on ticket price</li>
+                        <li>Miles will be earned based on ticket price.</li>
                         <br>
-                        <li>Miles are earned at a rate of 3 miles per USD</li>
+                        <li>Miles are earned at a rate of 3 miles per USD.</li>
                         <br>
-                        <li>Miles can be spent on trips, flights, and hotels</li>
+                        <li>Miles can be spent on trips, flights, and hotels.</li>
                         <br>
                         <li>Miles can also be used on upgrading seats and other amenities.</li>
                         <br>
-                        <li>Miles are used as currency</li>
+                        <li>Miles are used as currency.</li>
                         <br>
                         <br /><br />
                     </ul>
@@ -196,7 +196,7 @@
                     <img src="/images/frequent/walkingArches.jpeg" class="card-img-top" alt="utah arches image">
                     <div class="card-body">
                         <h5 class="card-title">Utah</h5>
-                        <p class="card-text">From delightful desert areas to snowy white mountains, Utah has it all. To
+                        <p class="card-text">From delightful desert areas, to snowy white mountains, Utah has it all. To
                             the South, adventures are greeted with 5 national parks, Arches, Zion, Bryce Canyon,
                             Canyonlands, and Capital Reef. To the North, you can hit the slopes in the Wasatch
                             mountains.

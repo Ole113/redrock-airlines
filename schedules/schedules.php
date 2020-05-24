@@ -238,9 +238,7 @@
                 <div class="reviews-holder">
                     <p> <i class="material-icons">
                             format_quote
-                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </i>Red Rock Airlines provides a streamlined experience that's uncomparable to any other airlines!</p>
                 </div>
             </div>
         </div>
@@ -253,9 +251,7 @@
 
                     <p> <i class="material-icons">
                             format_quote
-                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </i>Red Rock Airlines gave me such a good experience, I never would've thought it was a budget airline!</p>
                 </div>
             </div>
         </div>
@@ -267,9 +263,7 @@
                 <div class="reviews-holder">
                     <p> <i class="material-icons">
                             format_quote
-                        </i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </i>Red Rock Airlines is the most convenient and straightforward airline I've ever been on!</p>
                 </div>
             </div>
         </div>

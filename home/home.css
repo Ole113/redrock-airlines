@@ -622,6 +622,7 @@ h6 {
 .btn-primary {
     background-color: red;
     border: 0;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
