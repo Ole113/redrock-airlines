@@ -1,7 +1,7 @@
 {
-    "host": "fbla2020.cpf3yxrjif7m.us-east-2.rds.amazonaws.com",
+    "host": "",
     "user": "admin",
-    "password": "aelb8362580",
-    "database": "booking",
-    "port": "3306"
+    "password": "",
+    "database": "",
+    "port": ""
 }
